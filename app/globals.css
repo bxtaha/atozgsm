@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 20% 4%;
+    --foreground: 0 0% 100%;
+
+    --card: 230 16% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 230 16% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 160 100% 48%;
+    --primary-foreground: 230 20% 4%;
+
+    --secondary: 330 100% 63%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 230 14% 12%;
+    --muted-foreground: 228 12% 60%;
+
+    --accent: 230 14% 15%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 100% / 0.05;
+    --input: 230 14% 15%;
+    --ring: 160 100% 48%;
+
+    --radius: 1rem;
+
+    --console-base: 230 20% 4%;
+    --console-surface: 230 16% 10%;
+    --console-key: 230 14% 15%;
+    --glow-mint: 160 100% 48%;
+    --glow-pink: 336 100% 56%;
+    --text-dim: 228 12% 60%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  .console-input {
+    @apply w-full bg-accent text-foreground px-5 py-4 rounded-2xl outline-none border border-transparent transition-all duration-300;
+  }
+  .console-input:focus {
+    @apply border-primary/50 bg-muted shadow-[0_0_20px_hsl(var(--primary)/0.15)];
+  }
+  .console-input-pink:focus {
+    @apply border-secondary/50 bg-muted shadow-[0_0_20px_hsl(var(--secondary)/0.15)];
+  }
+  .console-label {
+    @apply text-[10px] font-bold tracking-widest text-muted-foreground uppercase transition-colors;
+  }
+}
+
+@layer utilities {
+  .glow-mint {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  .glow-pink {
+    box-shadow: 0 0 20px hsl(var(--secondary) / 0.3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
