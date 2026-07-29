@@ -14,13 +14,13 @@ const FAQSection = () => (
   <section className="py-24 px-4 border-t border-border" id="faq">
     <div className="max-w-3xl mx-auto">
       <div className="text-center mb-16">
-        <h2 className="text-3xl lg:text-5xl font-bold mb-4">Frequently Asked Questions</h2>
+        <h2 className="font-display text-3xl lg:text-5xl font-bold mb-4">Frequently Asked Questions</h2>
         <p className="text-muted-foreground text-lg">Still unsure? Ask us — free.</p>
       </div>
       <Accordion type="single" collapsible className="space-y-3">
         {faqs.map((f, i) => (
-          <AccordionItem key={i} value={`faq-${i}`} className="bg-console-surface border border-border rounded-2xl px-6 data-[state=open]:border-primary/30">
-            <AccordionTrigger className="font-bold text-left py-5 hover:no-underline hover:text-primary">{f.q}</AccordionTrigger>
+          <AccordionItem key={i} value={`faq-${i}`} className="bg-console-surface border border-border rounded-2xl px-6 data-[state=open]:border-primary/50">
+            <AccordionTrigger className="font-bold text-left py-5 text-secondary hover:no-underline hover:text-primary">{f.q}</AccordionTrigger>
             <AccordionContent className="text-muted-foreground leading-relaxed pb-5">{f.a}</AccordionContent>
           </AccordionItem>
         ))}
