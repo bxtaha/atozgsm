@@ -9,14 +9,14 @@ const ProgramsSection = () => (
   <section className="py-24 px-4 border-t border-border" id="programs">
     <div className="max-w-5xl mx-auto">
       <div className="text-center mb-16">
-        <h2 className="text-3xl lg:text-5xl font-bold mb-4">Programs & Services</h2>
+        <h2 className="font-display text-3xl lg:text-5xl font-bold mb-4">Programs & Services</h2>
         <p className="text-muted-foreground text-lg max-w-xl mx-auto">We support all degree levels — from foundation to PhD.</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {programs.map((p) => (
-          <div key={p.level} className="bg-console-surface border border-border rounded-2xl p-8 hover:border-primary/30 transition-colors">
+          <div key={p.level} className="bg-console-surface border border-border border-t-4 border-t-primary rounded-2xl p-8 shadow-[0_8px_24px_rgba(11,31,58,0.06)] hover:shadow-[0_12px_32px_rgba(11,31,58,0.1)] transition-shadow">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-2xl font-bold">{p.level}</h3>
+              <h3 className="font-display text-2xl font-bold">{p.level}</h3>
               <span className="text-xs font-bold text-primary bg-primary/10 px-4 py-1.5 rounded-full">{p.duration}</span>
             </div>
             <p className="text-muted-foreground mb-5">{p.desc}</p>
