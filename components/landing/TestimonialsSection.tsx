@@ -28,7 +28,8 @@ const TestimonialsSection = () => (
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((t) => (
-          <div key={t.name} className="bg-console-surface border border-border border-t-4 border-t-primary rounded-2xl p-8 flex flex-col shadow-[0_8px_24px_rgba(11,31,58,0.06)]">
+          <div key={t.name} className="relative overflow-hidden bg-console-surface border border-border rounded-2xl p-8 flex flex-col shadow-[0_8px_24px_rgba(11,31,58,0.06)]">
+            <div className="absolute inset-x-0 top-0 h-1 bg-primary" />
             <div className="text-4xl text-primary/60 mb-4">"</div>
             <p className="text-muted-foreground leading-relaxed flex-1">{t.quote}</p>
             <div className="mt-6 pt-5 border-t border-border">
