@@ -233,7 +233,7 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FieldGroup label="Date of Birth" error={errors.dob}>
               <input type="date" value={formData.dob} onChange={(e) => handleChange("dob", e.target.value)}
-                className="console-input [color-scheme:dark]" />
+                className="console-input [color-scheme:light]" />
               {age !== null && <p className="text-xs text-muted-foreground mt-1">Age: {age} years</p>}
             </FieldGroup>
 

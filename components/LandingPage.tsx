@@ -51,11 +51,11 @@ const LandingPage = () => {
 
       {/* Application form — console grid style */}
       <section className="flex items-center justify-center p-4 lg:p-8 relative z-10 py-12 lg:py-20 border-t border-border" id="apply">
-        <div className="w-full max-w-6xl bg-console-surface rounded-[2.5rem] p-3 lg:p-4 ring-1 ring-border shadow-[0_20px_50px_rgba(0,0,0,0.5)] grid lg:grid-cols-12 gap-4 animate-fade-in">
+        <div className="w-full max-w-6xl bg-console-surface rounded-[2.5rem] p-3 lg:p-4 ring-1 ring-border shadow-[0_20px_50px_rgba(11,31,58,0.12)] grid lg:grid-cols-12 gap-4 animate-fade-in">
           <HeroSection />
-          <div className="lg:col-span-7 bg-background/50 rounded-[2rem] p-5 lg:p-10 flex flex-col justify-center border border-border relative">
+          <div className="lg:col-span-7 bg-card rounded-[2rem] p-5 lg:p-10 flex flex-col justify-center border border-border relative">
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-2">Start Your Application</h2>
+              <h2 className="font-display text-2xl font-bold mb-2 text-secondary">Start Your Application</h2>
               <p className="text-sm text-muted-foreground">Complete the form to get free counseling. A counselor will reach out within 24 hours.</p>
             </div>
             <ApplicationForm onSuccess={() => router.push("/thank-you")} />
