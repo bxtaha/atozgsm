@@ -1,4 +1,5 @@
 import heroBanner from "@/assets/hero-banner.jpg";
+import { AntiGravityCanvas } from "@/components/ui/particle-effect-for-hero";
 
 const HeroBanner = () => (
   <section className="relative min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden bg-secondary">
@@ -15,9 +16,8 @@ const HeroBanner = () => (
     {/* Navy overlay */}
     <div className="absolute inset-0 bg-gradient-to-b from-secondary/85 via-secondary/70 to-secondary" />
 
-    {/* Ambient glows */}
-    <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/20 blur-[120px] rounded-full pointer-events-none" />
-    <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
+    {/* Interactive gold particle field — replaces the old static ambient blur glows */}
+    <AntiGravityCanvas accentColor="#d4af37" glowColor="212, 175, 55" />
 
     {/* Content */}
     <div className="relative z-10 max-w-5xl mx-auto px-4 text-center space-y-6 animate-fade-in">
