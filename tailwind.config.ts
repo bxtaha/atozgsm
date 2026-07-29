@@ -55,11 +55,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "console-base": "hsl(var(--console-base))",
         "console-surface": "hsl(var(--console-surface))",
-        "console-key": "hsl(var(--console-key))",
-        "glow-mint": "hsl(var(--glow-mint))",
-        "glow-pink": "hsl(var(--glow-pink))",
         "text-dim": "hsl(var(--text-dim))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

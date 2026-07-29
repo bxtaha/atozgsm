@@ -4,42 +4,38 @@
 
 @layer base {
   :root {
-    --background: 230 20% 4%;
-    --foreground: 0 0% 100%;
+    --background: 40 45% 96%;
+    --foreground: 220 43% 11%;
 
-    --card: 230 16% 8%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 43% 11%;
 
-    --popover: 230 16% 8%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 43% 11%;
 
-    --primary: 160 100% 48%;
-    --primary-foreground: 230 20% 4%;
+    --primary: 46 65% 52%;
+    --primary-foreground: 214 68% 14%;
 
-    --secondary: 330 100% 63%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 214 68% 14%;
+    --secondary-foreground: 40 45% 96%;
 
-    --muted: 230 14% 12%;
-    --muted-foreground: 228 12% 60%;
+    --muted: 40 30% 93%;
+    --muted-foreground: 221 13% 46%;
 
-    --accent: 230 14% 15%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 40 40% 92%;
+    --accent-foreground: 214 68% 14%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 100% / 0.05;
-    --input: 230 14% 15%;
-    --ring: 160 100% 48%;
+    --border: 220 20% 88%;
+    --input: 40 30% 95%;
+    --ring: 46 65% 52%;
 
     --radius: 1rem;
 
-    --console-base: 230 20% 4%;
-    --console-surface: 230 16% 10%;
-    --console-key: 230 14% 15%;
-    --glow-mint: 160 100% 48%;
-    --glow-pink: 336 100% 56%;
-    --text-dim: 228 12% 60%;
+    --console-surface: 0 0% 100%;
+    --text-dim: 221 13% 46%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -78,14 +74,6 @@
   }
 }
 
-@layer utilities {
-  .glow-mint {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
-  }
-  .glow-pink {
-    box-shadow: 0 0 20px hsl(var(--secondary) / 0.3);
-  }
-}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
