@@ -20,9 +20,9 @@ const LandingPage = () => {
   return (
     <div className="min-h-dvh flex flex-col relative overflow-hidden">
       {/* Sticky nav */}
-      <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
+      <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-          <span className="font-bold tracking-tight text-lg">🎓 ChinaAdmit</span>
+          <span className="font-display font-bold tracking-tight text-lg text-secondary">🎓 ChinaAdmit</span>
           <div className="hidden md:flex items-center gap-6 text-xs font-bold tracking-wider uppercase text-muted-foreground">
             <a href="#benefits" className="hover:text-primary transition-colors">Benefits</a>
             <a href="#programs" className="hover:text-primary transition-colors">Programs</a>
