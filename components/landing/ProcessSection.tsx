@@ -10,20 +10,20 @@ const ProcessSection = () => (
   <section className="py-24 px-4 border-t border-border" id="process">
     <div className="max-w-4xl mx-auto">
       <div className="text-center mb-16">
-        <h2 className="text-3xl lg:text-5xl font-bold mb-4">How It Works</h2>
+        <h2 className="font-display text-3xl lg:text-5xl font-bold mb-4">How It Works</h2>
         <p className="text-muted-foreground text-lg max-w-xl mx-auto">A clear, step-by-step process from first contact to campus arrival.</p>
       </div>
       <div className="relative">
         {/* Timeline line */}
-        <div className="absolute left-6 top-0 bottom-0 w-px bg-border hidden md:block" />
+        <div className="absolute left-6 top-0 bottom-0 w-px bg-secondary/30 hidden md:block" />
         <div className="space-y-8">
           {steps.map((s) => (
             <div key={s.num} className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 relative z-10">
-                <span className="text-sm font-bold text-primary">{s.num}</span>
+              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0 relative z-10 shadow-[0_4px_14px_rgba(212,175,55,0.35)]">
+                <span className="text-sm font-bold text-primary-foreground">{s.num}</span>
               </div>
               <div className="pt-1">
-                <h3 className="font-bold text-xl mb-1">{s.title}</h3>
+                <h3 className="font-display font-bold text-xl mb-1">{s.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
               </div>
             </div>
