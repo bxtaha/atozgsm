@@ -10,7 +10,7 @@ const FooterSection = () => (
       <p className="text-xs text-secondary-foreground/70 tracking-wider">
         © {new Date().getFullYear()} ChinaAdmit · All rights reserved
       </p>
-      <p className="text-[10px] text-secondary-foreground/40 max-w-2xl">
+      <p className="text-[10px] text-secondary-foreground/60 max-w-2xl">
         Disclaimer: This agency facilitates admissions support and is not directly affiliated with any specific Chinese university. Statistics shown are based on reported data and internal records.
       </p>
     </div>
