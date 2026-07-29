@@ -31,6 +31,9 @@ next-env.d.ts
 # Env files
 .env*.local
 
+# Superpowers brainstorming companion
+.superpowers/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
