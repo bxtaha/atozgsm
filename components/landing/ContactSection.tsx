@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { GlowCard } from "@/components/ui/spotlight-card";
 
 const contacts = [
   { icon: MapPin, label: "Office Address", value: "House 12, Road 5, Block C, Banani, Dhaka 1213, Bangladesh" },
@@ -17,7 +18,14 @@ const ContactSection = () => (
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {contacts.map((c) => (
-          <div key={c.label} className="flex gap-4 items-start bg-secondary-foreground/5 border border-secondary-foreground/15 rounded-2xl p-6">
+          <GlowCard
+            key={c.label}
+            customSize
+            glowColor="gold"
+            backdropColor="hsl(40 45% 96% / 0.06)"
+            radius={16}
+            className="flex gap-4 items-start p-6"
+          >
             <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
               <c.icon className="w-5 h-5 text-primary" />
             </div>
@@ -29,7 +37,7 @@ const ContactSection = () => (
                 <p className="text-secondary-foreground">{c.value}</p>
               )}
             </div>
-          </div>
+          </GlowCard>
         ))}
       </div>
     </div>

@@ -1,3 +1,5 @@
+import { GlowCard } from "@/components/ui/spotlight-card";
+
 const programs = [
   { level: "Foundation", duration: "1 Year", desc: "Chinese language + academic prep for direct university entry.", popular: ["Chinese Language", "Pre-Medicine", "Pre-Engineering"] },
   { level: "Bachelor's", duration: "4–6 Years", desc: "Full undergraduate degrees taught in English or Chinese.", popular: ["MBBS", "Computer Science", "Business Admin", "Engineering"] },
@@ -14,8 +16,14 @@ const ProgramsSection = () => (
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {programs.map((p) => (
-          <div key={p.level} className="relative overflow-hidden bg-console-surface border border-border rounded-2xl p-8 shadow-[0_8px_24px_rgba(11,31,58,0.06)] hover:shadow-[0_12px_32px_rgba(11,31,58,0.1)] transition-shadow">
-            <div className="absolute inset-x-0 top-0 h-1 bg-primary" />
+          <GlowCard
+            key={p.level}
+            customSize
+            glowColor="gold"
+            backdropColor="hsl(0 0% 100% / 0.97)"
+            radius={16}
+            className="p-8 shadow-[0_8px_24px_rgba(11,31,58,0.06)] hover:shadow-[0_12px_32px_rgba(11,31,58,0.1)] transition-shadow"
+          >
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-display text-2xl font-bold">{p.level}</h3>
               <span className="text-xs font-bold text-primary bg-primary/10 px-4 py-1.5 rounded-full">{p.duration}</span>
@@ -26,7 +34,7 @@ const ProgramsSection = () => (
                 <span key={m} className="text-[11px] uppercase tracking-wider font-bold text-muted-foreground bg-muted px-3 py-1.5 rounded-full">{m}</span>
               ))}
             </div>
-          </div>
+          </GlowCard>
         ))}
       </div>
     </div>
