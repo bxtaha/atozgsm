@@ -23,10 +23,11 @@ const BenefitsSection = () => (
             key={b.title}
             customSize
             glowColor="gold"
-            backdropColor="hsl(0 0% 100% / 0.97)"
+            backdropColor="hsl(var(--card) / 0.97)"
             radius={16}
             className="p-8 shadow-[0_8px_24px_rgba(11,31,58,0.06)] hover:shadow-[0_12px_32px_rgba(11,31,58,0.1)] transition-shadow group"
           >
+            <div className="absolute inset-x-0 top-0 h-1 bg-primary rounded-t-2xl" />
             <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-5 group-hover:bg-secondary/20 transition-colors">
               <b.icon className="w-6 h-6 text-secondary" />
             </div>

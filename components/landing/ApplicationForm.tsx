@@ -153,12 +153,12 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
 
       {/* Step indicator */}
       <div className="flex items-center gap-3 mb-6">
-        <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase ${step >= 1 ? "bg-primary/20 text-primary" : "bg-muted text-muted-foreground"}`}>
+        <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase ${step >= 1 ? "bg-primary/20 text-primary-text" : "bg-muted text-muted-foreground"}`}>
           <span className="w-5 h-5 rounded-full bg-primary/30 flex items-center justify-center text-[10px]">1</span>
           Contact
         </div>
         <div className="h-px flex-1 bg-border" />
-        <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase ${step >= 2 ? "bg-primary/20 text-primary" : "bg-muted text-muted-foreground"}`}>
+        <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase ${step >= 2 ? "bg-primary/20 text-primary-text" : "bg-muted text-muted-foreground"}`}>
           <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] ${step >= 2 ? "bg-primary/30" : "bg-muted"}`}>2</span>
           Education
         </div>
@@ -174,7 +174,7 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FieldGroup label="Phone (WhatsApp)" error={errors.phone} required>
               <input type="tel" inputMode="tel" autoComplete="tel" placeholder="+880 1XXXXXXXXX" value={formData.phone}
-                onChange={(e) => handleChange("phone", e.target.value)} className="console-input console-input-pink" />
+                onChange={(e) => handleChange("phone", e.target.value)} className="console-input" />
             </FieldGroup>
 
             <FieldGroup label="Email" error={errors.email}>

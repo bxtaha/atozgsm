@@ -34,10 +34,11 @@ const TestimonialsSection = () => (
             key={t.name}
             customSize
             glowColor="gold"
-            backdropColor="hsl(0 0% 100% / 0.97)"
+            backdropColor="hsl(var(--card) / 0.97)"
             radius={16}
             className="p-8 flex flex-col shadow-[0_8px_24px_rgba(11,31,58,0.06)]"
           >
+            <div className="absolute inset-x-0 top-0 h-1 bg-primary rounded-t-2xl" />
             <div className="text-4xl text-primary/60 mb-4">"</div>
             <p className="text-muted-foreground leading-relaxed flex-1">{t.quote}</p>
             <div className="mt-6 pt-5 border-t border-border">

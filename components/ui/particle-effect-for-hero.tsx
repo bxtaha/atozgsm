@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useCallback } from "react";
-import { MousePointer2, Info, ArrowRight } from "lucide-react";
+import React, { useEffect, useRef, useCallback } from "react";
 
 // --- Types ---
 
@@ -37,6 +36,7 @@ interface MouseState {
 
 const PARTICLE_DENSITY = 0.00015; // Particles per pixel squared (adjust for density)
 const BG_PARTICLE_DENSITY = 0.00005; // Less dense for background
+const MAX_PARTICLES = 250; // Safety cap for very large/high-density viewports (e.g. 4K monitors)
 const MOUSE_RADIUS = 180; // Radius of mouse influence
 const RETURN_SPEED = 0.08; // How fast particles fly back to origin (spring constant)
 const DAMPING = 0.9; // Friction (velocity decay)
@@ -53,6 +53,15 @@ const randomRange = (min: number, max: number) => Math.random() * (max - min) + 
  * mouse repulsion + elastic collisions) meant to sit as an absolutely
  * positioned overlay inside a `relative` container. Transparent background —
  * layer it over existing imagery/color rather than using it standalone.
+ *
+ * `accentColor`/`glowColor` are consumed directly as Canvas 2D `fillStyle`
+ * values (raw strings, `rgba(${glowColor}, ...)` for glowColor). Canvas
+ * fillStyle does NOT resolve CSS custom properties (`var(--x)` silently
+ * fails to parse and falls back to black), so these can't reference
+ * `--primary` via `hsl(var(--primary))` the way a DOM/CSS color could.
+ * They're the RGB/hex equivalent of `--primary` (46 65% 52% ≈ #d4af37 ≈
+ * rgb(212, 175, 55)) kept as literal values for that reason — if `--primary`
+ * is retuned later, these two defaults need a matching manual update.
  */
 export const AntiGravityCanvas: React.FC<{ accentColor?: string; glowColor?: string }> = ({
   accentColor = "#d4af37",
@@ -66,12 +75,15 @@ export const AntiGravityCanvas: React.FC<{ accentColor?: string; glowColor?: str
   const backgroundParticlesRef = useRef<BackgroundParticle[]>([]);
   const mouseRef = useRef<MouseState>({ x: -1000, y: -1000, isActive: false });
   const frameIdRef = useRef<number>(0);
+  // CSS-pixel dimensions (as opposed to canvas.width/height, which are
+  // device pixels once scaled by devicePixelRatio — see handleResize).
+  const dimensionsRef = useRef({ width: 0, height: 0 });
 
   // Initialize Particles
   const initParticles = useCallback(
     (width: number, height: number) => {
       // 1. Main Interactive Particles
-      const particleCount = Math.floor(width * height * PARTICLE_DENSITY);
+      const particleCount = Math.min(Math.floor(width * height * PARTICLE_DENSITY), MAX_PARTICLES);
       const newParticles: Particle[] = [];
 
       for (let i = 0; i < particleCount; i++) {
@@ -120,14 +132,19 @@ export const AntiGravityCanvas: React.FC<{ accentColor?: string; glowColor?: str
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
 
+      // All drawing below operates in CSS-pixel space (the transform set in
+      // handleResize maps that to device pixels), so bounds/centers must use
+      // the CSS-pixel dimensions, not canvas.width/height (device pixels).
+      const { width: cssWidth, height: cssHeight } = dimensionsRef.current;
+
       // Clear Canvas
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, cssWidth, cssHeight);
 
       // --- Background Effects ---
 
       // 1. Pulsating Radial Glow
-      const centerX = canvas.width / 2;
-      const centerY = canvas.height / 2;
+      const centerX = cssWidth / 2;
+      const centerY = cssHeight / 2;
       const pulseSpeed = 0.0008;
       // Oscillates between 0.05 and 0.12 opacity
       const pulseOpacity = Math.sin(time * pulseSpeed) * 0.035 + 0.085;
@@ -138,13 +155,13 @@ export const AntiGravityCanvas: React.FC<{ accentColor?: string; glowColor?: str
         0,
         centerX,
         centerY,
-        Math.max(canvas.width, canvas.height) * 0.7,
+        Math.max(cssWidth, cssHeight) * 0.7,
       );
       gradient.addColorStop(0, `rgba(${glowColor}, ${pulseOpacity})`);
       gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
 
       ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0, 0, cssWidth, cssHeight);
 
       // 2. Background Particles (Drifting Stars)
       const bgParticles = backgroundParticlesRef.current;
@@ -156,10 +173,10 @@ export const AntiGravityCanvas: React.FC<{ accentColor?: string; glowColor?: str
         p.y += p.vy;
 
         // Wrap around screen
-        if (p.x < 0) p.x = canvas.width;
-        if (p.x > canvas.width) p.x = 0;
-        if (p.y < 0) p.y = canvas.height;
-        if (p.y > canvas.height) p.y = 0;
+        if (p.x < 0) p.x = cssWidth;
+        if (p.x > cssWidth) p.x = 0;
+        if (p.y < 0) p.y = cssHeight;
+        if (p.y > cssHeight) p.y = 0;
 
         // Twinkle effect
         const twinkle = Math.sin(time * 0.002 + p.phase) * 0.5 + 0.5; // 0 to 1
@@ -296,6 +313,8 @@ export const AntiGravityCanvas: React.FC<{ accentColor?: string; glowColor?: str
         const { width, height } = containerRef.current.getBoundingClientRect();
         const dpr = window.devicePixelRatio || 1;
 
+        dimensionsRef.current = { width, height };
+
         // Set actual size in memory (scaled to account for extra pixel density)
         canvasRef.current.width = width * dpr;
         canvasRef.current.height = height * dpr;
@@ -304,9 +323,12 @@ export const AntiGravityCanvas: React.FC<{ accentColor?: string; glowColor?: str
         canvasRef.current.style.width = `${width}px`;
         canvasRef.current.style.height = `${height}px`;
 
-        // Normalize coordinate system to use CSS pixels
+        // Normalize coordinate system to use CSS pixels. Use setTransform
+        // (absolute) rather than scale (relative/multiplicative) — scale()
+        // would compound on every subsequent resize/orientation change and
+        // progressively distort the rendering.
         const ctx = canvasRef.current.getContext("2d");
-        if (ctx) ctx.scale(dpr, dpr);
+        if (ctx) ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
         // Re-init particles for new dimensions
         initParticles(width, height);
@@ -319,10 +341,47 @@ export const AntiGravityCanvas: React.FC<{ accentColor?: string; glowColor?: str
     return () => window.removeEventListener("resize", handleResize);
   }, [initParticles]);
 
-  // Start Animation
+  // Start Animation — respects prefers-reduced-motion and pauses while the
+  // hero is scrolled off-screen.
   useEffect(() => {
-    frameIdRef.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(frameIdRef.current);
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      return;
+    }
+
+    const start = () => {
+      if (!frameIdRef.current) {
+        frameIdRef.current = requestAnimationFrame(animate);
+      }
+    };
+    const stop = () => {
+      if (frameIdRef.current) {
+        cancelAnimationFrame(frameIdRef.current);
+        frameIdRef.current = 0;
+      }
+    };
+
+    start();
+
+    let observer: IntersectionObserver | null = null;
+    if (containerRef.current && "IntersectionObserver" in window) {
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            start();
+          } else {
+            stop();
+          }
+        },
+        { threshold: 0 },
+      );
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      stop();
+      observer?.disconnect();
+    };
   }, [animate]);
 
   // Mouse Handlers
@@ -343,7 +402,7 @@ export const AntiGravityCanvas: React.FC<{ accentColor?: string; glowColor?: str
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 overflow-hidden pointer-events-auto cursor-crosshair"
+      className="absolute inset-0 overflow-hidden pointer-events-auto"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -351,86 +410,3 @@ export const AntiGravityCanvas: React.FC<{ accentColor?: string; glowColor?: str
     </div>
   );
 };
-
-// --- Standalone demo shell (original registry component) ---
-// Kept for reference/fidelity to the source snippet. Not used by the live
-// app — the real integration renders `AntiGravityCanvas` directly inside
-// components/landing/HeroBanner.tsx with ChinaAdmit's own copy and imagery,
-// not this generic placeholder shell.
-
-const Navigation: React.FC = () => {
-  return (
-    <nav className="absolute top-0 left-0 w-full z-20 flex justify-between items-center p-6 md:p-8">
-      <div className="flex items-center space-x-2">
-        <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-          <span className="font-bold text-black text-lg">G</span>
-        </div>
-        <span className="text-white font-medium tracking-wide text-lg">Antigravity</span>
-      </div>
-      <div className="hidden md:flex space-x-8 text-sm font-medium text-white/70">
-        <a href="#" className="hover:text-white transition-colors">
-          Experiments
-        </a>
-        <a href="#" className="hover:text-white transition-colors">
-          Case Studies
-        </a>
-        <a href="#" className="hover:text-white transition-colors">
-          About
-        </a>
-      </div>
-      <button className="text-white/80 hover:text-white transition-colors">
-        <Info size={24} />
-      </button>
-    </nav>
-  );
-};
-
-const HeroContent: React.FC = () => {
-  return (
-    <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none px-4">
-      <div className="max-w-4xl w-full text-center space-y-8">
-        <div className="inline-block animate-fade-in-up">
-          <span className="py-1 px-3 border border-white/20 rounded-full text-xs font-mono text-white/60 tracking-widest uppercase bg-white/5 backdrop-blur-sm">
-            Experimental Interaction
-          </span>
-        </div>
-
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40 tracking-tighter mix-blend-difference">
-          Zero
-          <br />
-          Gravity
-        </h1>
-
-        <p className="max-w-2xl mx-auto text-lg md:text-xl text-white/60 font-light leading-relaxed">
-          Experience the fluidity of data. A WebGL-inspired particle simulation running entirely on 2D Canvas for
-          maximum compatibility and performance.
-        </p>
-
-        <div className="pt-8 pointer-events-auto">
-          <button className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-bold tracking-wide overflow-hidden transition-transform hover:scale-105 active:scale-95">
-            <span className="relative z-10">Start Experience</span>
-            <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
-            <div className="absolute inset-0 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out opacity-10"></div>
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default function App() {
-  return (
-    <div className="relative w-full h-screen bg-black overflow-hidden selection:bg-blue-500 selection:text-white">
-      <div className="absolute inset-0 z-0 bg-black">
-        <AntiGravityCanvas />
-      </div>
-      <Navigation />
-      <HeroContent />
-
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30 animate-pulse pointer-events-none">
-        <span className="text-[10px] uppercase tracking-[0.2em]">Interact</span>
-        <MousePointer2 size={16} />
-      </div>
-    </div>
-  );
-}

@@ -16,7 +16,12 @@ const HeroBanner = () => (
     {/* Navy overlay */}
     <div className="absolute inset-0 bg-gradient-to-b from-secondary/85 via-secondary/70 to-secondary" />
 
-    {/* Interactive gold particle field — replaces the old static ambient blur glows */}
+    {/* Interactive gold particle field — replaces the old static ambient blur glows.
+        accentColor/glowColor are Canvas 2D fillStyle values; canvas does not
+        resolve CSS custom properties (hsl(var(--primary)) silently fails to
+        parse), so these stay as literal RGB/hex — they're the equivalent of
+        --primary (46 65% 52%) and must be updated by hand if that token
+        changes. See the component-level comment in particle-effect-for-hero.tsx. */}
     <AntiGravityCanvas accentColor="#d4af37" glowColor="212, 175, 55" />
 
     {/* Content */}

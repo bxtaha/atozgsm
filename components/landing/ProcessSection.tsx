@@ -19,7 +19,7 @@ const ProcessSection = () => (
         <div className="space-y-8">
           {steps.map((s) => (
             <div key={s.num} className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0 relative z-10 shadow-[0_4px_14px_rgba(212,175,55,0.35)]">
+              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0 relative z-10 shadow-[0_4px_14px_hsl(var(--primary)/0.35)]">
                 <span className="text-sm font-bold text-primary-foreground">{s.num}</span>
               </div>
               <div className="pt-1">
