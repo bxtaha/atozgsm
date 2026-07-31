@@ -26,7 +26,6 @@ const ContactSection = () => (
             radius={16}
             className="flex gap-4 items-start p-6"
           >
-            <div className="absolute inset-x-0 top-0 h-1 bg-primary rounded-t-2xl" />
             <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
               <c.icon className="w-5 h-5 text-primary" />
             </div>
