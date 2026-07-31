@@ -1,0 +1,7 @@
+services:
+  atozgsm:
+    build: .
+    container_name: atozgsm
+    restart: unless-stopped
+    ports:
+      - "80:8080"
