@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { Video } from "lucide-react";
 import HeroBanner from "@/components/landing/HeroBanner";
 import HeroSection from "@/components/landing/HeroSection";
 import StatsBar from "@/components/landing/StatsBar";
@@ -31,8 +32,9 @@ const LandingPage = () => {
             <a href="#faq" className="hover:text-primary-text transition-colors">FAQ</a>
             <a href="#contact" className="hover:text-primary-text transition-colors">Contact</a>
           </div>
-          <a href="#apply" className="px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-bold tracking-wider uppercase hover:brightness-110 transition-all">
-            Apply Now
+          <a href="#apply" className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-bold tracking-wider uppercase hover:brightness-110 transition-all">
+            <Video className="w-3.5 h-3.5" />
+            Book Now
           </a>
         </div>
       </nav>
@@ -55,7 +57,7 @@ const LandingPage = () => {
           <HeroSection />
           <div className="lg:col-span-7 bg-card rounded-[2rem] p-5 lg:p-10 flex flex-col justify-center border border-border relative">
             <div className="mb-8">
-              <h2 className="font-display text-2xl font-bold mb-2 text-secondary">Start Your Application</h2>
+              <h2 className="font-display text-2xl font-bold mb-2 text-secondary">Register for a Free Meeting</h2>
               <p className="text-sm text-muted-foreground">Complete the form to get free counseling. A counselor will reach out within 24 hours.</p>
             </div>
             <ApplicationForm onSuccess={() => router.push("/thank-you")} />

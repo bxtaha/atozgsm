@@ -1,6 +1,9 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
+
+const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/GBCNtHwgvsk6uty5uWYdxk?s=hd&p=i&ilr=4&amv=2";
 
 interface FormData {
   // Step 1
@@ -57,8 +60,8 @@ const PROGRAM_LEVELS = [
   { value: "other", label: "Other" },
 ];
 const INTAKES = [
-  { value: "spring", label: "Spring 2026" },
-  { value: "fall", label: "Fall 2026" },
+  { value: "spring", label: "March 2027" },
+  { value: "fall", label: "September 2027" },
   { value: "not_sure", label: "Not sure yet" },
 ];
 const EDUCATION_LEVELS = [
@@ -87,6 +90,8 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
+  const [savingLead, setSavingLead] = useState(false);
+  const [showWhatsApp, setShowWhatsApp] = useState(false);
 
   const handleChange = useCallback((field: keyof FormData, value: string | boolean) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -102,7 +107,8 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
     if (!formData.fullName.trim() || formData.fullName.trim().length < 2) errs.fullName = "Full name is required (min 2 characters)";
     if (formData.fullName.length > 80) errs.fullName = "Name must be under 80 characters";
     if (!formData.phone.trim() || formData.phone.replace(/\D/g, "").length < 10) errs.phone = "Valid phone number required (min 10 digits)";
-    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) errs.email = "Enter a valid email address";
+    if (!formData.email.trim()) errs.email = "Email is required";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) errs.email = "Enter a valid email address";
     if (!formData.programLevel) errs.programLevel = "Please select a program level";
     if (!formData.privacyConsent) errs.privacyConsent = "You must agree to the privacy policy";
     setErrors(errs);
@@ -123,14 +129,36 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
     return Object.keys(errs).length === 0;
   };
 
-  const handleNext = () => {
-    if (validateStep1()) setStep(2);
+  const handleNext = async () => {
+    if (!validateStep1()) return;
+    setSavingLead(true);
+    try {
+      await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          phone: formData.phone,
+          email: formData.email,
+          city: formData.city,
+          programLevel: formData.programLevel,
+          intake: formData.intake,
+          marketingOptIn: formData.marketingOptIn,
+        }),
+      });
+    } catch (err) {
+      console.error("Failed to save lead to Google Sheets:", err);
+    } finally {
+      setSavingLead(false);
+    }
+    setStep(2);
+    setShowWhatsApp(true);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (formData.website) return; // honeypot
-    if (step === 1) { handleNext(); return; }
+    if (step === 1) { await handleNext(); return; }
     if (!validateStep2()) return;
     setSubmitting(true);
     // Simulate submission
@@ -145,6 +173,7 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
   const passingYears = Array.from({ length: 20 }, (_, i) => currentYear - i);
 
   return (
+    <>
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
       {/* Honeypot */}
       <div className="absolute -left-[9999px]" aria-hidden="true">
@@ -177,7 +206,7 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
                 onChange={(e) => handleChange("phone", e.target.value)} className="console-input" />
             </FieldGroup>
 
-            <FieldGroup label="Email" error={errors.email}>
+            <FieldGroup label="Email" error={errors.email} required>
               <input type="email" autoComplete="email" placeholder="you@email.com" value={formData.email}
                 onChange={(e) => handleChange("email", e.target.value)} className="console-input" />
             </FieldGroup>
@@ -302,20 +331,13 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
             ← Back
           </button>
         )}
-        <button type="submit" disabled={submitting}
+        <button type="submit" disabled={submitting || savingLead}
           className="flex-1 relative group overflow-hidden rounded-full p-[2px] active:scale-[0.98] transition-transform">
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary opacity-70 group-hover:opacity-100 transition-opacity duration-500 animate-glow-pulse" />
           <div className="relative bg-console-surface px-8 py-4 rounded-full flex items-center justify-center gap-3">
             <span className="font-bold tracking-wide uppercase text-base">
-              {submitting ? "Submitting..." : step === 1 ? "Next → Education Details" : "Submit Application"}
+              {savingLead ? "Saving..." : submitting ? "Submitting..." : step === 1 ? "Next" : "Submit Application"}
             </span>
-            {!submitting && (
-              <span className="flex gap-1">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
-                <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse [animation-delay:150ms]" />
-                <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse [animation-delay:300ms]" />
-              </span>
-            )}
           </div>
         </button>
       </div>
@@ -324,6 +346,28 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
         {step === 1 ? "Step 2 is optional — you can always provide details later." : "By submitting, you agree to our admissions privacy policy."}
       </p>
     </form>
+
+    <Dialog open={showWhatsApp} onOpenChange={setShowWhatsApp}>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Join Our WhatsApp Group</DialogTitle>
+          <DialogDescription>
+            Get instant updates on scholarships, deadlines, and application tips — connect with fellow applicants and our counselors on WhatsApp.
+          </DialogDescription>
+        </DialogHeader>
+        <DialogFooter>
+          <button type="button" onClick={() => setShowWhatsApp(false)}
+            className="px-6 py-3 rounded-full border border-border text-muted-foreground font-bold text-sm tracking-wider uppercase hover:bg-accent transition-colors">
+            Maybe Later
+          </button>
+          <a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener noreferrer" onClick={() => setShowWhatsApp(false)}
+            className="px-6 py-3 rounded-full bg-primary text-primary-foreground font-bold text-sm tracking-wider uppercase hover:brightness-110 transition-all text-center">
+            Join Now
+          </a>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+    </>
   );
 };
 
