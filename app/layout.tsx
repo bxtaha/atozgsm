@@ -22,22 +22,22 @@ const ogImage =
 
 // TODO: Set the document title to the name of your application
 export const metadata: Metadata = {
-  title: "Lovable App",
-  description: "Lovable Generated Project",
-  authors: [{ name: "Lovable" }],
+  title: "AtoZ GSM",
+  description: "AtoZ GSM Generated Project",
+  authors: [{ name: "AtoZ GSM" }],
   icons: { icon: "/favicon.ico" },
   openGraph: {
     // TODO: Update og:title to match your application name
-    title: "Lovable App",
-    description: "Lovable Generated Project",
+    title: "AtoZ GSM App",
+    description: " Generated Project",
     type: "website",
     images: [ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@Lovable",
-    title: "Lovable App",
-    description: "Lovable Generated Project",
+    site: "@AtoZ GSM",
+    title: "AtoZ GSM App",
+    description: "AtoZ GSM Generated Project",
     images: [ogImage],
   },
 };
