@@ -19,7 +19,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["var(--font-space-grotesk)", "'Space Grotesk'", "sans-serif"],
+        display: ["var(--font-source-serif)", "'Source Serif 4'", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -31,6 +31,7 @@ export default {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        "primary-text": "hsl(var(--primary-text))",
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -55,11 +56,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "console-base": "hsl(var(--console-base))",
         "console-surface": "hsl(var(--console-surface))",
-        "console-key": "hsl(var(--console-key))",
-        "glow-mint": "hsl(var(--glow-mint))",
-        "glow-pink": "hsl(var(--glow-pink))",
         "text-dim": "hsl(var(--text-dim))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

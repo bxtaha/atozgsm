@@ -4,42 +4,43 @@
 
 @layer base {
   :root {
-    --background: 230 20% 4%;
-    --foreground: 0 0% 100%;
+    --background: 40 45% 96%;
+    --foreground: 220 43% 11%;
 
-    --card: 230 16% 8%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 43% 11%;
 
-    --popover: 230 16% 8%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 43% 11%;
 
-    --primary: 160 100% 48%;
-    --primary-foreground: 230 20% 4%;
+    --primary: 46 65% 52%;
+    --primary-foreground: 214 68% 14%;
+    /* Darker gold for use as TEXT directly on light/white/cream backgrounds
+       (the --primary accent fails WCAG AA contrast as text on light bg —
+       see stats/badges/hover-links). Verified: 4.90:1 vs --background,
+       5.27:1 vs #ffffff (both above the 4.5:1 AA threshold). */
+    --primary-text: 46 70% 30%;
 
-    --secondary: 330 100% 63%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 214 68% 14%;
+    --secondary-foreground: 40 45% 96%;
 
-    --muted: 230 14% 12%;
-    --muted-foreground: 228 12% 60%;
+    --muted: 40 30% 93%;
+    --muted-foreground: 221 13% 46%;
 
-    --accent: 230 14% 15%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 40 40% 92%;
+    --accent-foreground: 214 68% 14%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 100% / 0.05;
-    --input: 230 14% 15%;
-    --ring: 160 100% 48%;
+    --border: 220 20% 88%;
+    --input: 40 30% 95%;
+    --ring: 46 65% 52%;
 
     --radius: 1rem;
 
-    --console-base: 230 20% 4%;
-    --console-surface: 230 16% 10%;
-    --console-key: 230 14% 15%;
-    --glow-mint: 160 100% 48%;
-    --glow-pink: 336 100% 56%;
-    --text-dim: 228 12% 60%;
+    --console-surface: 0 0% 100%;
+    --text-dim: 221 13% 46%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -59,7 +60,7 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
+    font-family: var(--font-work-sans), 'Work Sans', sans-serif;
   }
 }
 
@@ -68,24 +69,70 @@
     @apply w-full bg-accent text-foreground px-5 py-4 rounded-2xl outline-none border border-transparent transition-all duration-300;
   }
   .console-input:focus {
-    @apply border-primary/50 bg-muted shadow-[0_0_20px_hsl(var(--primary)/0.15)];
-  }
-  .console-input-pink:focus {
-    @apply border-secondary/50 bg-muted shadow-[0_0_20px_hsl(var(--secondary)/0.15)];
+    @apply border-secondary bg-muted shadow-[0_0_20px_hsl(var(--primary)/0.15)];
   }
   .console-label {
     @apply text-[10px] font-bold tracking-widest text-muted-foreground uppercase transition-colors;
   }
 }
 
-@layer utilities {
-  .glow-mint {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
-  }
-  .glow-pink {
-    box-shadow: 0 0 20px hsl(var(--secondary) / 0.3);
-  }
+/* GlowCard spotlight/border pseudo-elements (components/ui/spotlight-card.tsx).
+   Static, prop-independent CSS — lives here once instead of being injected
+   as a duplicate <style> tag by every GlowCard instance. */
+[data-glow]::before,
+[data-glow]::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: calc(var(--border-size) * -1);
+  border: var(--border-size) solid transparent;
+  border-radius: calc(var(--radius) * 1px);
+  background-attachment: fixed;
+  background-size: calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size)));
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  mask: linear-gradient(transparent, transparent), linear-gradient(white, white);
+  mask-clip: padding-box, border-box;
+  mask-composite: intersect;
 }
+
+[data-glow]::before {
+  background-image: radial-gradient(
+    calc(var(--spotlight-size) * 0.75) calc(var(--spotlight-size) * 0.75) at
+    calc(var(--x, 0) * 1px)
+    calc(var(--y, 0) * 1px),
+    hsl(var(--hue, 210) calc(var(--saturation, 100) * 1%) calc(var(--lightness, 50) * 1%) / var(--border-spot-opacity, 1)), transparent 100%
+  );
+  filter: brightness(2);
+}
+
+[data-glow]::after {
+  background-image: radial-gradient(
+    calc(var(--spotlight-size) * 0.5) calc(var(--spotlight-size) * 0.5) at
+    calc(var(--x, 0) * 1px)
+    calc(var(--y, 0) * 1px),
+    hsl(0 100% 100% / var(--border-light-opacity, 1)), transparent 100%
+  );
+}
+
+[data-glow] [data-glow] {
+  position: absolute;
+  inset: 0;
+  will-change: filter;
+  opacity: var(--outer, 1);
+  border-radius: calc(var(--radius) * 1px);
+  border-width: calc(var(--border-size) * 20);
+  filter: blur(calc(var(--border-size) * 10));
+  background: none;
+  pointer-events: none;
+  border: none;
+}
+
+[data-glow] > [data-glow]::before {
+  inset: -10px;
+  border-width: 10px;
+}
+
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

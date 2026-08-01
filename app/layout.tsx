@@ -1,13 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Source_Serif_4, Work_Sans } from "next/font/google";
 import { Providers } from "./providers";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  display: "swap",
+  variable: "--font-source-serif",
+});
+
+const workSans = Work_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
-  variable: "--font-space-grotesk",
+  variable: "--font-work-sans",
 });
 
 const ogImage =
@@ -44,7 +51,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={spaceGrotesk.variable}>
+    <html lang="en" className={`${sourceSerif.variable} ${workSans.variable}`}>
       <body>
         <Providers>{children}</Providers>
       </body>

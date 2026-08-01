@@ -1,0 +1,412 @@
+"use client";
+
+import React, { useEffect, useRef, useCallback } from "react";
+
+// --- Types ---
+
+interface Particle {
+  x: number;
+  y: number;
+  originX: number;
+  originY: number;
+  vx: number;
+  vy: number;
+  size: number;
+  color: string;
+  angle: number; // For some organic oscillation
+}
+
+interface BackgroundParticle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+  alpha: number;
+  phase: number;
+}
+
+interface MouseState {
+  x: number;
+  y: number;
+  isActive: boolean;
+}
+
+// --- Configuration Constants ---
+
+const PARTICLE_DENSITY = 0.00015; // Particles per pixel squared (adjust for density)
+const BG_PARTICLE_DENSITY = 0.00005; // Less dense for background
+const MAX_PARTICLES = 250; // Safety cap for very large/high-density viewports (e.g. 4K monitors)
+const MOUSE_RADIUS = 180; // Radius of mouse influence
+const RETURN_SPEED = 0.08; // How fast particles fly back to origin (spring constant)
+const DAMPING = 0.9; // Friction (velocity decay)
+const REPULSION_STRENGTH = 1.2; // Multiplier for mouse push force
+
+// --- Helper Functions ---
+
+const randomRange = (min: number, max: number) => Math.random() * (max - min) + min;
+
+// --- Components ---
+
+/**
+ * Interactive particle field: a physics-based canvas layer (spring-return +
+ * mouse repulsion + elastic collisions) meant to sit as an absolutely
+ * positioned overlay inside a `relative` container. Transparent background —
+ * layer it over existing imagery/color rather than using it standalone.
+ *
+ * `accentColor`/`glowColor` are consumed directly as Canvas 2D `fillStyle`
+ * values (raw strings, `rgba(${glowColor}, ...)` for glowColor). Canvas
+ * fillStyle does NOT resolve CSS custom properties (`var(--x)` silently
+ * fails to parse and falls back to black), so these can't reference
+ * `--primary` via `hsl(var(--primary))` the way a DOM/CSS color could.
+ * They're the RGB/hex equivalent of `--primary` (46 65% 52% ≈ #d4af37 ≈
+ * rgb(212, 175, 55)) kept as literal values for that reason — if `--primary`
+ * is retuned later, these two defaults need a matching manual update.
+ */
+export const AntiGravityCanvas: React.FC<{ accentColor?: string; glowColor?: string }> = ({
+  accentColor = "#d4af37",
+  glowColor = "212, 175, 55",
+}) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Mutable state refs to avoid re-renders during animation loop
+  const particlesRef = useRef<Particle[]>([]);
+  const backgroundParticlesRef = useRef<BackgroundParticle[]>([]);
+  const mouseRef = useRef<MouseState>({ x: -1000, y: -1000, isActive: false });
+  const frameIdRef = useRef<number>(0);
+  // CSS-pixel dimensions (as opposed to canvas.width/height, which are
+  // device pixels once scaled by devicePixelRatio — see handleResize).
+  const dimensionsRef = useRef({ width: 0, height: 0 });
+
+  // Initialize Particles
+  const initParticles = useCallback(
+    (width: number, height: number) => {
+      // 1. Main Interactive Particles
+      const particleCount = Math.min(Math.floor(width * height * PARTICLE_DENSITY), MAX_PARTICLES);
+      const newParticles: Particle[] = [];
+
+      for (let i = 0; i < particleCount; i++) {
+        const x = Math.random() * width;
+        const y = Math.random() * height;
+
+        newParticles.push({
+          x: x,
+          y: y,
+          originX: x,
+          originY: y,
+          vx: 0,
+          vy: 0,
+          size: randomRange(1, 2.5),
+          color: Math.random() > 0.9 ? accentColor : "#ffffff",
+          angle: Math.random() * Math.PI * 2,
+        });
+      }
+      particlesRef.current = newParticles;
+
+      // 2. Background Ambient Particles (Stars/Dust)
+      const bgCount = Math.floor(width * height * BG_PARTICLE_DENSITY);
+      const newBgParticles: BackgroundParticle[] = [];
+
+      for (let i = 0; i < bgCount; i++) {
+        newBgParticles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.2, // Very slow drift
+          vy: (Math.random() - 0.5) * 0.2,
+          size: randomRange(0.5, 1.5),
+          alpha: randomRange(0.1, 0.4),
+          phase: Math.random() * Math.PI * 2, // For twinkling offset
+        });
+      }
+      backgroundParticlesRef.current = newBgParticles;
+    },
+    [accentColor],
+  );
+
+  // Animation Loop
+  const animate = useCallback(
+    (time: number) => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+
+      // All drawing below operates in CSS-pixel space (the transform set in
+      // handleResize maps that to device pixels), so bounds/centers must use
+      // the CSS-pixel dimensions, not canvas.width/height (device pixels).
+      const { width: cssWidth, height: cssHeight } = dimensionsRef.current;
+
+      // Clear Canvas
+      ctx.clearRect(0, 0, cssWidth, cssHeight);
+
+      // --- Background Effects ---
+
+      // 1. Pulsating Radial Glow
+      const centerX = cssWidth / 2;
+      const centerY = cssHeight / 2;
+      const pulseSpeed = 0.0008;
+      // Oscillates between 0.05 and 0.12 opacity
+      const pulseOpacity = Math.sin(time * pulseSpeed) * 0.035 + 0.085;
+
+      const gradient = ctx.createRadialGradient(
+        centerX,
+        centerY,
+        0,
+        centerX,
+        centerY,
+        Math.max(cssWidth, cssHeight) * 0.7,
+      );
+      gradient.addColorStop(0, `rgba(${glowColor}, ${pulseOpacity})`);
+      gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
+
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, cssWidth, cssHeight);
+
+      // 2. Background Particles (Drifting Stars)
+      const bgParticles = backgroundParticlesRef.current;
+      ctx.fillStyle = "#ffffff";
+
+      for (let i = 0; i < bgParticles.length; i++) {
+        const p = bgParticles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+
+        // Wrap around screen
+        if (p.x < 0) p.x = cssWidth;
+        if (p.x > cssWidth) p.x = 0;
+        if (p.y < 0) p.y = cssHeight;
+        if (p.y > cssHeight) p.y = 0;
+
+        // Twinkle effect
+        const twinkle = Math.sin(time * 0.002 + p.phase) * 0.5 + 0.5; // 0 to 1
+        const currentAlpha = p.alpha * (0.3 + 0.7 * twinkle);
+
+        ctx.globalAlpha = currentAlpha;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1.0; // Reset alpha for foreground
+
+      // --- Main Foreground Physics ---
+
+      const particles = particlesRef.current;
+      const mouse = mouseRef.current;
+
+      // Phase 1: Apply Forces (Mouse & Spring)
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+
+        // 1. Calculate Distance to Mouse
+        const dx = mouse.x - p.x;
+        const dy = mouse.y - p.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        // 2. Mouse Repulsion Force
+        if (mouse.isActive && distance < MOUSE_RADIUS) {
+          const forceDirectionX = dx / distance;
+          const forceDirectionY = dy / distance;
+          const force = (MOUSE_RADIUS - distance) / MOUSE_RADIUS;
+
+          const repulsion = force * REPULSION_STRENGTH;
+          p.vx -= forceDirectionX * repulsion * 5;
+          p.vy -= forceDirectionY * repulsion * 5;
+        }
+
+        // 3. Spring Force (Return to Origin)
+        const springDx = p.originX - p.x;
+        const springDy = p.originY - p.y;
+
+        p.vx += springDx * RETURN_SPEED;
+        p.vy += springDy * RETURN_SPEED;
+      }
+
+      // Phase 2: Resolve Collisions
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const p1 = particles[i];
+          const p2 = particles[j];
+
+          const dx = p2.x - p1.x;
+          const dy = p2.y - p1.y;
+          const distSq = dx * dx + dy * dy;
+          const minDist = p1.size + p2.size;
+
+          if (distSq < minDist * minDist) {
+            const dist = Math.sqrt(distSq);
+
+            if (dist > 0.01) {
+              // Avoid division by zero
+              const nx = dx / dist; // Normal X
+              const ny = dy / dist; // Normal Y
+
+              // Static Resolution: Push particles apart so they don't overlap
+              const overlap = minDist - dist;
+              const pushX = nx * overlap * 0.5;
+              const pushY = ny * overlap * 0.5;
+
+              p1.x -= pushX;
+              p1.y -= pushY;
+              p2.x += pushX;
+              p2.y += pushY;
+
+              // Dynamic Resolution: Elastic Collision
+              const dvx = p1.vx - p2.vx;
+              const dvy = p1.vy - p2.vy;
+
+              const velocityAlongNormal = dvx * nx + dvy * ny;
+
+              // Only bounce if they are moving towards each other
+              if (velocityAlongNormal > 0) {
+                const m1 = p1.size; // Use size as mass proxy
+                const m2 = p2.size;
+                const restitution = 0.85; // Bounciness (1 is perfectly elastic)
+
+                const impulseMagnitude = (-(1 + restitution) * velocityAlongNormal) / (1 / m1 + 1 / m2);
+
+                const impulseX = impulseMagnitude * nx;
+                const impulseY = impulseMagnitude * ny;
+
+                p1.vx += impulseX / m1;
+                p1.vy += impulseY / m1;
+                p2.vx -= impulseX / m2;
+                p2.vy -= impulseY / m2;
+              }
+            }
+          }
+        }
+      }
+
+      // Phase 3: Integration & Drawing
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+
+        // Physics Update
+        p.vx *= DAMPING;
+        p.vy *= DAMPING;
+
+        p.x += p.vx;
+        p.y += p.vy;
+
+        // Drawing
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+
+        const velocity = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+        const opacity = Math.min(0.3 + velocity * 0.1, 1);
+
+        ctx.fillStyle = p.color === "#ffffff" ? `rgba(255, 255, 255, ${opacity})` : p.color;
+
+        ctx.fill();
+      }
+
+      frameIdRef.current = requestAnimationFrame(animate);
+    },
+    [glowColor],
+  );
+
+  // Resize Handler
+  useEffect(() => {
+    const handleResize = () => {
+      if (containerRef.current && canvasRef.current) {
+        const { width, height } = containerRef.current.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+
+        dimensionsRef.current = { width, height };
+
+        // Set actual size in memory (scaled to account for extra pixel density)
+        canvasRef.current.width = width * dpr;
+        canvasRef.current.height = height * dpr;
+
+        // Make it visible size
+        canvasRef.current.style.width = `${width}px`;
+        canvasRef.current.style.height = `${height}px`;
+
+        // Normalize coordinate system to use CSS pixels. Use setTransform
+        // (absolute) rather than scale (relative/multiplicative) — scale()
+        // would compound on every subsequent resize/orientation change and
+        // progressively distort the rendering.
+        const ctx = canvasRef.current.getContext("2d");
+        if (ctx) ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        // Re-init particles for new dimensions
+        initParticles(width, height);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Initial call
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [initParticles]);
+
+  // Start Animation — respects prefers-reduced-motion and pauses while the
+  // hero is scrolled off-screen.
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      return;
+    }
+
+    const start = () => {
+      if (!frameIdRef.current) {
+        frameIdRef.current = requestAnimationFrame(animate);
+      }
+    };
+    const stop = () => {
+      if (frameIdRef.current) {
+        cancelAnimationFrame(frameIdRef.current);
+        frameIdRef.current = 0;
+      }
+    };
+
+    start();
+
+    let observer: IntersectionObserver | null = null;
+    if (containerRef.current && "IntersectionObserver" in window) {
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            start();
+          } else {
+            stop();
+          }
+        },
+        { threshold: 0 },
+      );
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      stop();
+      observer?.disconnect();
+    };
+  }, [animate]);
+
+  // Mouse Handlers
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    mouseRef.current = {
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+      isActive: true,
+    };
+  };
+
+  const handleMouseLeave = () => {
+    mouseRef.current.isActive = false;
+  };
+
+  return (
+    <div
+      ref={containerRef}
+      className="absolute inset-0 overflow-hidden pointer-events-auto"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <canvas ref={canvasRef} className="block w-full h-full" />
+    </div>
+  );
+};
