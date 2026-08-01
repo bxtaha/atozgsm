@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
+import { toast } from "@/components/ui/sonner";
 
 const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/GBCNtHwgvsk6uty5uWYdxk?s=hd&p=i&ilr=4&amv=2";
 
@@ -75,6 +76,14 @@ const EDUCATION_LEVELS = [
 const MAJORS = ["MBBS / Medicine", "Engineering", "Business / MBA", "Computer Science / IT", "Language (Chinese)", "Other"];
 const BUDGETS = ["Below $3,000/yr", "$3,000–$6,000/yr", "$6,000–$10,000/yr", "Above $10,000/yr", "Not sure"];
 
+function notifyValidationErrors(errs: Record<string, string>) {
+  const messages = Object.values(errs);
+  if (messages.length === 0) return;
+  toast.error(messages.length === 1 ? messages[0] : "Please fix the following before continuing", {
+    description: messages.length > 1 ? messages.join(" · ") : undefined,
+  });
+}
+
 function computeAge(dob: string): number | null {
   if (!dob) return null;
   const birth = new Date(dob);
@@ -90,7 +99,6 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
-  const [savingLead, setSavingLead] = useState(false);
   const [showWhatsApp, setShowWhatsApp] = useState(false);
 
   const handleChange = useCallback((field: keyof FormData, value: string | boolean) => {
@@ -102,7 +110,7 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
     });
   }, []);
 
-  const validateStep1 = (): boolean => {
+  const validateStep1 = (): Record<string, string> => {
     const errs: Record<string, string> = {};
     if (!formData.fullName.trim() || formData.fullName.trim().length < 2) errs.fullName = "Full name is required (min 2 characters)";
     if (formData.fullName.length > 80) errs.fullName = "Name must be under 80 characters";
@@ -112,10 +120,10 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
     if (!formData.programLevel) errs.programLevel = "Please select a program level";
     if (!formData.privacyConsent) errs.privacyConsent = "You must agree to the privacy policy";
     setErrors(errs);
-    return Object.keys(errs).length === 0;
+    return errs;
   };
 
-  const validateStep2 = (): boolean => {
+  const validateStep2 = (): Record<string, string> => {
     const errs: Record<string, string> = {};
     if (formData.dob) {
       const age = computeAge(formData.dob);
@@ -126,40 +134,46 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
     if (!formData.educationExperience.trim() || formData.educationExperience.trim().length < 20)
       errs.educationExperience = "Please describe your education (min 20 characters)";
     setErrors(errs);
-    return Object.keys(errs).length === 0;
+    return errs;
   };
 
-  const handleNext = async () => {
-    if (!validateStep1()) return;
-    setSavingLead(true);
-    try {
-      await fetch("/api/lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          fullName: formData.fullName,
-          phone: formData.phone,
-          email: formData.email,
-          city: formData.city,
-          programLevel: formData.programLevel,
-          intake: formData.intake,
-          marketingOptIn: formData.marketingOptIn,
-        }),
-      });
-    } catch (err) {
-      console.error("Failed to save lead to Google Sheets:", err);
-    } finally {
-      setSavingLead(false);
+  const handleNext = () => {
+    const errs = validateStep1();
+    if (Object.keys(errs).length > 0) {
+      notifyValidationErrors(errs);
+      return;
     }
+
+    // Advance immediately — the Google Sheets write can take several
+    // seconds (Apps Script cold start) and must never block the user
+    // from moving to step 2. Fire-and-forget in the background instead.
+    fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        fullName: formData.fullName,
+        phone: formData.phone,
+        email: formData.email,
+        city: formData.city,
+        programLevel: formData.programLevel,
+        intake: formData.intake,
+        marketingOptIn: formData.marketingOptIn,
+      }),
+    }).catch((err) => console.error("Failed to save lead to Google Sheets:", err));
+
     setStep(2);
     setShowWhatsApp(true);
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (formData.website) return; // honeypot
-    if (step === 1) { await handleNext(); return; }
-    if (!validateStep2()) return;
+    if (step === 1) { handleNext(); return; }
+    const errs = validateStep2();
+    if (Object.keys(errs).length > 0) {
+      notifyValidationErrors(errs);
+      return;
+    }
     setSubmitting(true);
     // Simulate submission
     setTimeout(() => {
@@ -331,12 +345,12 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
             ← Back
           </button>
         )}
-        <button type="submit" disabled={submitting || savingLead}
+        <button type="submit" disabled={submitting}
           className="flex-1 relative group overflow-hidden rounded-full p-[2px] active:scale-[0.98] transition-transform">
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary opacity-70 group-hover:opacity-100 transition-opacity duration-500 animate-glow-pulse" />
           <div className="relative bg-console-surface px-8 py-4 rounded-full flex items-center justify-center gap-3">
             <span className="font-bold tracking-wide uppercase text-base">
-              {savingLead ? "Saving..." : submitting ? "Submitting..." : step === 1 ? "Next" : "Submit Application"}
+              {submitting ? "Submitting..." : step === 1 ? "Next" : "Submit Application"}
             </span>
           </div>
         </button>
