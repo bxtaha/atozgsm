@@ -76,7 +76,7 @@ original exactly. Swapping in `next/image` later would add automatic optimisatio
 
 ### Removed dependencies
 
-`vite`, `@vitejs/plugin-react-swc`, `lovable-tagger`, `react-router-dom`.
+`vite`, `@vitejs/plugin-react-swc`, `AtoZ-GSM-tagger`, `react-router-dom`.
 Added: `next`, `eslint-config-next`.
 
 ## Deploying
