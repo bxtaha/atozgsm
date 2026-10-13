@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Source_Serif_4, Work_Sans } from "next/font/google";
+import Script from "next/script";
 import { Providers } from "./providers";
 import "./globals.css";
 
@@ -54,6 +55,11 @@ export default function RootLayout({
     <html lang="en" className={`${sourceSerif.variable} ${workSans.variable}`}>
       <body>
         <Providers>{children}</Providers>
+        <Script
+          src="https://bluex.agency/embed/v1/widget.js"
+          data-key="bx_pk_live_a68fc14b6ece9fc1e57a41c8581ffa6d"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
