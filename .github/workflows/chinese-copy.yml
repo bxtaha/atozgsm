@@ -7,7 +7,12 @@ permissions:
 jobs:
   translate:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        part: [0, 1, 2, 3]
+    env:
+      COPY_PART: ${{ matrix.part }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -18,5 +23,5 @@ jobs:
       - run: python .translation-build/translate.py
       - uses: actions/upload-artifact@v4
         with:
-          name: chinese-copy
-          path: zh-CN.json
+          name: chinese-copy-${{ matrix.part }}
+          path: zh-CN-${{ matrix.part }}.json
