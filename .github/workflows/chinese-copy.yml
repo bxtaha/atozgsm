@@ -1,27 +1,14 @@
-name: Generate Chinese copy
+name: Probe alternative translation
 on:
   push:
     branches: [codex/chinese-copy-build]
-permissions:
-  contents: read
 jobs:
-  translate:
+  probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-    strategy:
-      matrix:
-        part: [0, 1, 2, 3]
-    env:
-      COPY_PART: ${{ matrix.part }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install 'torch==2.7.1' --index-url https://download.pytorch.org/whl/cpu
-      - run: pip install 'transformers==4.53.3' sentencepiece sacremoses
-      - run: python .translation-build/translate.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: chinese-copy-${{ matrix.part }}
-          path: zh-CN-${{ matrix.part }}.json
+      - run: |
+          for url in             'https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=en&tl=zh-CN&q=Get%20my%20brief'             'https://translate.google.com/translate_a/single?client=gtx&sl=en&tl=zh-CN&dt=t&q=Get%20my%20brief'             'https://translate.google.com/m?sl=en&tl=zh-CN&q=Get%20my%20brief'             'https://api.mymemory.translated.net/get?q=Get%20my%20brief&langpair=en%7Czh-CN'             'https://translate.googleapis.com/translate_a/t?client=te_lib&sl=en&tl=zh-CN&q=Get%20my%20brief'; do
+            echo "$url"
+            curl -sSL --max-time 8 "$url" | head -c 350
+            echo
+          done
