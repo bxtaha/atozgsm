@@ -1,0 +1,13 @@
+name: Generate Chinese copy
+on:
+  push:
+    branches: [codex/chinese-copy-build]
+permissions:
+  contents: read
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          curl -fsSG --max-time 20 https://translate.googleapis.com/translate_a/single --data-urlencode client=gtx --data-urlencode sl=en --data-urlencode tl=zh-CN --data-urlencode dt=t --data-urlencode 'q=Practice Chinese'
