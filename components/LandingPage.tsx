@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Video } from "lucide-react";
+import { MobileNav } from "@/components/layout/MobileNav";
 import HeroBanner from "@/components/landing/HeroBanner";
 import HeroSection from "@/components/landing/HeroSection";
 import StatsBar from "@/components/landing/StatsBar";
@@ -16,6 +17,15 @@ import FAQSection from "@/components/landing/FAQSection";
 import ContactSection from "@/components/landing/ContactSection";
 import FooterSection from "@/components/landing/FooterSection";
 
+const NAV = [
+  { href: "/universities", label: "Universities" },
+  { href: "/ai-advisor", label: "AI Advisor" },
+  { href: "/blog", label: "Guides" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "#faq", label: "FAQ" },
+  { href: "#contact", label: "Contact" },
+];
+
 const LandingPage = () => {
   const router = useRouter();
 
@@ -26,17 +36,19 @@ const LandingPage = () => {
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
           <span className="font-display font-bold tracking-tight text-lg text-secondary">🎓 AtoZGSM</span>
           <div className="hidden md:flex items-center gap-6 text-xs font-bold tracking-wider uppercase text-muted-foreground">
-            <Link href="/universities" className="hover:text-primary-text transition-colors">Universities</Link>
-            <Link href="/ai-advisor" className="hover:text-primary-text transition-colors">AI Advisor</Link>
-            <Link href="/blog" className="hover:text-primary-text transition-colors">Guides</Link>
-            <Link href="/pricing" className="hover:text-primary-text transition-colors">Pricing</Link>
-            <a href="#faq" className="hover:text-primary-text transition-colors">FAQ</a>
-            <a href="#contact" className="hover:text-primary-text transition-colors">Contact</a>
+            {NAV.map(({ href, label }) => (
+              <Link key={href} href={href} className="hover:text-primary-text transition-colors">
+                {label}
+              </Link>
+            ))}
           </div>
-          <a href="#apply" className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-bold tracking-wider uppercase hover:brightness-110 transition-all">
-            <Video className="w-3.5 h-3.5" />
-            Book Now
-          </a>
+          <div className="flex items-center gap-2">
+            <a href="#apply" className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-bold tracking-wider uppercase hover:brightness-110 transition-all">
+              <Video className="w-3.5 h-3.5" />
+              Book Now
+            </a>
+            <MobileNav links={NAV} />
+          </div>
         </div>
       </nav>
 

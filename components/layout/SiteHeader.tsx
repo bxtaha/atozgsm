@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { LayoutDashboard, Video } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth/session";
+import { MobileNav } from "@/components/layout/MobileNav";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { Wordmark } from "@/components/layout/Wordmark";
 
@@ -15,6 +16,9 @@ const NAV = [
 
 export const SiteHeader = () => {
   const user = getCurrentUser();
+  const accountLinks = user
+    ? [{ href: "/dashboard", label: "Dashboard" }]
+    : [{ href: "/login", label: "Log in" }, { href: "/signup", label: "Create account" }];
 
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-xl">
@@ -36,7 +40,7 @@ export const SiteHeader = () => {
           {user ? (
             <Link
               href="/dashboard"
-              className="flex items-center gap-1.5 rounded-full bg-secondary px-4 py-2 text-xs font-bold uppercase tracking-wider text-secondary-foreground transition-all hover:brightness-125"
+              className="hidden items-center gap-1.5 rounded-full bg-secondary px-4 py-2 text-xs font-bold uppercase tracking-wider text-secondary-foreground transition-all hover:brightness-125 md:flex"
             >
               <LayoutDashboard className="h-3.5 w-3.5" />
               Dashboard
@@ -45,13 +49,13 @@ export const SiteHeader = () => {
             <>
               <Link
                 href="/login"
-                className="hidden text-xs font-bold uppercase tracking-wider text-muted-foreground transition-colors hover:text-primary-text sm:block"
+                className="hidden text-xs font-bold uppercase tracking-wider text-muted-foreground transition-colors hover:text-primary-text md:block"
               >
                 Log in
               </Link>
               <Link
                 href="/signup"
-                className="rounded-full bg-secondary px-4 py-2 text-xs font-bold uppercase tracking-wider text-secondary-foreground transition-all hover:brightness-125"
+                className="hidden rounded-full bg-secondary px-4 py-2 text-xs font-bold uppercase tracking-wider text-secondary-foreground transition-all hover:brightness-125 md:block"
               >
                 Create account
               </Link>
@@ -65,6 +69,7 @@ export const SiteHeader = () => {
             <Video className="h-3.5 w-3.5" />
             Book
           </Link>
+          <MobileNav links={[...NAV, ...accountLinks]} />
         </div>
       </div>
     </nav>
