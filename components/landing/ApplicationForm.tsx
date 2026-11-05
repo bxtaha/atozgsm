@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
 import { toast } from "@/components/ui/sonner";
+import { trackEvent } from "@/lib/analytics/meta-pixel";
 
 const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/GBCNtHwgvsk6uty5uWYdxk?s=hd&p=i&ilr=4&amv=2";
 
@@ -100,6 +101,7 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
   const [showWhatsApp, setShowWhatsApp] = useState(false);
+  const leadTracked = useRef(false);
 
   const handleChange = useCallback((field: keyof FormData, value: string | boolean) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -147,10 +149,15 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
     // Advance immediately — the Google Sheets write can take several
     // seconds (Apps Script cold start) and must never block the user
     // from moving to step 2. Fire-and-forget in the background instead.
+    // One id shared by the browser pixel and the server-side Conversions API
+    // event, so Meta counts this lead once rather than twice.
+    const eventId = crypto.randomUUID();
+
     fetch("/api/lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        eventId,
         fullName: formData.fullName,
         phone: formData.phone,
         email: formData.email,
@@ -159,7 +166,18 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
         intake: formData.intake,
         marketingOptIn: formData.marketingOptIn,
       }),
-    }).catch((err) => console.error("Failed to save lead to Google Sheets:", err));
+    })
+      .then(async (res) => {
+        const body = await res.json().catch(() => null);
+        // Only report a Lead once the lead was actually stored — firing on the
+        // click would report leads that were never saved, and Meta would
+        // optimise the ad spend against a number that isn't real.
+        if (res.ok && body?.ok === true && !leadTracked.current) {
+          leadTracked.current = true;
+          trackEvent("Lead", { study_level: formData.programLevel || "unspecified" }, eventId);
+        }
+      })
+      .catch((err) => console.error("Failed to save lead to Google Sheets:", err));
 
     setStep(2);
     setShowWhatsApp(true);
@@ -175,11 +193,34 @@ const ApplicationForm = ({ onSuccess }: { onSuccess?: () => void }) => {
       return;
     }
     setSubmitting(true);
-    // Simulate submission
-    setTimeout(() => {
-      setSubmitting(false);
-      onSuccess?.();
-    }, 1500);
+    fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        step: 2,
+        fullName: formData.fullName,
+        phone: formData.phone,
+        email: formData.email,
+        city: formData.city,
+        programLevel: formData.programLevel,
+        intake: formData.intake,
+        marketingOptIn: formData.marketingOptIn,
+        dob: formData.dob,
+        lastPassingYear: formData.lastPassingYear,
+        lastEducationLevel: formData.lastEducationLevel,
+        lastEducationInstitution: formData.lastEducationInstitution,
+        gpa: formData.gpa,
+        educationExperience: formData.educationExperience,
+        otherExperiences: formData.otherExperiences,
+        preferredMajor: formData.preferredMajor,
+        budgetRange: formData.budgetRange,
+      }),
+    })
+      .catch((err) => console.error("Failed to save application details:", err))
+      .finally(() => {
+        setSubmitting(false);
+        onSuccess?.();
+      });
   };
 
   const age = computeAge(formData.dob);

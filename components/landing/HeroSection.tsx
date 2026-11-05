@@ -1,4 +1,5 @@
 import campusHero from "@/assets/campus-hero.jpg";
+import { trustStats } from "@/lib/site-config";
 
 const StatBar = ({ label, value, percentage, color }: { label: string; value: string; percentage: number; color: "mint" | "pink" }) => (
   <div className="space-y-2">
@@ -53,9 +54,9 @@ const HeroSection = () => (
     </div>
 
     <div className="mt-8 space-y-4 relative z-10">
-      <StatBar label="~20,000 BD Students in China" value="REPORTED" percentage={85} color="mint" />
-      <StatBar label="Scholarship Success Rate" value="92%" percentage={92} color="pink" />
-      <StatBar label="Visa Approval Rate" value="97%" percentage={97} color="mint" />
+      <StatBar label={trustStats[0].label} value="REPORTED" percentage={85} color="mint" />
+      <StatBar label="Scholarship Success Rate" value={trustStats[1].value} percentage={parseInt(trustStats[1].value)} color="pink" />
+      <StatBar label="Visa Approval Rate" value={trustStats[2].value} percentage={parseInt(trustStats[2].value)} color="mint" />
     </div>
   </div>
 );

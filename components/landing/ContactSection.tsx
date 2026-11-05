@@ -1,12 +1,13 @@
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { GlowCard } from "@/components/ui/spotlight-card";
+import { contactInfo } from "@/lib/site-config";
 
 const contacts = [
-  { icon: MapPin, label: "Office Address", value: "House 12, Road 5, Block C, Banani, Dhaka 1213, Bangladesh" },
-  { icon: Phone, label: "Phone", value: "+880 1XXX-XXXXXX", href: "tel:+8801XXXXXXXXX" },
-  { icon: MessageCircle, label: "WhatsApp", value: "+880 1XXX-XXXXXX", href: "https://wa.me/8801XXXXXXXXX" },
-  { icon: Mail, label: "Email", value: "admissions@example.com", href: "mailto:admissions@example.com" },
-  { icon: Clock, label: "Working Hours", value: "Sat–Thu: 10:00 AM – 7:00 PM" },
+  { icon: MapPin, label: "Office Address", value: contactInfo.address },
+  { icon: Phone, label: "Phone", value: contactInfo.phoneDisplay, href: contactInfo.phoneHref },
+  { icon: MessageCircle, label: "WhatsApp", value: contactInfo.whatsappDisplay, href: contactInfo.whatsappHref },
+  { icon: Mail, label: "Email", value: contactInfo.email, href: `mailto:${contactInfo.email}` },
+  { icon: Clock, label: "Working Hours", value: contactInfo.workingHours },
 ];
 
 const ContactSection = () => (
