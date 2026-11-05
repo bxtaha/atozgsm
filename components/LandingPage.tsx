@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Video } from "lucide-react";
 import HeroBanner from "@/components/landing/HeroBanner";
@@ -25,10 +26,10 @@ const LandingPage = () => {
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
           <span className="font-display font-bold tracking-tight text-lg text-secondary">🎓 ChinaAdmit</span>
           <div className="hidden md:flex items-center gap-6 text-xs font-bold tracking-wider uppercase text-muted-foreground">
-            <a href="#benefits" className="hover:text-primary-text transition-colors">Benefits</a>
-            <a href="#programs" className="hover:text-primary-text transition-colors">Programs</a>
-            <a href="#process" className="hover:text-primary-text transition-colors">Process</a>
-            <a href="#testimonials" className="hover:text-primary-text transition-colors">Stories</a>
+            <Link href="/universities" className="hover:text-primary-text transition-colors">Universities</Link>
+            <Link href="/ai-advisor" className="hover:text-primary-text transition-colors">AI Advisor</Link>
+            <Link href="/blog" className="hover:text-primary-text transition-colors">Guides</Link>
+            <Link href="/pricing" className="hover:text-primary-text transition-colors">Pricing</Link>
             <a href="#faq" className="hover:text-primary-text transition-colors">FAQ</a>
             <a href="#contact" className="hover:text-primary-text transition-colors">Contact</a>
           </div>

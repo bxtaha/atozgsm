@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { contactInfo } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Privacy Notice",
@@ -20,7 +21,7 @@ const Privacy = () => (
         <p><strong className="text-foreground">How we use it:</strong> Your data is used to contact you, prepare your application, and share relevant details with partner universities and visa processing entities as required for your admission.</p>
         <p><strong className="text-foreground">Who we share with:</strong> Chinese universities you apply to, visa processing partners, and scholarship bodies — only as needed for your application.</p>
         <p><strong className="text-foreground">Retention:</strong> We retain your data for the duration of the admissions process and up to 2 years afterward, unless you request earlier deletion.</p>
-        <p><strong className="text-foreground">Your rights:</strong> You may request access to, correction of, or deletion of your personal data by contacting us at admissions@example.com.</p>
+        <p><strong className="text-foreground">Your rights:</strong> You may request access to, correction of, or deletion of your personal data by contacting us at {contactInfo.email}.</p>
         <p><strong className="text-foreground">Cross-border transfers:</strong> Your data may be shared with institutions in China as part of the application process. By consenting, you acknowledge this transfer.</p>
         <p className="text-xs text-muted-foreground/60">Last updated: April 2026</p>
       </div>

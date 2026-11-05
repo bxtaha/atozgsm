@@ -43,3 +43,6 @@ next-env.d.ts
 *.njsproj
 *.sln
 *.sw?
+
+# Local SQLite database and uploaded student documents
+.data/

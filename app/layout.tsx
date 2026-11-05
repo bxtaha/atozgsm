@@ -1,6 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Source_Serif_4, Work_Sans } from "next/font/google";
 import { Providers } from "./providers";
+import { MetaPixel } from "@/components/analytics/MetaPixel";
+import { OrganizationSchema } from "@/components/seo/OrganizationSchema";
+import { TierToggle } from "@/components/preview/TierToggle";
+import { VoiceAssistant } from "@/components/voice/VoiceAssistant";
+import { SITE_URL } from "@/lib/site-config";
 import "./globals.css";
 
 const sourceSerif = Source_Serif_4({
@@ -17,28 +22,32 @@ const workSans = Work_Sans({
   variable: "--font-work-sans",
 });
 
-const ogImage =
-  "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/778ec05e-5b50-481a-bf36-be9fb870acfd/id-preview-c6268a59--40640a60-b76c-478c-9fb6-649bb48b196a.lovable.app-1776039275751.png";
+const DESCRIPTION =
+  "ATOZ GSM helps Bangladeshi students study in China — compare university tuition and hostel costs, understand scholarship and visa requirements, and get step-by-step application support from Dhaka.";
 
-// TODO: Set the document title to the name of your application
 export const metadata: Metadata = {
-  title: "AtoZ GSM",
-  description: "AtoZ GSM Generated Project",
-  authors: [{ name: "AtoZ GSM" }],
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "ATOZ GSM — Study in China from Bangladesh",
+    template: "%s | ATOZ GSM",
+  },
+  description: DESCRIPTION,
+  authors: [{ name: "ATOZ GSM" }],
   icons: { icon: "/favicon.ico" },
+  alternates: { canonical: "/" },
   openGraph: {
-    // TODO: Update og:title to match your application name
-    title: "AtoZ GSM App",
-    description: " Generated Project",
+    title: "ATOZ GSM — Study in China from Bangladesh",
+    description: DESCRIPTION,
     type: "website",
-    images: [ogImage],
+    locale: "en_US",
+    siteName: "ATOZ GSM",
+    images: ["/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@AtoZ GSM",
-    title: "AtoZ GSM App",
-    description: "AtoZ GSM Generated Project",
-    images: [ogImage],
+    title: "ATOZ GSM — Study in China from Bangladesh",
+    description: DESCRIPTION,
+    images: ["/og-image.jpg"],
   },
 };
 
@@ -51,9 +60,13 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${sourceSerif.variable} ${workSans.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${sourceSerif.variable} ${workSans.variable}`}>
       <body>
+        <OrganizationSchema />
+        <MetaPixel />
         <Providers>{children}</Providers>
+        <VoiceAssistant />
+        {process.env.NEXT_PUBLIC_SHOW_TIER_TOGGLE === "true" && <TierToggle />}
       </body>
     </html>
   );

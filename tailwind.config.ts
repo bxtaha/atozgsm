@@ -32,6 +32,8 @@ export default {
           foreground: "hsl(var(--primary-foreground))",
         },
         "primary-text": "hsl(var(--primary-text))",
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

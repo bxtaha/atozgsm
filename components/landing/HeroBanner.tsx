@@ -1,5 +1,7 @@
 import heroBanner from "@/assets/hero-banner.jpg";
 import { AntiGravityCanvas } from "@/components/ui/particle-effect-for-hero";
+import { RotatingWord } from "@/components/landing/RotatingWord";
+import { trustStats } from "@/lib/site-config";
 
 const HeroBanner = () => (
   <section className="relative min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden bg-secondary">
@@ -34,13 +36,13 @@ const HeroBanner = () => (
       </div>
 
       <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.08] text-secondary-foreground text-balance">
-        Your Dream University in China{" "}
-        <span className="text-primary">Starts Here</span>
+        Your Journey to <RotatingWord /> Starts Here
       </h1>
 
       <p className="text-secondary-foreground/80 text-base lg:text-xl max-w-2xl mx-auto leading-relaxed">
-        Scholarship guidance, application support, document checking, and visa prep —
-        with a clear, step-by-step process for Bangladeshi students.
+        Discover the right program, prepare your documents, explore universities and
+        scholarships, and get ready for your China journey with professional,
+        step-by-step guidance for Bangladeshi students.
       </p>
 
       <div className="flex flex-wrap justify-center gap-3 pt-2">
@@ -59,7 +61,7 @@ const HeroBanner = () => (
           href="#apply"
           className="px-8 py-3.5 rounded-full bg-primary text-primary-foreground text-sm font-bold tracking-wider uppercase hover:brightness-105 transition-all shadow-lg shadow-primary/25"
         >
-          Get Free Counseling
+          Apply to Study in China
         </a>
         <a
           href="#programs"
@@ -67,15 +69,17 @@ const HeroBanner = () => (
         >
           Explore Programs
         </a>
+        <a
+          href="#apply"
+          className="px-8 py-3.5 rounded-full text-sm font-bold tracking-wider uppercase text-secondary-foreground/70 hover:text-primary transition-colors"
+        >
+          Get Free Guidance →
+        </a>
       </div>
 
       {/* Stats row */}
       <div className="pt-8 flex flex-wrap justify-center gap-8 lg:gap-12">
-        {[
-          { value: "20,000+", label: "BD Students in China" },
-          { value: "92%", label: "Scholarship Success" },
-          { value: "97%", label: "Visa Approval Rate" },
-        ].map((s) => (
+        {trustStats.slice(0, 3).map((s) => (
           <div key={s.label} className="text-center">
             <div className="text-2xl lg:text-3xl font-bold text-primary">{s.value}</div>
             <div className="text-xs text-secondary-foreground/70 tracking-wider uppercase mt-1">{s.label}</div>

@@ -1,11 +1,12 @@
 import { GraduationCap, ShieldCheck, Plane, BadgeDollarSign, BookOpen, Globe } from "lucide-react";
 import { GlowCard } from "@/components/ui/spotlight-card";
+import { trustStats } from "@/lib/site-config";
 
 const benefits = [
   { icon: BadgeDollarSign, title: "Scholarship Guidance", desc: "CSC, university-specific, and partial scholarship opportunities curated for you." },
   { icon: ShieldCheck, title: "Visa Support", desc: "End-to-end visa preparation with document checking and interview coaching." },
   { icon: BookOpen, title: "Application Support", desc: "We handle your university applications — from document review to submission." },
-  { icon: GraduationCap, title: "Top Universities", desc: "Access 100+ recognized Chinese universities across all degree levels." },
+  { icon: GraduationCap, title: "Top Universities", desc: `Access ${trustStats[3].value} recognized Chinese universities across all degree levels.` },
   { icon: Plane, title: "Pre-Departure Help", desc: "Airport pickup coordination, accommodation guidance, and orientation support." },
   { icon: Globe, title: "Global Career Boost", desc: "A Chinese degree opens doors across Asia, the Middle East, and beyond." },
 ];
