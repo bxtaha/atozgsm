@@ -34,7 +34,6 @@ export const metadata: Metadata = {
   },
   description: DESCRIPTION,
   authors: [{ name: "ATOZ GSM" }],
-  icons: { icon: "/favicon.ico" },
   alternates: { canonical: "/" },
   openGraph: {
     title: "ATOZ GSM — Study in China from Bangladesh",

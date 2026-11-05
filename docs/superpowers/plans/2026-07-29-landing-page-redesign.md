@@ -1,4 +1,4 @@
-# ChinaAdmit Navy & Gold Redesign Implementation Plan
+# AtoZGSM Navy & Gold Redesign Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -253,7 +253,7 @@ In `components/LandingPage.tsx`, replace the `<nav>` block (lines 23–38) with:
 ```tsx
       <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-          <span className="font-display font-bold tracking-tight text-lg text-secondary">🎓 ChinaAdmit</span>
+          <span className="font-display font-bold tracking-tight text-lg text-secondary">🎓 AtoZGSM</span>
           <div className="hidden md:flex items-center gap-6 text-xs font-bold tracking-wider uppercase text-muted-foreground">
             <a href="#benefits" className="hover:text-primary transition-colors">Benefits</a>
             <a href="#programs" className="hover:text-primary transition-colors">Programs</a>
@@ -885,7 +885,7 @@ const FooterSection = () => (
         <Link href="/terms" className="text-xs text-secondary-foreground/70 hover:text-primary transition-colors uppercase tracking-wider">Terms</Link>
       </div>
       <p className="text-xs text-secondary-foreground/70 tracking-wider">
-        © {new Date().getFullYear()} ChinaAdmit · All rights reserved
+        © {new Date().getFullYear()} AtoZGSM · All rights reserved
       </p>
       <p className="text-[10px] text-secondary-foreground/40 max-w-2xl">
         Disclaimer: This agency facilitates admissions support and is not directly affiliated with any specific Chinese university. Statistics shown are based on reported data and internal records.

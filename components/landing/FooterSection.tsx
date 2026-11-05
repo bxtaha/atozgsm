@@ -8,7 +8,7 @@ const FooterSection = () => (
         <Link href="/terms" className="text-xs text-secondary-foreground/70 hover:text-primary transition-colors uppercase tracking-wider">Terms</Link>
       </div>
       <p className="text-xs text-secondary-foreground/70 tracking-wider">
-        © {new Date().getFullYear()} ChinaAdmit · All rights reserved
+        © {new Date().getFullYear()} AtoZGSM · All rights reserved
       </p>
       <p className="text-[10px] text-secondary-foreground/60 max-w-2xl">
         Disclaimer: This agency facilitates admissions support and is not directly affiliated with any specific Chinese university. Statistics shown are based on reported data and internal records.

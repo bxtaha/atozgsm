@@ -24,7 +24,7 @@ const LandingPage = () => {
       {/* Sticky nav */}
       <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-          <span className="font-display font-bold tracking-tight text-lg text-secondary">🎓 ChinaAdmit</span>
+          <span className="font-display font-bold tracking-tight text-lg text-secondary">🎓 AtoZGSM</span>
           <div className="hidden md:flex items-center gap-6 text-xs font-bold tracking-wider uppercase text-muted-foreground">
             <Link href="/universities" className="hover:text-primary-text transition-colors">Universities</Link>
             <Link href="/ai-advisor" className="hover:text-primary-text transition-colors">AI Advisor</Link>

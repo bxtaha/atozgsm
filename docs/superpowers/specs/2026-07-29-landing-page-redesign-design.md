@@ -1,4 +1,4 @@
-# ChinaAdmit Landing Page Redesign — Design
+# AtoZGSM Landing Page Redesign — Design
 
 ## Context
 
