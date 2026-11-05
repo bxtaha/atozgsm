@@ -1,5 +1,6 @@
 "use client";
 
+import { LanguageToggle } from "@/components/layout/LanguageToggle";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Video } from "lucide-react";
@@ -36,7 +37,7 @@ const LandingPage = () => {
       <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
           <span className="font-display font-bold tracking-tight text-lg text-secondary">🎓 AtoZGSM</span>
-          <div className="hidden md:flex items-center gap-6 text-xs font-bold tracking-wider uppercase text-muted-foreground">
+          <div className="hidden lg:flex items-center gap-6 text-xs font-bold tracking-wider uppercase text-muted-foreground">
             {NAV.map(({ href, label }) => (
               <Link key={href} href={href} className="hover:text-primary-text transition-colors">
                 {label}
@@ -44,11 +45,12 @@ const LandingPage = () => {
             ))}
           </div>
           <div className="flex items-center gap-2">
-            <a href="#apply" className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-bold tracking-wider uppercase hover:brightness-110 transition-all">
+            <a href="#apply" className="flex items-center gap-1.5 px-4 py-2 max-[374px]:hidden rounded-full bg-primary text-primary-foreground text-xs font-bold tracking-wider uppercase hover:brightness-110 transition-all">
               <Video className="w-3.5 h-3.5" />
               Book Now
             </a>
-            <MobileNav links={NAV} />
+            <LanguageToggle />
+            <MobileNav links={[...NAV, { href: "#apply", label: "Book Now" }]} />
           </div>
         </div>
       </nav>

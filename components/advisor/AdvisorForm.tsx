@@ -39,6 +39,7 @@ export const AdvisorForm = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           goal: goal.trim(),
+          locale: document.documentElement.lang === "zh-CN" ? "zh-CN" : "en",
           level: level || undefined,
           subject: subject.trim() || undefined,
         }),

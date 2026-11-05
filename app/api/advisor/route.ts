@@ -5,6 +5,7 @@ import { getTier } from "@/lib/tier.server";
 import { searchUniversities } from "@/lib/universities/queries";
 
 const RequestSchema = z.object({
+  locale: z.enum(["en", "zh-CN"]).default("en"),
   goal: z.string().trim().min(20).max(2000),
   level: z.enum(["bachelor", "master", "diploma", "language"]).optional(),
   subject: z.string().trim().max(120).optional(),
@@ -83,7 +84,9 @@ export async function POST(req: Request) {
       model: "claude-opus-5",
       max_tokens: 8000,
       thinking: { type: "adaptive" },
-      system: SYSTEM_PROMPT,
+      system: parsed.locale === "zh-CN"
+        ? SYSTEM_PROMPT + "\nWrite the brief in Simplified Chinese. Keep university names accurate."
+        : SYSTEM_PROMPT,
       messages: [
         {
           role: "user",

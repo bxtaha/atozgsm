@@ -10,7 +10,7 @@ export const MobileNav = ({ links }: { links: { href: string; label: string }[] 
       <button
         type="button"
         aria-label="Open navigation menu"
-        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-foreground hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:hidden"
+        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-foreground hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden"
       >
         <Menu className="h-5 w-5" aria-hidden="true" />
       </button>

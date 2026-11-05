@@ -65,6 +65,7 @@ export default function RootLayout({
         <OrganizationSchema />
         <MetaPixel />
         <Providers>{children}</Providers>
+        <Script src="/locales/language.js" strategy="afterInteractive" />
         <Script
           src="https://bluex.agency/embed/v1/widget.js"
           data-key="bx_pk_live_a68fc14b6ece9fc1e57a41c8581ffa6d"

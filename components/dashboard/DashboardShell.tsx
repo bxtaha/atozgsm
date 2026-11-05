@@ -1,3 +1,4 @@
+import { LanguageToggle } from "@/components/layout/LanguageToggle";
 import Link from "next/link";
 import { FileText, LayoutDashboard, LogOut } from "lucide-react";
 import { logout } from "@/app/(auth)/actions";
@@ -40,6 +41,7 @@ export const DashboardShell = ({
           }`}>
             {user.tier}
           </span>
+          <LanguageToggle />
           <form action={logout}>
             <button
               type="submit"

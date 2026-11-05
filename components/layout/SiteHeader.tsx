@@ -1,3 +1,4 @@
+import { LanguageToggle } from "@/components/layout/LanguageToggle";
 import Link from "next/link";
 import { LayoutDashboard, Video } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth/session";
@@ -28,7 +29,7 @@ export const SiteHeader = () => {
           <Wordmark className="text-xl" />
         </Link>
 
-        <div className="hidden items-center gap-6 text-xs font-bold uppercase tracking-wider text-muted-foreground md:flex">
+        <div className="hidden items-center gap-6 text-xs font-bold uppercase tracking-wider text-muted-foreground lg:flex">
           {NAV.map((item) => (
             <Link key={item.href} href={item.href} className="transition-colors hover:text-primary-text">
               {item.label}
@@ -41,7 +42,7 @@ export const SiteHeader = () => {
           {user ? (
             <Link
               href="/dashboard"
-              className="hidden items-center gap-1.5 rounded-full bg-secondary px-4 py-2 text-xs font-bold uppercase tracking-wider text-secondary-foreground transition-all hover:brightness-125 md:flex"
+              className="hidden items-center gap-1.5 rounded-full bg-secondary px-4 py-2 text-xs font-bold uppercase tracking-wider text-secondary-foreground transition-all hover:brightness-125 lg:flex"
             >
               <LayoutDashboard className="h-3.5 w-3.5" />
               Dashboard
@@ -50,13 +51,13 @@ export const SiteHeader = () => {
             <>
               <Link
                 href="/login"
-                className="hidden text-xs font-bold uppercase tracking-wider text-muted-foreground transition-colors hover:text-primary-text md:block"
+                className="hidden text-xs font-bold uppercase tracking-wider text-muted-foreground transition-colors hover:text-primary-text lg:block"
               >
                 Log in
               </Link>
               <Link
                 href="/signup"
-                className="hidden rounded-full bg-secondary px-4 py-2 text-xs font-bold uppercase tracking-wider text-secondary-foreground transition-all hover:brightness-125 md:block"
+                className="hidden rounded-full bg-secondary px-4 py-2 text-xs font-bold uppercase tracking-wider text-secondary-foreground transition-all hover:brightness-125 lg:block"
               >
                 Create account
               </Link>
@@ -65,12 +66,13 @@ export const SiteHeader = () => {
 
           <Link
             href="/#apply"
-            className="flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase tracking-wider text-primary-foreground transition-all hover:brightness-110"
+            className="flex items-center gap-1.5 rounded-full bg-primary max-[374px]:hidden px-4 py-2 text-xs font-bold uppercase tracking-wider text-primary-foreground transition-all hover:brightness-110"
           >
             <Video className="h-3.5 w-3.5" />
             Book
           </Link>
-          <MobileNav links={[...NAV, ...accountLinks]} />
+          <LanguageToggle />
+          <MobileNav links={[...NAV, ...accountLinks, { href: "/#apply", label: "Book" }]} />
         </div>
       </div>
     </nav>
