@@ -8,6 +8,7 @@ import { Wordmark } from "@/components/layout/Wordmark";
 const NAV = [
   { href: "/csca", label: "CSCA Prep" },
   { href: "/chinese", label: "Chinese" },
+  { href: "/practice-chinese", label: "Practice Chinese" },
   { href: "/universities", label: "Universities" },
   { href: "/ai-advisor", label: "AI Advisor" },
   { href: "/blog", label: "Guides" },
