@@ -133,17 +133,20 @@
     document.querySelectorAll(toggleSelector).forEach(syncToggle);
     try {
       if (next === "zh-CN" && !translations) {
-        const response = await fetch("/locales/zh-CN.json");
+        const [response, university] = await Promise.all([
+          fetch("/locales/zh-CN.json"),
+          fetch("/locales/university-zh-CN.json").then(r => r.ok ? r.json() : null).catch(() => null),
+        ]);
         if (!response.ok) throw new Error("Unable to load the Chinese translation");
         const catalog = await response.json();
-        patterns = Object.entries(catalog.patterns).map(([source, target]) => {
+        patterns = Object.entries({ ...catalog.patterns, ...university?.patterns }).map(([source, target]) => {
           const segments = source.split(/\{(\d+)\}/);
           const escape = value => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
           const ids = segments.filter((_, i) => i % 2);
           const regex = new RegExp("^" + segments.map((part, i) => i % 2 ? "(.+?)" : escape(part)).join("") + "$");
           return { prefix: segments[0], regex, ids, target };
         });
-        translations = catalog.strings;
+        translations = { ...catalog.strings, ...university?.strings };
       }
       observer.disconnect();
       language = next;

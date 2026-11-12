@@ -91,3 +91,14 @@ Docker, or any Node host via `npm run build && npm run start`.
 - `ApplicationForm` still simulates submission with a 1.5s timeout, exactly as
   before. When you wire up a real backend, `app/api/apply/route.ts` is the
   natural place for it.
+
+### University catalog
+
+The public catalog lives at `/university`. The existing SQLite database stores
+catalog edits and per-account access for `/admin/universities`. To grant access,
+a database operator adds the trusted staff account's existing `users.id` to
+`university_catalog_admins.user_id` after the application has run its migration.
+The admin page accepts a standalone JSON file (one university object or an array).
+The same slug updates the existing record. Imports default to draft, and only
+published records appear at `/university`. The catalog lives in SQLite.
+The annual tuition filter includes known annual rates.
