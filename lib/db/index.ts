@@ -93,6 +93,18 @@ function migrate(d: Database.Database) {
       PRIMARY KEY (user_id, question_id)
     );
 
+    CREATE TABLE IF NOT EXISTS university_catalog_admins (
+      user_id TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE
+    );
+
+    CREATE TABLE IF NOT EXISTS university_catalog (
+      slug TEXT PRIMARY KEY,
+      record_json TEXT NOT NULL,
+      published INTEGER NOT NULL CHECK (published IN (0, 1)),
+      updated_by TEXT REFERENCES users(id) ON DELETE SET NULL,
+      updated_at TEXT NOT NULL
+    );
+
     CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions(user_id);
     CREATE INDEX IF NOT EXISTS idx_documents_user ON documents(user_id);
     CREATE INDEX IF NOT EXISTS idx_attempts_user ON question_attempts(user_id);
