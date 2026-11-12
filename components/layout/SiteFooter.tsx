@@ -4,7 +4,6 @@ import { contactInfo } from "@/lib/site-config";
 const LINKS = [
   { href: "/csca", label: "CSCA Prep" },
   { href: "/chinese", label: "Chinese" },
-  { href: "/universities", label: "Universities" },
   { href: "/ai-advisor", label: "AI Advisor" },
   { href: "/blog", label: "Guides" },
   { href: "/pricing", label: "Pricing" },

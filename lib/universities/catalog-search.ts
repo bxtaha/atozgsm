@@ -12,7 +12,6 @@ export function searchCatalog(records: CatalogRecord[], filters: CatalogFilters)
   const programFilters = Boolean(filters.level || filters.intake || filters.subject || max !== null);
   return records.flatMap((record) => {
     if (filters.city && record.city !== filters.city) return [];
-    if (filters.scholarship && !record.scholarships.some((award) => award.type === filters.scholarship)) return [];
     const universityText = searchable([
       record.name, ...record.aliases, record.city, record.province, record.note,
       ...record.scholarships.flatMap((s) => [s.name, s.type, s.coverage, s.eligibility, s.application, s.renewal]),
@@ -26,7 +25,12 @@ export function searchCatalog(records: CatalogRecord[], filters: CatalogFilters)
       return terms.every((term) => universityText.includes(term) || description.includes(term));
     };
     const programs = record.programs.filter(matchesProgram);
-    if (programs.length || (!programFilters && terms.every((term) => universityText.includes(term)))) return [{ record, programs }];
+    const awards = record.scholarships.filter((award) =>
+      (!filters.scholarship || award.type === filters.scholarship) &&
+      (!programFilters || !award.levels.length || programs.some((program) => award.levels.includes(program.level))),
+    );
+    if (filters.scholarship && !awards.length) return [];
+    if (programs.length || (!programFilters && terms.every((term) => universityText.includes(term)))) return [{ record, programs, awards }];
     return [];
   });
 }

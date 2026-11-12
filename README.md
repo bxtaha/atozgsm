@@ -94,11 +94,12 @@ Docker, or any Node host via `npm run build && npm run start`.
 
 ### University catalog
 
-The public catalog lives at `/university`. The existing SQLite database stores
-catalog edits and per-account access for `/admin/universities`. To grant access,
-a database operator adds the trusted staff account's existing `users.id` to
-`university_catalog_admins.user_id` after the application has run its migration.
-The admin page accepts a standalone JSON file (one university object or an array).
-The same slug updates the existing record. Imports default to draft, and only
-published records appear at `/university`. The catalog lives in SQLite.
-The annual tuition filter includes known annual rates.
+The university catalog is available to authorized staff at `/admin/universities`.
+To grant access, a database operator adds the staff account's existing
+`users.id` to `university_catalog_admins.user_id` after the application runs its
+migration. Staff can then open Universities from the dashboard.
+
+Import a standalone JSON file containing one university object or an array.
+The same slug updates the existing SQLite record. The annual tuition filter
+includes known annual rates. Select matching universities and choose Save
+shortlist as PDF, then use the browser's Save as PDF option.

@@ -20,7 +20,6 @@ import FooterSection from "@/components/landing/FooterSection";
 
 const NAV = [
   { href: "/practice-chinese", label: "Practice Chinese" },
-  { href: "/universities", label: "Universities" },
   { href: "/ai-advisor", label: "AI Advisor" },
   { href: "/blog", label: "Guides" },
   { href: "/pricing", label: "Pricing" },
