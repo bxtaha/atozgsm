@@ -12,7 +12,7 @@ export async function importUniversities(
   const user = getCurrentUser();
   if (!user || !canManageCatalog(user.id)) return { error: "University admin access is required." };
   const file = form.get("catalogFile");
-  const uploaded = file instanceof File && file.size > 0;
+  const uploaded = file !== null && typeof file !== "string" && file.size > 0;
   if (uploaded && file.size > 750_000) return { error: "Choose a JSON file under 750 KB." };
   const payload = uploaded ? await file.text() : form.get("catalog");
   if (typeof payload !== "string" || !payload.trim()) {
