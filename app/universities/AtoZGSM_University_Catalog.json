@@ -1,0 +1,3741 @@
+[
+  {
+    "slug": "anhui-university-of-chinese-medicine",
+    "name": "Anhui University of Chinese Medicine",
+    "aliases": [
+      "AHUCM",
+      "AUCM",
+      "安徽中医药大学"
+    ],
+    "city": "Hefei",
+    "province": "Anhui",
+    "website": "https://gjjl.ahtcm.edu.cn",
+    "applicationUrl": null,
+    "note": "The 2027 fair brochure and the standing scholarship pages cover different award cycles. Confirm 2027 amounts and eligibility with AHUCM before applying.",
+    "programs": [
+      {
+        "id": "pharmacy",
+        "name": "Pharmacy",
+        "subjects": [
+          "Pharmacy"
+        ],
+        "level": "bachelor",
+        "language": "English",
+        "intakeMonth": null,
+        "intakeYear": 2027,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": "20 June 2027",
+        "requirements": "Non-Chinese citizen with a high-school diploma, good health and no criminal record. English IELTS 6.0 or TOEFL 80; Chinese HSK 4. University undergraduate proficiency test and supporting documents.",
+        "fees": "Double room CNY 2,000/year and insurance CNY 800/year. Verify the published pharmacy tuition directly.",
+        "source": {
+          "title": "AHUCM admissions office · 2027 fair brochure",
+          "url": "https://gjjl.ahtcm.edu.cn"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "first-year",
+        "name": "First-year tuition scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2027,
+        "coverage": "First-year tuition coverage for newly admitted students, as described in the fair brochure.",
+        "eligibility": "The brochure describes this for new undergraduate entrants. Confirm with the admissions office.",
+        "deadline": null,
+        "application": null,
+        "renewal": "Confirm awards for later academic years with AHUCM.",
+        "source": {
+          "title": "AHUCM admissions office · 2027 fair brochure",
+          "url": "https://gjjl.ahtcm.edu.cn"
+        }
+      },
+      {
+        "id": "anhui",
+        "name": "Anhui Local Government Scholarships",
+        "type": "Provincial or municipal",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "Official page lists Study in Anhui and Study in Hefei funding. Confirm the exact award and year-specific terms.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Anhui University of Chinese Medicine official scholarship page",
+          "url": "https://gjjl.ahtcm.edu.cn/Overseas_education/Scholarship.htm"
+        }
+      },
+      {
+        "id": "president",
+        "name": "President Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor",
+          "master",
+          "phd"
+        ],
+        "cycleYear": null,
+        "coverage": "Official standing page lists CNY 10,000–20,000/year. Confirm the award tier and cycle.",
+        "eligibility": "International degree students. The standing rules exclude applicants sponsored by another award. Academic prerequisites vary by degree.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "AHUCM President Scholarship overview",
+          "url": "https://gjjl.ahtcm.edu.cn/Overseas_education/Scholarship/President_Scholarship.htm"
+        }
+      },
+      {
+        "id": "jiren",
+        "name": "Jiren Special Scholarship",
+        "type": "University",
+        "levels": [],
+        "cycleYear": 2027,
+        "coverage": null,
+        "eligibility": "Named in the fair brochure. Detailed rules require the annual award notice.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "AHUCM admissions office · 2027 fair brochure",
+          "url": "https://gjjl.ahtcm.edu.cn"
+        }
+      },
+      {
+        "id": "achievement",
+        "name": "Individual Achievement Scholarship",
+        "type": "University",
+        "levels": [],
+        "cycleYear": 2027,
+        "coverage": null,
+        "eligibility": "Named in the fair brochure. Detailed rules require the annual award notice.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "AHUCM admissions office · 2027 fair brochure",
+          "url": "https://gjjl.ahtcm.edu.cn"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "beijing-forestry-university",
+    "name": "Beijing Forestry University",
+    "aliases": [
+      "BFU",
+      "北京林业大学"
+    ],
+    "city": "Beijing",
+    "province": "Beijing",
+    "website": "https://english.bjfu.edu.cn",
+    "applicationUrl": "https://bjfu.at0086.cn/student",
+    "note": null,
+    "programs": [
+      {
+        "id": "forestry",
+        "name": "English-taught graduate programmes",
+        "subjects": [
+          "Forestry",
+          "Forest Ecology"
+        ],
+        "level": "master",
+        "language": "English",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": null,
+        "source": {
+          "title": "Beijing Forestry University international admissions guide",
+          "url": "https://english.bjfu.edu.cn/docs/2025-11/32b00671b6bd4459abf65924cb0084c8.pdf"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "bgs",
+        "name": "Beijing Government Scholarship",
+        "type": "Provincial or municipal",
+        "levels": [],
+        "cycleYear": 2027,
+        "coverage": "The fair brochure describes first-tier tuition, accommodation and living support; lower tiers offer full or partial tuition waivers.",
+        "eligibility": "Competitive admission and award review. Check which degrees are funded for the cycle.",
+        "deadline": "8 June 2027 in the photographed brochure; verify with BFU.",
+        "application": "Choose scholarship intent on the university application portal.",
+        "renewal": "Continued funding is subject to the applicable annual review.",
+        "source": {
+          "title": "Beijing Forestry University international admissions guide",
+          "url": "https://english.bjfu.edu.cn/docs/2025-11/32b00671b6bd4459abf65924cb0084c8.pdf"
+        }
+      },
+      {
+        "id": "csc",
+        "name": "Chinese Government Scholarship",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "The guide lists CGS. Confirm eligible degrees, funding and dates for the relevant cycle.",
+        "deadline": null,
+        "application": "Select scholarship interest on the BFU application portal.",
+        "renewal": null,
+        "source": {
+          "title": "Beijing Forestry University international admissions guide",
+          "url": "https://english.bjfu.edu.cn/docs/2025-11/32b00671b6bd4459abf65924cb0084c8.pdf"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "beijing-institute-of-petrochemical-technology",
+    "name": "Beijing Institute of Petrochemical Technology",
+    "aliases": [
+      "BIPT",
+      "北京石油化工学院"
+    ],
+    "city": "Beijing",
+    "province": "Beijing",
+    "website": "https://www.bipt.edu.cn/pub/en",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [],
+    "scholarships": [
+      {
+        "id": "spring",
+        "name": "BIPT Spring Semester Scholarship",
+        "type": "University",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "Official overview describes eligible international students in academic or non-academic study. Confirm the spring cycle, award tiers and programme eligibility.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "BIPT official international scholarship overview",
+          "url": "https://www.bipt.edu.cn/pub/en/Admission/Scholarships/index.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "beijing-normal-hong-kong-baptist-university",
+    "name": "Beijing Normal–Hong Kong Baptist University",
+    "aliases": [
+      "BNBU",
+      "UIC",
+      "北师香港浸会大学"
+    ],
+    "city": "Zhuhai",
+    "province": "Guangdong",
+    "website": "https://admission.bnbu.edu.cn",
+    "applicationUrl": "https://applyintl.bnbu.edu.cn",
+    "note": null,
+    "programs": [],
+    "scholarships": [
+      {
+        "id": "freshman",
+        "name": "Undergraduate International Freshman Entrance Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2026,
+        "coverage": "The photographed guide lists 100%, 50% and 30% tuition awards. Check the policy for exact amounts, programme scope and duration.",
+        "eligibility": "International high-school graduates, selected competitively.",
+        "deadline": "See university admissions cycle.",
+        "application": null,
+        "renewal": "Continuing eligibility is governed by the annual policy and academic performance.",
+        "source": {
+          "title": "BNBU 2026 international undergraduate scholarship policy",
+          "url": "https://admission.bnbu.edu.cn/ido/scholarship.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "beijing-university-of-chemical-technology",
+    "name": "Beijing University of Chemical Technology",
+    "aliases": [
+      "BUCT",
+      "北京化工大学"
+    ],
+    "city": "Beijing",
+    "province": "Beijing",
+    "website": "https://apply.buct.edu.cn",
+    "applicationUrl": "https://study.buct.edu.cn",
+    "note": "For CSC Type A, check the deadline set by the Chinese embassy or dispatching authority for your country.",
+    "programs": [
+      {
+        "id": "ug-chem",
+        "name": "Chemical Engineering and Technology",
+        "subjects": [
+          "Chemical Engineering and Technology"
+        ],
+        "level": "bachelor",
+        "language": "English",
+        "intakeMonth": 9,
+        "intakeYear": 2027,
+        "duration": "4 years",
+        "tuitionCny": 20000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "30 June 2027",
+        "requirements": "High-school qualification and CSCA. Programme page lists IELTS 6.0 and GPA 2.85. Check subject tests in the cycle guide.",
+        "fees": null,
+        "source": {
+          "title": "BUCT programme page and 2027 admissions guide",
+          "url": "https://apply.buct.edu.cn/15563/list.htm"
+        }
+      },
+      {
+        "id": "masters-cn",
+        "name": "Chinese-taught master’s programmes",
+        "subjects": [
+          "Chemical Engineering",
+          "Materials Science",
+          "Mechanical Engineering",
+          "Chemistry",
+          "Computer Science"
+        ],
+        "level": "master",
+        "language": "Chinese",
+        "intakeMonth": 9,
+        "intakeYear": 2027,
+        "duration": "See major catalogue",
+        "tuitionCny": 30000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "30 June 2027",
+        "requirements": "Bachelor’s degree or equivalent, under 35, HSK 4 with at least 180. Check the programme catalogue for exact disciplines and supervisors.",
+        "fees": "Application CNY 500; insurance CNY 800/year; residence permit CNY 400/year; double dorm CNY 10,800/semester.",
+        "source": {
+          "title": "BUCT 2027 postgraduate admissions guide",
+          "url": "https://apply.buct.edu.cn/_upload/article/files/1b/a8/e9a7168341e2ac868396e9d7cf98/e1fc571f-ae05-46bb-83ad-548b7d26ecec.pdf"
+        }
+      },
+      {
+        "id": "masters-en",
+        "name": "English-taught master’s programmes",
+        "subjects": [
+          "Chemical Engineering",
+          "Materials Science",
+          "Mechanical Engineering",
+          "Chemistry"
+        ],
+        "level": "master",
+        "language": "English",
+        "intakeMonth": 9,
+        "intakeYear": 2027,
+        "duration": "See major catalogue",
+        "tuitionCny": 35000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "30 June 2027",
+        "requirements": "Bachelor’s degree or equivalent, under 35, IELTS 6.0 or TOEFL 85, subject to accepted exemptions. Check language availability by major.",
+        "fees": null,
+        "source": {
+          "title": "BUCT 2027 postgraduate admissions guide",
+          "url": "https://apply.buct.edu.cn/_upload/article/files/1b/a8/e9a7168341e2ac868396e9d7cf98/e1fc571f-ae05-46bb-83ad-548b7d26ecec.pdf"
+        }
+      },
+      {
+        "id": "phd",
+        "name": "Doctoral programmes",
+        "subjects": [
+          "Chemical Engineering",
+          "Materials Science",
+          "Mechanical Engineering",
+          "Chemistry",
+          "Computer Science"
+        ],
+        "level": "phd",
+        "language": "Depends on major",
+        "intakeMonth": 9,
+        "intakeYear": 2027,
+        "duration": "See major catalogue",
+        "tuitionCny": 35000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "30 June 2027",
+        "requirements": "Master’s degree or equivalent and under 40. Chinese track HSK 4 (180). English track IELTS 6.5 or TOEFL 90, subject to accepted exemptions.",
+        "fees": null,
+        "source": {
+          "title": "BUCT 2027 postgraduate admissions guide",
+          "url": "https://apply.buct.edu.cn/_upload/article/files/1b/a8/e9a7168341e2ac868396e9d7cf98/e1fc571f-ae05-46bb-83ad-548b7d26ecec.pdf"
+        }
+      },
+      {
+        "id": "language-3",
+        "name": "Chinese Language Programme",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": "Chinese",
+        "intakeMonth": 3,
+        "intakeYear": 2027,
+        "duration": "Semester or academic year",
+        "tuitionCny": 20000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "31 January 2027",
+        "requirements": null,
+        "fees": "Application CNY 500; insurance CNY 800/year; Changping twin room CNY 21,600/academic year. Annual fee shown.",
+        "source": {
+          "title": "BUCT 2027 Chinese language admissions guide",
+          "url": "https://apply.buct.edu.cn/_upload/article/files/52/33/59999f3e451c8a6fd8a5d832d17d/b8faa171-aa18-4d46-a4b0-188843900a0b.pdf"
+        }
+      },
+      {
+        "id": "language-9",
+        "name": "Chinese Language Programme",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": "Chinese",
+        "intakeMonth": 9,
+        "intakeYear": 2027,
+        "duration": "Semester or academic year",
+        "tuitionCny": 20000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "31 July 2027",
+        "requirements": null,
+        "fees": "Application CNY 500; insurance CNY 800/year; Changping twin room CNY 21,600/academic year. Annual fee shown.",
+        "source": {
+          "title": "BUCT 2027 Chinese language admissions guide",
+          "url": "https://apply.buct.edu.cn/_upload/article/files/52/33/59999f3e451c8a6fd8a5d832d17d/b8faa171-aa18-4d46-a4b0-188843900a0b.pdf"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "csc-a",
+        "name": "Chinese Government Scholarship Type A",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2027,
+        "coverage": "Full tuition, accommodation, comprehensive insurance and CNY 2,500/month for bachelor’s students.",
+        "eligibility": "Undergraduate admission eligibility and dispatching authority rules apply.",
+        "deadline": "Set by local dispatching authority.",
+        "application": "Apply via the local Chinese embassy or dispatching authority and submit both BUCT and CSC forms. Choose BUCT as first preference; agency number 10010.",
+        "renewal": "Continued funding is subject to the applicable annual review.",
+        "source": {
+          "title": "BUCT 2027 undergraduate admissions guide",
+          "url": "https://apply.buct.edu.cn/_upload/article/files/1c/cf/95a8b08a47bcbfbe5285188744ee/4b2bcd01-2474-42a0-8f22-00cb8931fdc6.pdf"
+        }
+      },
+      {
+        "id": "csc-b",
+        "name": "CSC Type B High-Level Postgraduate Scholarship",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": 2027,
+        "coverage": "Tuition waiver, accommodation, CNY 3,000/month (master’s) or CNY 3,500/month (PhD), and CNY 800/year comprehensive insurance.",
+        "eligibility": "Non-Chinese applicants. Master’s: bachelor’s degree and under 35. PhD: master’s degree and under 40. HSK 4 (180) for Chinese. English: IELTS 6.0/TOEFL 85 (master’s) or IELTS 6.5/TOEFL 90 (PhD).",
+        "deadline": "28 February 2027",
+        "application": "Submit applications to BUCT and CSC, select Type B and agency number 10010. Consult the guide for supporting documents.",
+        "renewal": "Continued funding is subject to the applicable annual review.",
+        "source": {
+          "title": "BUCT 2027 CSC Type B guide",
+          "url": "https://apply.buct.edu.cn/_upload/article/files/83/01/a36f6f134ee1a4660abba74262a4/53a5b53a-acbd-4969-b8f8-7fe171fe5d5f.pdf"
+        }
+      },
+      {
+        "id": "beijing",
+        "name": "Beijing Government Scholarship for International Students",
+        "type": "Provincial or municipal",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2027,
+        "coverage": "See the 2027 guide for award tiers and covered fees.",
+        "eligibility": "Competitive selection among eligible undergraduate applicants.",
+        "deadline": "June 2027",
+        "application": "Apply via the university portal.",
+        "renewal": "Continued funding is subject to the applicable annual review.",
+        "source": {
+          "title": "BUCT 2027 undergraduate admissions guide",
+          "url": "https://apply.buct.edu.cn/_upload/article/files/1c/cf/95a8b08a47bcbfbe5285188744ee/4b2bcd01-2474-42a0-8f22-00cb8931fdc6.pdf"
+        }
+      },
+      {
+        "id": "buct",
+        "name": "BUCT Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2027,
+        "coverage": "First prize: full tuition and university accommodation. Second prize: full tuition. Third prize: half tuition. The undergraduate guide lists a four-year duration.",
+        "eligibility": "Applicants to eligible bachelor’s programmes.",
+        "deadline": "June 2027",
+        "application": "University portal.",
+        "renewal": "Continued funding is subject to the applicable annual review.",
+        "source": {
+          "title": "BUCT 2027 undergraduate admissions guide",
+          "url": "https://apply.buct.edu.cn/_upload/article/files/1c/cf/95a8b08a47bcbfbe5285188744ee/4b2bcd01-2474-42a0-8f22-00cb8931fdc6.pdf"
+        }
+      },
+      {
+        "id": "clec",
+        "name": "International Chinese Language Teachers Scholarship",
+        "type": "Chinese language teaching",
+        "levels": [
+          "language"
+        ],
+        "cycleYear": 2027,
+        "coverage": null,
+        "eligibility": "Consult the current award notice for age, HSK/HSKK and recommending institution requirements.",
+        "deadline": "Guide lists 1 March to 15 May for scholarship applications.",
+        "application": "Apply through the Chinese language scholarship system and follow BUCT instructions.",
+        "renewal": null,
+        "source": {
+          "title": "BUCT 2027 Chinese language admissions guide",
+          "url": "https://apply.buct.edu.cn/_upload/article/files/52/33/59999f3e451c8a6fd8a5d832d17d/b8faa171-aa18-4d46-a4b0-188843900a0b.pdf"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "beijing-university-of-technology",
+    "name": "Beijing University of Technology",
+    "aliases": [
+      "BJUT",
+      "北京工业大学"
+    ],
+    "city": "Beijing",
+    "province": "Beijing",
+    "website": "https://isa.bjut.edu.cn",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [],
+    "scholarships": [
+      {
+        "id": "bgs",
+        "name": "Beijing Government Scholarship",
+        "type": "Provincial or municipal",
+        "levels": [],
+        "cycleYear": 2026,
+        "coverage": null,
+        "eligibility": "Check the university guide for eligible programmes and award classes.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "BJUT 2026 international admissions guide",
+          "url": "https://isa.bjut.edu.cn/__local/B/A3/B2/69DCE244B953DEB7673801CFF5B_425639CD_9BD8A.pdf"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "capital-medical-university",
+    "name": "Capital Medical University",
+    "aliases": [
+      "CMU",
+      "CCMU",
+      "首都医科大学"
+    ],
+    "city": "Beijing",
+    "province": "Beijing",
+    "website": "https://www.ccmu.edu.cn",
+    "applicationUrl": "https://admissions.ccmu.edu.cn",
+    "note": null,
+    "programs": [
+      {
+        "id": "mbbs",
+        "name": "Clinical Medicine (MBBS)",
+        "subjects": [
+          "Clinical Medicine",
+          "MBBS"
+        ],
+        "level": "bachelor",
+        "language": "English",
+        "intakeMonth": null,
+        "intakeYear": 2026,
+        "duration": "6 years",
+        "tuitionCny": 50000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "High-school credentials and competitive review. English evidence required for relevant applicants; the guide recommends TOEFL 80 or IELTS 6.0. See the guide for CSCA, entry exam and financial proof.",
+        "fees": "Insurance options: CNY 800, 1,000 or 1,200/year.",
+        "source": {
+          "title": "Capital Medical University 2026 English-medium MBBS guide",
+          "url": "https://www.ccmu.edu.cn/pub/ccmu/docs/2026-01/c17eaf1198cb4e16bd6a875489c27b2b.pdf"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "bgs",
+        "name": "Beijing Government Scholarship",
+        "type": "Provincial or municipal",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2026,
+        "coverage": null,
+        "eligibility": "The MBBS guide refers to the Beijing Government Scholarship Management Measures. Obtain the award notice for coverage, eligibility and application instructions.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Capital Medical University 2026 English-medium MBBS guide",
+          "url": "https://www.ccmu.edu.cn/pub/ccmu/docs/2026-01/c17eaf1198cb4e16bd6a875489c27b2b.pdf"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "china-university-of-petroleum-east-china",
+    "name": "China University of Petroleum (East China)",
+    "aliases": [
+      "UPC",
+      "中国石油大学（华东）"
+    ],
+    "city": "Qingdao",
+    "province": "Shandong",
+    "website": "https://cie.upc.edu.cn/admission_en",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [
+      {
+        "id": "ug-en",
+        "name": "English-taught bachelor’s programmes",
+        "subjects": [
+          "Petroleum Engineering",
+          "Big Data Management and Application",
+          "New Energy Materials and Devices"
+        ],
+        "level": "bachelor",
+        "language": "English",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": "4 years",
+        "tuitionCny": 20000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": null,
+        "source": {
+          "title": "UPC official tuition and programme table",
+          "url": "https://cie.upc.edu.cn/admission_en/admissionhighlights/Tuition___Costs.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "csc",
+        "name": "Chinese Government Scholarship",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": null,
+        "coverage": "Tuition, accommodation or an accommodation subsidy, living allowance and comprehensive medical insurance.",
+        "eligibility": "Confirm programme, degree eligibility and type of CSC nomination in the annual notice.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "UPC international admissions and scholarship site",
+          "url": "https://cie.upc.edu.cn/admission_en"
+        }
+      },
+      {
+        "id": "upc",
+        "name": "UPC university scholarships",
+        "type": "University",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "The university lists a range of awards. Check the new-student or current-student listing for the applicable category.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "UPC international admissions and scholarship site",
+          "url": "https://cie.upc.edu.cn/admission_en"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "east-china-university-of-technology",
+    "name": "East China University of Technology",
+    "aliases": [
+      "ECUT",
+      "东华理工大学"
+    ],
+    "city": "Nanchang",
+    "province": "Jiangxi",
+    "website": "https://eng.ecut.edu.cn",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [
+      {
+        "id": "ug-arts",
+        "name": "Liberal Arts programmes",
+        "subjects": [
+          "Liberal Arts"
+        ],
+        "level": "bachelor",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": 14000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": "Insurance CNY 800/year; books about CNY 1,000/year. Accommodation rates vary.",
+        "source": {
+          "title": "ECUT official tuition and fees",
+          "url": "https://eng.ecut.edu.cn/Fees/list.htm"
+        }
+      },
+      {
+        "id": "ug-science",
+        "name": "Science programmes",
+        "subjects": [
+          "Science"
+        ],
+        "level": "bachelor",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": 16000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": "Insurance CNY 800/year; books about CNY 1,000/year. Accommodation rates vary.",
+        "source": {
+          "title": "ECUT official tuition and fees",
+          "url": "https://eng.ecut.edu.cn/Fees/list.htm"
+        }
+      },
+      {
+        "id": "pg-arts",
+        "name": "Liberal Arts programmes",
+        "subjects": [
+          "Liberal Arts"
+        ],
+        "level": "master",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": 18000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": "Insurance CNY 800/year; books about CNY 1,000/year. Accommodation rates vary.",
+        "source": {
+          "title": "ECUT official tuition and fees",
+          "url": "https://eng.ecut.edu.cn/Fees/list.htm"
+        }
+      },
+      {
+        "id": "pg-science",
+        "name": "Science programmes",
+        "subjects": [
+          "Science"
+        ],
+        "level": "master",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": 20000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": "Insurance CNY 800/year; books about CNY 1,000/year. Accommodation rates vary.",
+        "source": {
+          "title": "ECUT official tuition and fees",
+          "url": "https://eng.ecut.edu.cn/Fees/list.htm"
+        }
+      },
+      {
+        "id": "phd",
+        "name": "Science programmes",
+        "subjects": [
+          "Science"
+        ],
+        "level": "phd",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": 30000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": "Insurance CNY 800/year; books about CNY 1,000/year. Accommodation rates vary.",
+        "source": {
+          "title": "ECUT official tuition and fees",
+          "url": "https://eng.ecut.edu.cn/Fees/list.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "jiangxi",
+        "name": "Jiangxi Government Scholarship",
+        "type": "Provincial or municipal",
+        "levels": [
+          "bachelor",
+          "master",
+          "phd"
+        ],
+        "cycleYear": null,
+        "coverage": "CNY 20,000/year bachelor’s; CNY 25,000/year master’s or PhD.",
+        "eligibility": "Coverage from the photographed brochure where stated. Confirm application and academic requirements in the annual notice.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "ECUT international admissions · scholarship brochure",
+          "url": "https://eng.ecut.edu.cn"
+        }
+      },
+      {
+        "id": "president",
+        "name": "President Scholarship for Freshmen",
+        "type": "University",
+        "levels": [
+          "bachelor",
+          "master",
+          "phd"
+        ],
+        "cycleYear": null,
+        "coverage": "CNY 5,000/year bachelor’s; CNY 8,000/year master’s; CNY 10,000/year PhD.",
+        "eligibility": "Coverage from the photographed brochure where stated. Confirm application and academic requirements in the annual notice.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "ECUT international admissions · scholarship brochure",
+          "url": "https://eng.ecut.edu.cn"
+        }
+      },
+      {
+        "id": "innovation",
+        "name": "Graduate Academic Innovation Scholarship",
+        "type": "University",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": null,
+        "coverage": "CNY 8,000/year master’s or CNY 10,000/year PhD.",
+        "eligibility": "Coverage from the photographed brochure where stated. Confirm application and academic requirements in the annual notice.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "ECUT international admissions · scholarship brochure",
+          "url": "https://eng.ecut.edu.cn"
+        }
+      },
+      {
+        "id": "excellent",
+        "name": "Excellent Students Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": null,
+        "coverage": "Three award tiers of CNY 3,000, 2,000 or 1,000 per year.",
+        "eligibility": "Coverage from the photographed brochure where stated. Confirm application and academic requirements in the annual notice.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "ECUT international admissions · scholarship brochure",
+          "url": "https://eng.ecut.edu.cn"
+        }
+      },
+      {
+        "id": "individual",
+        "name": "Outstanding Individual Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor",
+          "master",
+          "phd"
+        ],
+        "cycleYear": null,
+        "coverage": "CNY 2,000/year.",
+        "eligibility": "Coverage from the photographed brochure where stated. Confirm application and academic requirements in the annual notice.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "ECUT international admissions · scholarship brochure",
+          "url": "https://eng.ecut.edu.cn"
+        }
+      },
+      {
+        "id": "clec",
+        "name": "International Chinese Language Teachers Scholarship",
+        "type": "Chinese language teaching",
+        "levels": [
+          "language"
+        ],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "Coverage from the photographed brochure where stated. Confirm application and academic requirements in the annual notice.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "ECUT international admissions · scholarship brochure",
+          "url": "https://eng.ecut.edu.cn"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "guangxi-normal-university",
+    "name": "Guangxi Normal University",
+    "aliases": [
+      "GXNU",
+      "广西师范大学"
+    ],
+    "city": "Guilin",
+    "province": "Guangxi",
+    "website": "https://english.gxnu.edu.cn",
+    "applicationUrl": "http://gxnu.liuguanbao.com/Account/Login/",
+    "note": null,
+    "programs": [
+      {
+        "id": "master",
+        "name": "Selected master’s programmes",
+        "subjects": [
+          "Computer Science and Technology",
+          "Physics"
+        ],
+        "level": "master",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": 2027,
+        "duration": "Up to 3 years",
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": "31 May 2027",
+        "requirements": "Bachelor’s degree and under 35. HSK 5 (180) for Chinese-medium or IELTS 6.0/equivalent for English-medium study. Check the actual programme language.",
+        "fees": "Application CNY 400 in the photographed postgraduate notice.",
+        "source": {
+          "title": "GXNU international admissions FAQ and brochure reference",
+          "url": "https://english.gxnu.edu.cn/4248/main.htm"
+        }
+      },
+      {
+        "id": "phd",
+        "name": "Selected doctoral programmes",
+        "subjects": [
+          "Chemistry",
+          "Physics",
+          "Chinese Philology",
+          "Chinese Minority Languages and Literature"
+        ],
+        "level": "phd",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": 2027,
+        "duration": "3–4 years",
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": "31 May 2027",
+        "requirements": "Master’s degree and under 40. HSK 5 (180) or IELTS 6.0/equivalent by teaching track. Check the full programme list.",
+        "fees": null,
+        "source": {
+          "title": "GXNU international admissions FAQ and brochure reference",
+          "url": "https://english.gxnu.edu.cn/4248/main.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "gxnu-pg",
+        "name": "GXNU Master’s and PhD Scholarship",
+        "type": "University",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": 2027,
+        "coverage": "The 2027/28 fair brochure lists tuition and on-campus accommodation, plus CNY 2,000/month (master’s) or CNY 3,500/month (PhD) for 10 months per academic year within the standard duration.",
+        "eligibility": "Degree, age and language conditions apply. Chinese: HSK 5 (180). English: IELTS 6.0 or equivalent. Further nationality and residence requirements appear in the guide.",
+        "deadline": "31 May 2027 in the fair brochure.",
+        "application": "Apply via the GXNU portal and upload the specific scholarship form.",
+        "renewal": null,
+        "source": {
+          "title": "GXNU international admissions FAQ and brochure reference",
+          "url": "https://english.gxnu.edu.cn/4248/main.htm"
+        }
+      },
+      {
+        "id": "csc-a",
+        "name": "Chinese Government Scholarship (Bilateral)",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "Requirements and dates vary by dispatching country.",
+        "deadline": "Consult the relevant embassy.",
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "GXNU international admissions FAQ and brochure reference",
+          "url": "https://english.gxnu.edu.cn/4248/main.htm"
+        }
+      },
+      {
+        "id": "asean",
+        "name": "Guangxi Government Scholarship for ASEAN Students",
+        "type": "Provincial or municipal",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "Restricted to eligible ASEAN member-country nationals. Confirm annual eligibility and deadline.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "GXNU international admissions FAQ and brochure reference",
+          "url": "https://english.gxnu.edu.cn/4248/main.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "hangzhou-normal-university",
+    "name": "Hangzhou Normal University",
+    "aliases": [
+      "HZNU",
+      "杭州师范大学"
+    ],
+    "city": "Hangzhou",
+    "province": "Zhejiang",
+    "website": "https://gjjyxy.hznu.edu.cn",
+    "applicationUrl": "https://international.hznu.edu.cn",
+    "note": null,
+    "programs": [
+      {
+        "id": "ug-trade",
+        "name": "International Economics and Trade",
+        "subjects": [
+          "International Economics and Trade"
+        ],
+        "level": "bachelor",
+        "language": "English",
+        "intakeMonth": null,
+        "intakeYear": 2026,
+        "duration": "4 years",
+        "tuitionCny": 20000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "Check admission criteria and English requirements in the undergraduate guide.",
+        "fees": null,
+        "source": {
+          "title": "HZNU 2026 international undergraduate guide",
+          "url": "https://gjjyxy.hznu.edu.cn/c/2026-03-04/3176261.shtml"
+        }
+      },
+      {
+        "id": "master",
+        "name": "Selected master’s programmes",
+        "subjects": [
+          "International Business",
+          "Electronic Information",
+          "Nursing",
+          "International Chinese Education",
+          "Management Science and Engineering",
+          "Design Studies",
+          "Comparative Education"
+        ],
+        "level": "master",
+        "language": "Depends on major",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": "2–3 years",
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "Confirm tuition and teaching language by programme.",
+        "fees": null,
+        "source": {
+          "title": "HZNU international student handbook",
+          "url": "https://sie.hznu.edu.cn/Portal/Upload/Download/bLrvFqsM.pdf"
+        }
+      },
+      {
+        "id": "phd",
+        "name": "Selected doctoral programmes",
+        "subjects": [
+          "Biological Science",
+          "Psychology"
+        ],
+        "level": "phd",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": 30000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": null,
+        "source": {
+          "title": "HZNU international student handbook",
+          "url": "https://sie.hznu.edu.cn/Portal/Upload/Download/bLrvFqsM.pdf"
+        }
+      },
+      {
+        "id": "language",
+        "name": "Chinese language programme",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": "Chinese",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": "See intake notice",
+        "tuitionCny": 15000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": null,
+        "source": {
+          "title": "HZNU international student handbook",
+          "url": "https://sie.hznu.edu.cn/Portal/Upload/Download/bLrvFqsM.pdf"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "csc",
+        "name": "Chinese Government Scholarship",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": "Tuition, accommodation or an accommodation subsidy, living allowance and comprehensive medical insurance.",
+        "eligibility": "Check the relevant annual notice and the programme-specific criteria. For CSC, the handbook distinguishes full and partial awards.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "HZNU international student handbook",
+          "url": "https://sie.hznu.edu.cn/Portal/Upload/Download/bLrvFqsM.pdf"
+        }
+      },
+      {
+        "id": "clec",
+        "name": "International Chinese Language Teachers Scholarship",
+        "type": "Chinese language teaching",
+        "levels": [
+          "language"
+        ],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "Check the relevant annual notice and the programme-specific criteria. For CSC, the handbook distinguishes full and partial awards.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "HZNU international student handbook",
+          "url": "https://sie.hznu.edu.cn/Portal/Upload/Download/bLrvFqsM.pdf"
+        }
+      },
+      {
+        "id": "zhejiang",
+        "name": "Zhejiang Provincial Government Scholarship",
+        "type": "Provincial or municipal",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "Check the relevant annual notice and the programme-specific criteria. For CSC, the handbook distinguishes full and partial awards.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "HZNU international student handbook",
+          "url": "https://sie.hznu.edu.cn/Portal/Upload/Download/bLrvFqsM.pdf"
+        }
+      },
+      {
+        "id": "hangzhou",
+        "name": "Hangzhou Municipal Government Scholarship",
+        "type": "Provincial or municipal",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "Check the relevant annual notice and the programme-specific criteria. For CSC, the handbook distinguishes full and partial awards.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "HZNU international student handbook",
+          "url": "https://sie.hznu.edu.cn/Portal/Upload/Download/bLrvFqsM.pdf"
+        }
+      },
+      {
+        "id": "hznu",
+        "name": "Hangzhou Normal University International Student Scholarship",
+        "type": "University",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "Check the relevant annual notice and the programme-specific criteria. For CSC, the handbook distinguishes full and partial awards.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "HZNU international student handbook",
+          "url": "https://sie.hznu.edu.cn/Portal/Upload/Download/bLrvFqsM.pdf"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "harbin-normal-university",
+    "name": "Harbin Normal University",
+    "aliases": [
+      "HRBNU",
+      "哈尔滨师范大学"
+    ],
+    "city": "Harbin",
+    "province": "Heilongjiang",
+    "website": "https://www.hrbnu.edu.cn",
+    "applicationUrl": null,
+    "note": "The fair brochure lists recurring intake months. Confirm the cycle, major and scholarship deadline with the university.",
+    "programs": [
+      {
+        "id": "bachelor-3",
+        "name": "Undergraduate programmes",
+        "subjects": [
+          "Chinese Language",
+          "International Chinese Language Education"
+        ],
+        "level": "bachelor",
+        "language": "Chinese",
+        "intakeMonth": 3,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "High-school diploma and transcripts; HSK 4 or programme-specific equivalent. CSCA as required.",
+        "fees": null,
+        "source": {
+          "title": "Harbin Normal University · international admissions brochure",
+          "url": "https://www.hrbnu.edu.cn"
+        }
+      },
+      {
+        "id": "bachelor-9",
+        "name": "Undergraduate programmes",
+        "subjects": [
+          "Chinese Language",
+          "International Chinese Language Education"
+        ],
+        "level": "bachelor",
+        "language": "Chinese",
+        "intakeMonth": 9,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "High-school diploma and transcripts; HSK 4 or programme-specific equivalent. CSCA as required.",
+        "fees": null,
+        "source": {
+          "title": "Harbin Normal University · international admissions brochure",
+          "url": "https://www.hrbnu.edu.cn"
+        }
+      },
+      {
+        "id": "master-9",
+        "name": "Master’s programmes",
+        "subjects": [
+          "International Chinese Language Education"
+        ],
+        "level": "master",
+        "language": "Chinese",
+        "intakeMonth": 9,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "Bachelor’s degree and transcripts; HSK 5 for the Chinese-medium route.",
+        "fees": null,
+        "source": {
+          "title": "Harbin Normal University · international admissions brochure",
+          "url": "https://www.hrbnu.edu.cn"
+        }
+      },
+      {
+        "id": "phd-9",
+        "name": "Doctoral programmes",
+        "subjects": [],
+        "level": "phd",
+        "language": "Chinese",
+        "intakeMonth": 9,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "Master’s degree and transcripts; HSK 5 for the Chinese-medium route.",
+        "fees": null,
+        "source": {
+          "title": "Harbin Normal University · international admissions brochure",
+          "url": "https://www.hrbnu.edu.cn"
+        }
+      },
+      {
+        "id": "language-3",
+        "name": "Chinese language programme",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": "Chinese",
+        "intakeMonth": 3,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "Check language placement and application documentation.",
+        "fees": null,
+        "source": {
+          "title": "Harbin Normal University · international admissions brochure",
+          "url": "https://www.hrbnu.edu.cn"
+        }
+      },
+      {
+        "id": "language-9",
+        "name": "Chinese language programme",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": "Chinese",
+        "intakeMonth": 9,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "Check language placement and application documentation.",
+        "fees": null,
+        "source": {
+          "title": "Harbin Normal University · international admissions brochure",
+          "url": "https://www.hrbnu.edu.cn"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "csc",
+        "name": "Chinese Government Scholarship",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "bachelor",
+          "master",
+          "phd"
+        ],
+        "cycleYear": null,
+        "coverage": "Tuition, accommodation or an accommodation subsidy, living allowance and comprehensive medical insurance.",
+        "eligibility": "Academic and language requirements by degree; undergraduate applicants may need CSCA.",
+        "deadline": "Follow the annual guide.",
+        "application": "Use the CSC and university application instructions.",
+        "renewal": null,
+        "source": {
+          "title": "Harbin Normal University · international admissions brochure",
+          "url": "https://www.hrbnu.edu.cn"
+        }
+      },
+      {
+        "id": "clec",
+        "name": "International Chinese Language Teachers Scholarship",
+        "type": "Chinese language teaching",
+        "levels": [
+          "bachelor",
+          "master",
+          "language"
+        ],
+        "cycleYear": null,
+        "coverage": "Tuition, accommodation and insurance; living support except for four-week study, according to the fair brochure.",
+        "eligibility": "Brochure lists age 16–35, up to 45 for in-service teachers. Master’s: HSK 5 (210) and HSKK. Bachelor’s: HSK 4 (210) and HSKK. One-year track: HSK 3 (180). Confirm track-specific HSKK scores.",
+        "deadline": "The brochure gives March 1–May 15 for its main round. Confirm the annual and intake-specific cutoff.",
+        "application": "Apply via the CLEC system and follow host and recommending institution requirements.",
+        "renewal": null,
+        "source": {
+          "title": "CLEC host-institution listing for Harbin Normal University",
+          "url": "https://pmplatform.chinese.cn/ui/schoolTable/html/50.html"
+        }
+      },
+      {
+        "id": "eurasia",
+        "name": "Scholarship for International Students from Eurasian Countries",
+        "type": "Provincial or municipal",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": null,
+        "coverage": "Tuition, accommodation or an accommodation subsidy, living allowance and comprehensive medical insurance.",
+        "eligibility": "Nationality restricted to eligible countries. The brochure lists academic excellence and HSK 5 or above for graduate tracks. Confirm country eligibility before applying.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Harbin Normal University · international admissions brochure",
+          "url": "https://www.hrbnu.edu.cn"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "hebei-university-of-technology",
+    "name": "Hebei University of Technology",
+    "aliases": [
+      "HEBUT",
+      "河北工业大学"
+    ],
+    "city": "Tianjin",
+    "province": "Tianjin",
+    "website": "https://sie.hebut.edu.cn",
+    "applicationUrl": null,
+    "note": "Confirm campus with the university. The photographed brochure also includes a newer postgraduate prospectus.",
+    "programs": [],
+    "scholarships": [
+      {
+        "id": "csc-b",
+        "name": "Chinese Government Scholarship Type B",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": 2026,
+        "coverage": "Free tuition and accommodation, CNY 3,000/month for master’s or CNY 3,500/month for PhD, and CNY 800/year insurance.",
+        "eligibility": "Review eligible majors, age, language and documentation in the year-specific prospectus.",
+        "deadline": "See current notice.",
+        "application": "Submit the HEBUT and CSC applications as directed. Select Type B and use agency number 10080.",
+        "renewal": null,
+        "source": {
+          "title": "HEBUT official CSC Type B prospectus",
+          "url": "https://sie.hebut.edu.cn/zsxx/zsjz/lxszsjz/541b98ab765b4356b0f26ed96d2f8740.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "hefei-university-of-technology",
+    "name": "Hefei University of Technology",
+    "aliases": [
+      "HFUT",
+      "合肥工业大学"
+    ],
+    "city": "Hefei",
+    "province": "Anhui",
+    "website": "https://iec.hfut.edu.cn",
+    "applicationUrl": "http://admission.hfut.edu.cn",
+    "note": "The 2027 CSC postgraduate notice has its own cycle and programme appendix.",
+    "programs": [
+      {
+        "id": "ug",
+        "name": "International undergraduate programmes",
+        "subjects": [
+          "Civil Engineering",
+          "Mechatronic Engineering",
+          "Mechanical Engineering",
+          "Geography",
+          "Urban and Rural Planning",
+          "English"
+        ],
+        "level": "bachelor",
+        "language": "Chinese or English by major",
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": "See major catalogue",
+        "tuitionCny": 22000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "15 June 2026",
+        "requirements": "High school diploma. CSCA. Chinese: HSK 4 or above. English: IELTS 6.0, TOEFL 85, Essentials 9 or Duolingo 100.",
+        "fees": "On-campus accommodation CNY 4,000/year; medical insurance CNY 800/year. See the guide for application charges.",
+        "source": {
+          "title": "HFUT 2026 international undergraduate guide",
+          "url": "https://iec.hfut.edu.cn/2025/1128/c11686a316558/page.htm"
+        }
+      },
+      {
+        "id": "master",
+        "name": "CSC postgraduate master’s options",
+        "subjects": [],
+        "level": "master",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": 2027,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "See the official programme appendix and supporting document templates.",
+        "fees": null,
+        "source": {
+          "title": "HFUT 2027 CSC Type B notice",
+          "url": "https://iec.hfut.edu.cn/2026/1104/c11686a324300/page.htm"
+        }
+      },
+      {
+        "id": "phd",
+        "name": "CSC postgraduate doctoral options",
+        "subjects": [],
+        "level": "phd",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": 2027,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "See the official programme appendix and supporting document templates.",
+        "fees": null,
+        "source": {
+          "title": "HFUT 2027 CSC Type B notice",
+          "url": "https://iec.hfut.edu.cn/2026/1104/c11686a324300/page.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "csc-a",
+        "name": "Chinese Government Scholarship Type A (Bilateral)",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "bachelor",
+          "master",
+          "phd"
+        ],
+        "cycleYear": 2026,
+        "coverage": "Tuition, accommodation or an accommodation subsidy, living allowance and comprehensive medical insurance.",
+        "eligibility": "Education and age requirements vary by degree. Previous-stage academic grade generally at least 75%; CSCA applies to bachelor’s.",
+        "deadline": "Country-specific dispatching authority deadline.",
+        "application": "Follow embassy or dispatching authority guidance; apply to HFUT for pre-admission if required.",
+        "renewal": null,
+        "source": {
+          "title": "HFUT 2026 CSC Type A notice",
+          "url": "https://iec.hfut.edu.cn/2025/1127/c11686a316542/page.htm"
+        }
+      },
+      {
+        "id": "csc-b",
+        "name": "CSC Type B High-Level Postgraduate Scholarship",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": 2027,
+        "coverage": null,
+        "eligibility": "See 2027 guide and programme list for eligible majors, criteria and deadlines.",
+        "deadline": null,
+        "application": "Follow both HFUT and CSC steps. The guide links templates for recommendations, a study plan and supervisor acceptance.",
+        "renewal": null,
+        "source": {
+          "title": "HFUT 2027 CSC Type B notice",
+          "url": "https://iec.hfut.edu.cn/2026/1104/c11686a324300/page.htm"
+        }
+      },
+      {
+        "id": "ug-chinese",
+        "name": "HFUT Undergraduate Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2026,
+        "coverage": "Type A covers tuition and on-campus accommodation. Type B covers half tuition and on-campus accommodation. Type C covers on-campus accommodation.",
+        "eligibility": "For Chinese-taught programmes and the English major. Other award tiers are described in the guide.",
+        "deadline": "15 June 2026",
+        "application": "Apply through the HFUT system. HFUT assigns the scholarship type after review.",
+        "renewal": "Annual review generally runs May to July. The award tier is reassessed for the next academic year.",
+        "source": {
+          "title": "HFUT 2026 international undergraduate guide",
+          "url": "https://iec.hfut.edu.cn/2025/1128/c11686a316558/page.htm"
+        }
+      },
+      {
+        "id": "ug-english",
+        "name": "HFUT English-taught Programme Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2026,
+        "coverage": "Type A covers two-thirds tuition and on-campus accommodation. Type B covers half tuition and on-campus accommodation. Type C covers on-campus accommodation.",
+        "eligibility": "For eligible English-taught programmes. See the guide for additional tiers.",
+        "deadline": "15 June 2026",
+        "application": "Apply through the HFUT system. HFUT assigns the scholarship type after review.",
+        "renewal": "Annual review generally runs May to July. The award tier is reassessed for the next academic year.",
+        "source": {
+          "title": "HFUT 2026 international undergraduate guide",
+          "url": "https://iec.hfut.edu.cn/2025/1128/c11686a316558/page.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "henan-university-of-technology",
+    "name": "Henan University of Technology",
+    "aliases": [
+      "HAUT",
+      "河南工业大学"
+    ],
+    "city": "Zhengzhou",
+    "province": "Henan",
+    "website": "https://sie.haut.edu.cn",
+    "applicationUrl": null,
+    "note": "The 2026 fall guide sets programme-specific fees and scholarship tiers.",
+    "programs": [
+      {
+        "id": "ug-arts",
+        "name": "Bachelor’s liberal arts programmes",
+        "subjects": [
+          "Economics"
+        ],
+        "level": "bachelor",
+        "language": "Chinese",
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": null,
+        "tuitionCny": 11000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "High-school diploma, under 25, valid CSCA result. International applicant in good health. Check language track requirements and required documents. English-track thresholds include IELTS 5.5, TOEFL 72 or Duolingo 100 where applicable.",
+        "fees": "See the published fee table for accommodation, insurance and any required advance payment.",
+        "source": {
+          "title": "Henan University of Technology 2026 fall admission and scholarship guide",
+          "url": "https://sie.haut.edu.cn/info/1298/17096.htm"
+        }
+      },
+      {
+        "id": "ug-stem",
+        "name": "Bachelor’s science and engineering programmes",
+        "subjects": [
+          "Civil Engineering",
+          "Bioengineering",
+          "Artificial Intelligence",
+          "Robotics Engineering",
+          "Automation",
+          "Computer Science and Technology",
+          "Environmental Engineering",
+          "Mathematics and Applied Mathematics"
+        ],
+        "level": "bachelor",
+        "language": "English by listed major",
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": null,
+        "tuitionCny": 16000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "High-school diploma, under 25, valid CSCA result. International applicant in good health. Check language track requirements and required documents. English-track thresholds include IELTS 5.5, TOEFL 72 or Duolingo 100 where applicable.",
+        "fees": "See the published fee table for accommodation, insurance and any required advance payment.",
+        "source": {
+          "title": "Henan University of Technology 2026 fall admission and scholarship guide",
+          "url": "https://sie.haut.edu.cn/info/1298/17096.htm"
+        }
+      },
+      {
+        "id": "ug-trade",
+        "name": "International Economics and Trade",
+        "subjects": [
+          "International Economics and Trade"
+        ],
+        "level": "bachelor",
+        "language": "English",
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "High-school diploma, under 25, valid CSCA result. International applicant in good health. Check language track requirements and required documents. English-track thresholds include IELTS 5.5, TOEFL 72 or Duolingo 100 where applicable.",
+        "fees": "See the published fee table for accommodation, insurance and any required advance payment.",
+        "source": {
+          "title": "Henan University of Technology 2026 fall admission and scholarship guide",
+          "url": "https://sie.haut.edu.cn/info/1298/17096.htm"
+        }
+      },
+      {
+        "id": "master",
+        "name": "Master’s programmes",
+        "subjects": [
+          "Mechanical Engineering",
+          "Biology",
+          "Applied Economics",
+          "Artificial Intelligence",
+          "Control Science and Engineering",
+          "Computer Science and Technology",
+          "Food Science and Engineering",
+          "Environmental Science and Engineering"
+        ],
+        "level": "master",
+        "language": "Chinese or English by major",
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "Bachelor’s degree and under 35. International applicant in good health. Check language track requirements and required documents. English-track thresholds include IELTS 5.5, TOEFL 72 or Duolingo 100 where applicable.",
+        "fees": "See the published fee table for accommodation, insurance and any required advance payment.",
+        "source": {
+          "title": "Henan University of Technology 2026 fall admission and scholarship guide",
+          "url": "https://sie.haut.edu.cn/info/1298/17096.htm"
+        }
+      },
+      {
+        "id": "phd",
+        "name": "Doctoral programmes",
+        "subjects": [
+          "Food Science and Engineering",
+          "Grain Storage and Processing",
+          "Mechanical Engineering",
+          "Control Science and Engineering"
+        ],
+        "level": "phd",
+        "language": "English by listed major",
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": null,
+        "tuitionCny": 25000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "Master’s degree and under 40. International applicant in good health. Check language track requirements and required documents. English-track thresholds include IELTS 5.5, TOEFL 72 or Duolingo 100 where applicable.",
+        "fees": "See the published fee table for accommodation, insurance and any required advance payment.",
+        "source": {
+          "title": "Henan University of Technology 2026 fall admission and scholarship guide",
+          "url": "https://sie.haut.edu.cn/info/1298/17096.htm"
+        }
+      },
+      {
+        "id": "language",
+        "name": "One-year Chinese language programme",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": null,
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": "1 year",
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": "See the published fee table for accommodation, insurance and any required advance payment.",
+        "source": {
+          "title": "Henan University of Technology 2026 fall admission and scholarship guide",
+          "url": "https://sie.haut.edu.cn/info/1298/17096.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "freshman",
+        "name": "International Student Freshman Scholarship",
+        "type": "University",
+        "levels": [],
+        "cycleYear": 2026,
+        "coverage": "First class: full tuition and double room. Second class: full tuition. Third class: half tuition.",
+        "eligibility": "Awarded in the 2026 autumn freshman scheme. Check the current cycle’s selection criteria.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Henan University of Technology 2026 fall admission and scholarship guide",
+          "url": "https://sie.haut.edu.cn/info/1298/17096.htm"
+        }
+      },
+      {
+        "id": "entry",
+        "name": "Undergraduate and Chinese Language Admission Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor",
+          "language"
+        ],
+        "cycleYear": 2026,
+        "coverage": "The guide sets tuition plus accommodation at CNY 10,000/year under the admission scheme.",
+        "eligibility": "Eligible undergraduates and one-year language students in the 2026 autumn cycle.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Henan University of Technology 2026 fall admission and scholarship guide",
+          "url": "https://sie.haut.edu.cn/info/1298/17096.htm"
+        }
+      },
+      {
+        "id": "silk-road",
+        "name": "CSC Silk Road Programme",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "phd"
+        ],
+        "cycleYear": 2026,
+        "coverage": "Tuition, accommodation or an accommodation subsidy, living allowance and comprehensive medical insurance.",
+        "eligibility": "Doctoral applicants in Food Science and Engineering with a focus on grain storage and processing. Check eligible countries and submission requirements in the project notice.",
+        "deadline": null,
+        "application": "Follow the university notice and submit in the CSC system.",
+        "renewal": null,
+        "source": {
+          "title": "Henan University of Technology 2026 fall admission and scholarship guide",
+          "url": "https://sie.haut.edu.cn/info/1298/17096.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "hunan-college-of-foreign-studies",
+    "name": "Hunan College of Foreign Studies",
+    "aliases": [
+      "HCFS",
+      "湖南外国语职业学院"
+    ],
+    "city": "Changsha",
+    "province": "Hunan",
+    "website": "https://www.huwai.edu.cn/ieac",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [
+      {
+        "id": "language",
+        "name": "Chinese Language Programme",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": null,
+        "source": {
+          "title": "Hunan College of Foreign Studies international office · fair brochure",
+          "url": "https://www.huwai.edu.cn/ieac/Contact_Us.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "belt-road",
+        "name": "HCFS Belt and Road Scholarship",
+        "type": "University",
+        "levels": [
+          "language",
+          "other"
+        ],
+        "cycleYear": null,
+        "coverage": "The fair brochure lists separate standard and subsidised tuition for Chinese language and diploma routes. Confirm the final payable rate and eligible countries with HCFS.",
+        "eligibility": null,
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Hunan College of Foreign Studies international office · fair brochure",
+          "url": "https://www.huwai.edu.cn/ieac/Contact_Us.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "jiangsu-normal-university",
+    "name": "Jiangsu Normal University",
+    "aliases": [
+      "JSNU",
+      "江苏师范大学"
+    ],
+    "city": "Xuzhou",
+    "province": "Jiangsu",
+    "website": "https://www.jsnu.edu.cn",
+    "applicationUrl": null,
+    "note": "The photographed guide concerns preparatory education. Check the international office for the current scholarship and programme terms.",
+    "programs": [
+      {
+        "id": "prep",
+        "name": "Preparatory Programme",
+        "subjects": [
+          "Chinese Language",
+          "Preparatory Studies"
+        ],
+        "level": "other",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": null,
+        "source": {
+          "title": "Jiangsu Normal University · preparatory programme brochure",
+          "url": "https://www.jsnu.edu.cn"
+        }
+      }
+    ],
+    "scholarships": []
+  },
+  {
+    "slug": "jiaxing-university",
+    "name": "Jiaxing University",
+    "aliases": [
+      "JXU",
+      "嘉兴大学"
+    ],
+    "city": "Jiaxing",
+    "province": "Zhejiang",
+    "website": "https://global.zjxu.edu.cn",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [
+      {
+        "id": "language",
+        "name": "Chinese Language Programme",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": null,
+        "source": {
+          "title": "Jiaxing University official university-awards overview",
+          "url": "https://global.zjxu.edu.cn/Scholarships/Scholarships_from_JXU.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "undergrad",
+        "name": "Outstanding International Undergraduate Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": null,
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Jiaxing University official university-awards overview",
+          "url": "https://global.zjxu.edu.cn/Scholarships/Scholarships_from_JXU.htm"
+        }
+      },
+      {
+        "id": "friendship",
+        "name": "International Student Friendship Scholarship",
+        "type": "University",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": null,
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Jiaxing University official university-awards overview",
+          "url": "https://global.zjxu.edu.cn/Scholarships/Scholarships_from_JXU.htm"
+        }
+      },
+      {
+        "id": "language",
+        "name": "Chinese Language Program New Student Scholarship",
+        "type": "University",
+        "levels": [
+          "language"
+        ],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": null,
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Jiaxing University official university-awards overview",
+          "url": "https://global.zjxu.edu.cn/Scholarships/Scholarships_from_JXU.htm"
+        }
+      },
+      {
+        "id": "huayou",
+        "name": "Huayou Cobalt Enterprise Scholarship",
+        "type": "Enterprise",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "The official listing specifies Indonesian and Hungarian nationals.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Jiaxing University official university-awards overview",
+          "url": "https://global.zjxu.edu.cn/Scholarships/Scholarships_from_JXU.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "jilin-agricultural-university",
+    "name": "Jilin Agricultural University",
+    "aliases": [
+      "JLAU",
+      "吉林农业大学"
+    ],
+    "city": "Changchun",
+    "province": "Jilin",
+    "website": "https://gjjy.jlau.edu.cn",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [],
+    "scholarships": [
+      {
+        "id": "csc",
+        "name": "Chinese Government Scholarship",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": 2027,
+        "coverage": null,
+        "eligibility": "The photographed 2027 prospectus lists language and academic conditions. Check the annual university notice before applying.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Jilin Agricultural University international office and brochure reference",
+          "url": "https://gjjy.jlau.edu.cn/info/1039/1737.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "jinzhou-medical-university",
+    "name": "Jinzhou Medical University",
+    "aliases": [
+      "JZMU",
+      "锦州医科大学"
+    ],
+    "city": "Jinzhou",
+    "province": "Liaoning",
+    "website": "https://www.jzmu.edu.cn/en",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [
+      {
+        "id": "foundation",
+        "name": "International foundation programme",
+        "subjects": [
+          "Clinical Medicine",
+          "MBBS",
+          "Dental Surgery",
+          "Nursing",
+          "Pharmacy",
+          "Food Nutrition and Health"
+        ],
+        "level": "other",
+        "language": "English",
+        "intakeMonth": null,
+        "intakeYear": 2026,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "Preparation for CSCA and English-medium university programmes. The brochure lists an interview and English proficiency requirements. Progression conditions are programme-specific.",
+        "fees": null,
+        "source": {
+          "title": "Jinzhou Medical University accreditation and brochure reference",
+          "url": "https://www.jzmu.edu.cn/en/About/Accreditation.htm"
+        }
+      },
+      {
+        "id": "mbbs",
+        "name": "Clinical Medicine (MBBS)",
+        "subjects": [
+          "Clinical Medicine",
+          "MBBS"
+        ],
+        "level": "bachelor",
+        "language": "English",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": null,
+        "source": {
+          "title": "Jinzhou Medical University accreditation and brochure reference",
+          "url": "https://www.jzmu.edu.cn/en/About/Accreditation.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "csc",
+        "name": "Chinese Government Scholarship host institution",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "University accreditation lists CSC host status. Confirm which programmes and categories are open in the current cycle.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Jinzhou Medical University accreditation and brochure reference",
+          "url": "https://www.jzmu.edu.cn/en/About/Accreditation.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "nanchang-medical-college",
+    "name": "Nanchang Medical College",
+    "aliases": [
+      "NCMC",
+      "南昌医学院"
+    ],
+    "city": "Nanchang",
+    "province": "Jiangxi",
+    "website": "https://www.ncmc.edu.cn/gjhz/index.htm",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [
+      {
+        "id": "pharmacy",
+        "name": "Pharmacy",
+        "subjects": [
+          "Pharmacy"
+        ],
+        "level": "bachelor",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": 2026,
+        "duration": null,
+        "tuitionCny": 15000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "30 June 2026",
+        "requirements": "Submit admissions documents as specified in the brochure. Competitive review and interview.",
+        "fees": "Double room CNY 2,000/year plus utilities; textbooks and insurance CNY 800 each/year; medical examination and residence permit fees separately.",
+        "source": {
+          "title": "Nanchang Medical College 2026 international admissions brochure",
+          "url": "https://www.ncmc.edu.cn/gjhz/info/1053/1075.htm"
+        }
+      },
+      {
+        "id": "language",
+        "name": "Chinese language programme",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": "Chinese and English",
+        "intakeMonth": null,
+        "intakeYear": 2026,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": "30 June 2026",
+        "requirements": "Submit the programme’s required documents as specified in the brochure.",
+        "fees": null,
+        "source": {
+          "title": "Nanchang Medical College 2026 international admissions brochure",
+          "url": "https://www.ncmc.edu.cn/gjhz/info/1053/1075.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "ncmc",
+        "name": "NCMC International Student Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2026,
+        "coverage": null,
+        "eligibility": "Pharmacy students with strong grades, attendance and conduct. Approximately 20% may receive an award.",
+        "deadline": null,
+        "application": "Apply after enrollment as directed by the college.",
+        "renewal": "Continued funding is subject to the applicable annual review.",
+        "source": {
+          "title": "Nanchang Medical College 2026 international admissions brochure",
+          "url": "https://www.ncmc.edu.cn/gjhz/info/1053/1075.htm"
+        }
+      },
+      {
+        "id": "jiangxi",
+        "name": "Jiangxi Provincial Government Scholarship for International Students",
+        "type": "Provincial or municipal",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2026,
+        "coverage": null,
+        "eligibility": "The brochure lists this as an additional route for pharmacy students. Confirm award criteria separately.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Nanchang Medical College 2026 international admissions brochure",
+          "url": "https://www.ncmc.edu.cn/gjhz/info/1053/1075.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "nanjing-agricultural-university",
+    "name": "Nanjing Agricultural University",
+    "aliases": [
+      "NAU",
+      "南京农业大学"
+    ],
+    "city": "Nanjing",
+    "province": "Jiangsu",
+    "website": "https://coieen.njau.edu.cn",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [
+      {
+        "id": "graduate",
+        "name": "International graduate programmes",
+        "subjects": [
+          "Agriculture",
+          "Food Science",
+          "Biology",
+          "Environmental Science"
+        ],
+        "level": "master",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "Confirm eligible disciplines, language and supervisor requirements in the international admissions guide.",
+        "fees": null,
+        "source": {
+          "title": "NAU international education and brochure reference",
+          "url": "https://coieen.njau.edu.cn"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "csc",
+        "name": "CSC High-Level Postgraduate Scholarship",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": null,
+        "coverage": "Tuition waiver, comprehensive insurance, stipend CNY 3,000/month (master’s) or CNY 3,500/month (PhD). The fair brochure also quotes accommodation support.",
+        "eligibility": "Follow the postgraduate and CSC requirements for the annual cycle.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "NAU international education and brochure reference",
+          "url": "https://coieen.njau.edu.cn"
+        }
+      },
+      {
+        "id": "nanjing",
+        "name": "Nanjing Municipal Government Scholarship",
+        "type": "Provincial or municipal",
+        "levels": [
+          "bachelor",
+          "master",
+          "phd",
+          "other"
+        ],
+        "cycleYear": null,
+        "coverage": "Fair brochure quotes CNY 20,000 for graduate students, CNY 10,000 for undergraduates and CNY 5,000 for non-degree students. Confirm the current award schedule.",
+        "eligibility": null,
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "NAU international education and brochure reference",
+          "url": "https://coieen.njau.edu.cn"
+        }
+      },
+      {
+        "id": "nau",
+        "name": "Nanjing Agricultural University Scholarship",
+        "type": "University",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": null,
+        "coverage": "Full and partial awards. Fair brochure describes full funding as tuition waiver, CNY 10,000/year accommodation support, CNY 1,500/month stipend and comprehensive medical insurance. Partial funding varies.",
+        "eligibility": "Eligible international graduate applicants. For English-medium tracks, the published overview gives IELTS 6.0, TOEFL 80 or a listed alternative.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "NAU university scholarship programme information",
+          "url": "https://coieen.njau.edu.cn/__local/C/3E/FD/BED3BCA3D7C1EDEEAACA6D7AD91_553F91D1_24055.pdf"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "nanjing-university-of-aeronautics-and-astronautics",
+    "name": "Nanjing University of Aeronautics and Astronautics",
+    "aliases": [
+      "NUAA",
+      "南京航空航天大学"
+    ],
+    "city": "Nanjing",
+    "province": "Jiangsu",
+    "website": "https://ciee.nuaa.edu.cn",
+    "applicationUrl": null,
+    "note": "The fair brochure lists the Fly-High 2027 application window. Award coverage depends on the published tier.",
+    "programs": [
+      {
+        "id": "ug",
+        "name": "International undergraduate programmes",
+        "subjects": [
+          "Aeronautical Engineering",
+          "Aerospace Engineering"
+        ],
+        "level": "bachelor",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "High-school qualification and CSCA where required. The admission page lists IELTS 6.0, TOEFL 70 or accepted equivalents for English proof.",
+        "fees": null,
+        "source": {
+          "title": "NUAA admissions requirements and brochure reference",
+          "url": "https://ciee.nuaa.edu.cn/admissions/admission-requirements"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "fly-high",
+        "name": "NUAA Fly-High Scholarship",
+        "type": "University",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": 2027,
+        "coverage": "Fair brochure shows awards up to 100% and a single-year award.",
+        "eligibility": "Competitive review of applicant qualifications and academic results.",
+        "deadline": "1 November 2026 to 30 May 2027 for the route in the fair brochure.",
+        "application": "Apply through the university admission route.",
+        "renewal": "Subsequent funding is assessed separately on academic performance.",
+        "source": {
+          "title": "NUAA admissions requirements and brochure reference",
+          "url": "https://ciee.nuaa.edu.cn/admissions/admission-requirements"
+        }
+      },
+      {
+        "id": "csc",
+        "name": "Chinese Government Scholarship",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": 2027,
+        "coverage": null,
+        "eligibility": "Applicants for Type B are assessed by the university. Apply under the relevant CSC stream.",
+        "deadline": "Depends on the CSC route.",
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "NUAA admissions requirements and brochure reference",
+          "url": "https://ciee.nuaa.edu.cn/admissions/admission-requirements"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "nanjing-university-of-information-science-and-technology",
+    "name": "Nanjing University of Information Science and Technology",
+    "aliases": [
+      "NUIST",
+      "南京信息工程大学"
+    ],
+    "city": "Nanjing",
+    "province": "Jiangsu",
+    "website": "https://gjy.nuist.edu.cn/english",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [
+      {
+        "id": "ug",
+        "name": "International undergraduate programmes",
+        "subjects": [
+          "Atmospheric Science",
+          "Meteorology"
+        ],
+        "level": "bachelor",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": 2026,
+        "duration": null,
+        "tuitionCny": 15000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": null,
+        "source": {
+          "title": "NUIST official tuition and fees",
+          "url": "https://gjy.nuist.edu.cn/english/FeeswPayment/list.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "excellent",
+        "name": "NUIST Excellent Freshman Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor",
+          "master",
+          "phd"
+        ],
+        "cycleYear": 2026,
+        "coverage": "Bachelor’s: full or half tuition. Master’s: tuition plus housing, or tuition alone. PhD: tuition plus housing, with CNY 2,500/month stipend for first class.",
+        "eligibility": "Competitive first-year award. Confirm programme and award tiers with NUIST.",
+        "deadline": null,
+        "application": null,
+        "renewal": "Continued funding is subject to the applicable annual review.",
+        "source": {
+          "title": "NUIST international admissions · scholarship brochure",
+          "url": "https://gjy.nuist.edu.cn/english"
+        }
+      },
+      {
+        "id": "csc",
+        "name": "Chinese Government Scholarship",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "bachelor",
+          "master",
+          "phd"
+        ],
+        "cycleYear": null,
+        "coverage": "Tuition, accommodation or an accommodation subsidy, living allowance and comprehensive medical insurance.",
+        "eligibility": "Check current supported degrees and type of nomination.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "NUIST international admissions · scholarship brochure",
+          "url": "https://gjy.nuist.edu.cn/english"
+        }
+      },
+      {
+        "id": "commerce",
+        "name": "Ministry of Commerce Master Programme of Meteorology",
+        "type": "National · Ministry of Commerce",
+        "levels": [
+          "master"
+        ],
+        "cycleYear": null,
+        "coverage": "The photographed guide lists tuition, accommodation, insurance and CNY 3,000/month.",
+        "eligibility": "Confirm the nomination channel and country/programme restrictions.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "NUIST international admissions · scholarship brochure",
+          "url": "https://gjy.nuist.edu.cn/english"
+        }
+      },
+      {
+        "id": "clec",
+        "name": "International Chinese Language Teachers Scholarship",
+        "type": "Chinese language teaching",
+        "levels": [
+          "bachelor",
+          "master",
+          "language"
+        ],
+        "cycleYear": null,
+        "coverage": "Brochure lists tuition, accommodation, insurance and stipend based on degree/track.",
+        "eligibility": "Check annual language and programme criteria.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "NUIST international admissions · scholarship brochure",
+          "url": "https://gjy.nuist.edu.cn/english"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "ningbo-university",
+    "name": "Ningbo University",
+    "aliases": [
+      "NBU",
+      "宁波大学"
+    ],
+    "city": "Ningbo",
+    "province": "Zhejiang",
+    "website": "https://icnbu.nbu.edu.cn",
+    "applicationUrl": "https://icnbu.nbu.edu.cn",
+    "note": null,
+    "programs": [
+      {
+        "id": "lang-year",
+        "name": "Chinese Language (academic year)",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": "Chinese",
+        "intakeMonth": null,
+        "intakeYear": 2026,
+        "duration": "1 year",
+        "tuitionCny": 16000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "Aged 18–50, high-school graduate, physically and mentally fit.",
+        "fees": null,
+        "source": {
+          "title": "Ningbo University international admissions · 2026 brochure",
+          "url": "https://icnbu.nbu.edu.cn"
+        }
+      },
+      {
+        "id": "lang-sem",
+        "name": "Chinese Language (semester)",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": "Chinese",
+        "intakeMonth": null,
+        "intakeYear": 2026,
+        "duration": "1 semester",
+        "tuitionCny": 8000,
+        "tuitionPeriod": "semester",
+        "applicationDeadline": null,
+        "requirements": "Aged 18–50, high-school graduate, physically and mentally fit.",
+        "fees": null,
+        "source": {
+          "title": "Ningbo University international admissions · 2026 brochure",
+          "url": "https://icnbu.nbu.edu.cn"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "csc",
+        "name": "CSC Chinese University Programme",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": 2026,
+        "coverage": "Tuition, on-campus accommodation, medical insurance and monthly stipend of CNY 3,000 for master’s or CNY 3,500 for PhD, per 2026 prospectus.",
+        "eligibility": "Follow the year-specific university notice and CSC criteria.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Ningbo University admissions scholarship notices",
+          "url": "https://icnbu.nbu.edu.cn/Admissions/Scholarship.htm"
+        }
+      },
+      {
+        "id": "clec",
+        "name": "International Chinese Language Teachers Scholarship",
+        "type": "Chinese language teaching",
+        "levels": [
+          "language"
+        ],
+        "cycleYear": 2026,
+        "coverage": null,
+        "eligibility": "Eligibility varies by category. Consult the 2026 guide or its replacement.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Ningbo University admissions scholarship notices",
+          "url": "https://icnbu.nbu.edu.cn/Admissions/Scholarship.htm"
+        }
+      },
+      {
+        "id": "zhejiang",
+        "name": "Zhejiang Provincial Government Scholarship",
+        "type": "Provincial or municipal",
+        "levels": [
+          "bachelor",
+          "master",
+          "phd"
+        ],
+        "cycleYear": 2026,
+        "coverage": "The fair brochure lists CNY 30,000 for graduate students and CNY 20,000 for undergraduate students. Confirm the applicable year and cohort.",
+        "eligibility": null,
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Ningbo University admissions scholarship notices",
+          "url": "https://icnbu.nbu.edu.cn/Admissions/Scholarship.htm"
+        }
+      },
+      {
+        "id": "nbu",
+        "name": "Ningbo University Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor",
+          "master",
+          "phd"
+        ],
+        "cycleYear": 2026,
+        "coverage": "The fair brochure lists CNY 30,000 for graduate students and CNY 20,000 for undergraduate students. Award rules vary by cohort.",
+        "eligibility": null,
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Ningbo University admissions scholarship notices",
+          "url": "https://icnbu.nbu.edu.cn/Admissions/Scholarship.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "ningbotech-university",
+    "name": "NingboTech University",
+    "aliases": [
+      "NBT",
+      "浙大宁波理工学院"
+    ],
+    "city": "Ningbo",
+    "province": "Zhejiang",
+    "website": "https://www.nbt.edu.cn",
+    "applicationUrl": null,
+    "note": "NingboTech University and Ningbo University are separate institutions.",
+    "programs": [
+      {
+        "id": "lang",
+        "name": "Chinese Language Programme",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": null,
+        "intakeMonth": null,
+        "intakeYear": 2026,
+        "duration": "Semester",
+        "tuitionCny": 6000,
+        "tuitionPeriod": "semester",
+        "applicationDeadline": null,
+        "requirements": "High school or higher, 18–40, good health, per photographed brochure.",
+        "fees": null,
+        "source": {
+          "title": "NingboTech University · 2026 admissions brochure",
+          "url": "https://www.nbt.edu.cn"
+        }
+      },
+      {
+        "id": "masters",
+        "name": "International master’s programme",
+        "subjects": [],
+        "level": "master",
+        "language": "Chinese",
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": "3 years",
+        "tuitionCny": 20000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "Bachelor’s degree, under 35, HSK 5 or above from the preceding two years, per photographed brochure.",
+        "fees": null,
+        "source": {
+          "title": "NingboTech University · 2026 admissions brochure",
+          "url": "https://www.nbt.edu.cn"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "outstanding",
+        "name": "NingboTech Outstanding International Student Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2026,
+        "coverage": null,
+        "eligibility": "The published 2025–26 notice refers to continuing students in years two to four.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "NingboTech continuing-student scholarship notice",
+          "url": "https://wyxy.nbt.edu.cn/gjjy2026/info/1201/2022.htm"
+        }
+      },
+      {
+        "id": "entry",
+        "name": "NingboTech first-year tuition awards",
+        "type": "University",
+        "levels": [],
+        "cycleYear": 2026,
+        "coverage": "The photographed brochure lists 100% and 70% first-year tuition tiers. Confirm the award names and eligibility before applying.",
+        "eligibility": null,
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "NingboTech University · 2026 admissions brochure",
+          "url": "https://www.nbt.edu.cn"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "northeast-forestry-university",
+    "name": "Northeast Forestry University",
+    "aliases": [
+      "NEFU",
+      "东北林业大学"
+    ],
+    "city": "Harbin",
+    "province": "Heilongjiang",
+    "website": "https://siee.nefu.edu.cn",
+    "applicationUrl": "https://istudy.nefu.edu.cn",
+    "note": null,
+    "programs": [
+      {
+        "id": "bachelor-cn",
+        "name": "Chinese-medium bachelor programmes",
+        "subjects": [],
+        "level": "bachelor",
+        "language": "Chinese",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": 16500,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "Verify the relevant degree and teaching track. Annual tuition is from the fair brochure.",
+        "fees": null,
+        "source": {
+          "title": "NEFU international education and scholarship notices",
+          "url": "https://siee.nefu.edu.cn/English.htm"
+        }
+      },
+      {
+        "id": "bachelor-en",
+        "name": "English-medium bachelor programmes",
+        "subjects": [],
+        "level": "bachelor",
+        "language": "English",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": 21500,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "Verify the relevant degree and teaching track. Annual tuition is from the fair brochure.",
+        "fees": null,
+        "source": {
+          "title": "NEFU international education and scholarship notices",
+          "url": "https://siee.nefu.edu.cn/English.htm"
+        }
+      },
+      {
+        "id": "master-en",
+        "name": "English-medium master programmes",
+        "subjects": [],
+        "level": "master",
+        "language": "English",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": 30000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "Verify the relevant degree and teaching track. Annual tuition is from the fair brochure.",
+        "fees": null,
+        "source": {
+          "title": "NEFU international education and scholarship notices",
+          "url": "https://siee.nefu.edu.cn/English.htm"
+        }
+      },
+      {
+        "id": "phd-cn",
+        "name": "Chinese-medium phd programmes",
+        "subjects": [],
+        "level": "phd",
+        "language": "Chinese",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": 32000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "Verify the relevant degree and teaching track. Annual tuition is from the fair brochure.",
+        "fees": null,
+        "source": {
+          "title": "NEFU international education and scholarship notices",
+          "url": "https://siee.nefu.edu.cn/English.htm"
+        }
+      },
+      {
+        "id": "phd-en",
+        "name": "English-medium phd programmes",
+        "subjects": [],
+        "level": "phd",
+        "language": "English",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": 38000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "Verify the relevant degree and teaching track. Annual tuition is from the fair brochure.",
+        "fees": null,
+        "source": {
+          "title": "NEFU international education and scholarship notices",
+          "url": "https://siee.nefu.edu.cn/English.htm"
+        }
+      },
+      {
+        "id": "language",
+        "name": "Chinese language training",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": "Chinese",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": 13600,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "Verify the relevant degree and teaching track. Annual tuition is from the fair brochure.",
+        "fees": null,
+        "source": {
+          "title": "NEFU international education and scholarship notices",
+          "url": "https://siee.nefu.edu.cn/English.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "president",
+        "name": "NEFU President Scholarship (Freshman)",
+        "type": "University",
+        "levels": [
+          "bachelor",
+          "master"
+        ],
+        "cycleYear": null,
+        "coverage": "One year. First class: tuition and housing. Second: tuition. Third: 50% tuition. Fourth: 30% tuition.",
+        "eligibility": "Self-funded international applicants to Chinese-medium bachelor’s or master’s programmes. HSK 4. Cannot be combined with another scholarship.",
+        "deadline": null,
+        "application": "Submit the university scholarship form and admission documents.",
+        "renewal": "Students may apply for the following year based on prior academic performance.",
+        "source": {
+          "title": "NEFU President Scholarship rules",
+          "url": "https://siee.nefu.edu.cn/English/Scholarships/NEFU_President_Scholarship__Freshman_.htm"
+        }
+      },
+      {
+        "id": "csc",
+        "name": "Chinese Government Scholarship",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": null,
+        "coverage": "Tuition, accommodation or an accommodation subsidy, living allowance and comprehensive medical insurance.",
+        "eligibility": "Review the current scheme and programme notice.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "NEFU international education and scholarship notices",
+          "url": "https://siee.nefu.edu.cn/English.htm"
+        }
+      },
+      {
+        "id": "eurasia",
+        "name": "Scholarship for International Students from Eurasian Countries",
+        "type": "Provincial or municipal",
+        "levels": [
+          "master",
+          "phd"
+        ],
+        "cycleYear": null,
+        "coverage": "Tuition and dormitory waiver; CNY 800/year insurance; CNY 3,000/month master’s or CNY 3,500/month PhD in the photographed guide.",
+        "eligibility": "Country restrictions. The photographed guide lists master’s applicants under 35, doctoral applicants under 40 and HSK 4 or higher for Chinese-medium study. No concurrent award.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "NEFU international education and scholarship notices",
+          "url": "https://siee.nefu.edu.cn/English.htm"
+        }
+      },
+      {
+        "id": "clec",
+        "name": "International Chinese Language Teachers Scholarship",
+        "type": "Chinese language teaching",
+        "levels": [
+          "language"
+        ],
+        "cycleYear": null,
+        "coverage": null,
+        "eligibility": "Verify supported tracks and HSK/HSKK in the annual notice.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "NEFU international education and scholarship notices",
+          "url": "https://siee.nefu.edu.cn/English.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "shandong-university-of-traditional-chinese-medicine",
+    "name": "Shandong University of Traditional Chinese Medicine",
+    "aliases": [
+      "SDUTCM",
+      "山东中医药大学"
+    ],
+    "city": "Jinan",
+    "province": "Shandong",
+    "website": "https://gjjiaoyu.sdutcm.edu.cn",
+    "applicationUrl": "https://sdutcm.at0086.cn/StuApplication/NewIndex.aspx",
+    "note": "Degree data is from the 2026 guide. The same guide expressly lists a March 2027 language intake. The university directs applicants to its own admissions portal.",
+    "programs": [
+      {
+        "id": "bachelor",
+        "name": "Undergraduate programmes",
+        "subjects": [
+          "Traditional Chinese Medicine",
+          "Acupuncture and Tuina",
+          "Chinese Materia Medica",
+          "Pharmacy"
+        ],
+        "level": "bachelor",
+        "language": "Depends on major",
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": null,
+        "tuitionCny": 23000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "30 June 2026",
+        "requirements": "High school or equivalent. HSK 4 for Chinese instruction. English programmes require accepted English proof or an exemption. Study plan at least 500 words and an online interview.",
+        "fees": "Twin dorm CNY 4,000/year or single CNY 8,000/year; mandatory insurance CNY 800/year.",
+        "source": {
+          "title": "SDUTCM 2026 admissions guide",
+          "url": "https://gjjiaoyu.sdutcm.edu.cn/info/1158/2262.htm"
+        }
+      },
+      {
+        "id": "master",
+        "name": "Master’s programmes",
+        "subjects": [
+          "Acupuncture and Tuina",
+          "Ophthalmology",
+          "Chinese Materia Medica",
+          "Pharmacy",
+          "Nursing",
+          "Electronic Information",
+          "Biomedical Engineering",
+          "Applied Psychology",
+          "Rehabilitation Medicine"
+        ],
+        "level": "master",
+        "language": "Chinese or English by major",
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": "3 years",
+        "tuitionCny": 30000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "30 June 2026",
+        "requirements": "Bachelor’s degree. Chinese track HSK 5 (180); English track IELTS 6.0, TOEFL 80 or other listed equivalent. Two recommendations and a 1,500-word plan.",
+        "fees": "Twin dorm CNY 4,000/year or single CNY 8,000/year; mandatory insurance CNY 800/year.",
+        "source": {
+          "title": "SDUTCM 2026 postgraduate guide",
+          "url": "https://gjjiaoyu.sdutcm.edu.cn/info/1159/2265.htm"
+        }
+      },
+      {
+        "id": "phd",
+        "name": "Doctoral programmes",
+        "subjects": [
+          "Traditional Chinese Medicine",
+          "Acupuncture and Tuina",
+          "Chinese Materia Medica"
+        ],
+        "level": "phd",
+        "language": "Depends on major",
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": null,
+        "tuitionCny": 38000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "30 June 2026",
+        "requirements": "Master’s degree. Chinese track HSK 5 (180); check English equivalencies. Two recommendations and a 2,500-word proposal.",
+        "fees": "Twin dorm CNY 4,000/year or single CNY 8,000/year; mandatory insurance CNY 800/year.",
+        "source": {
+          "title": "SDUTCM 2026 postgraduate guide",
+          "url": "https://gjjiaoyu.sdutcm.edu.cn/info/1159/2265.htm"
+        }
+      },
+      {
+        "id": "language-9",
+        "name": "Chinese Language (TCM Chinese)",
+        "subjects": [
+          "Chinese Language",
+          "Traditional Chinese Medicine"
+        ],
+        "level": "language",
+        "language": "Chinese",
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": "One semester or full year where offered",
+        "tuitionCny": 15000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "15 June 2026",
+        "requirements": "Beginners should be able to communicate in English. Other applicants can show HSK or prior Chinese-medium study. Online interview.",
+        "fees": "Twin dorm CNY 4,000/year or single CNY 8,000/year; mandatory insurance CNY 800/year.",
+        "source": {
+          "title": "SDUTCM 2026/27 non-degree guide",
+          "url": "https://gjjiaoyu.sdutcm.edu.cn/info/1151/2267.htm"
+        }
+      },
+      {
+        "id": "language-3",
+        "name": "Chinese Language (TCM Chinese)",
+        "subjects": [
+          "Chinese Language",
+          "Traditional Chinese Medicine"
+        ],
+        "level": "language",
+        "language": "Chinese",
+        "intakeMonth": 3,
+        "intakeYear": 2027,
+        "duration": "One semester or full year where offered",
+        "tuitionCny": 15000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "31 December 2026",
+        "requirements": "Beginners should be able to communicate in English. Other applicants can show HSK or prior Chinese-medium study. Online interview.",
+        "fees": "Twin dorm CNY 4,000/year or single CNY 8,000/year; mandatory insurance CNY 800/year.",
+        "source": {
+          "title": "SDUTCM 2026/27 non-degree guide",
+          "url": "https://gjjiaoyu.sdutcm.edu.cn/info/1151/2267.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "shandong",
+        "name": "Shandong Provincial Government Scholarship for International Students",
+        "type": "Provincial or municipal",
+        "levels": [],
+        "cycleYear": 2026,
+        "coverage": null,
+        "eligibility": "Applicants apply after registering. The annual notice supplies award-specific criteria and selection is competitive.",
+        "deadline": "September to October after registration",
+        "application": "Submit documents called for in the university’s annual notice.",
+        "renewal": null,
+        "source": {
+          "title": "SDUTCM 2026 admissions guide",
+          "url": "https://gjjiaoyu.sdutcm.edu.cn/info/1158/2262.htm"
+        }
+      },
+      {
+        "id": "president",
+        "name": "SDUTCM Presidential Scholarship",
+        "type": "University",
+        "levels": [],
+        "cycleYear": 2026,
+        "coverage": null,
+        "eligibility": "Applicants apply after registering. The annual notice supplies award-specific criteria and selection is competitive.",
+        "deadline": "September to October after registration",
+        "application": "Submit documents called for in the university’s annual notice.",
+        "renewal": null,
+        "source": {
+          "title": "SDUTCM 2026 admissions guide",
+          "url": "https://gjjiaoyu.sdutcm.edu.cn/info/1158/2262.htm"
+        }
+      },
+      {
+        "id": "bian-que",
+        "name": "Bian Que Scholarship",
+        "type": "University",
+        "levels": [],
+        "cycleYear": 2026,
+        "coverage": null,
+        "eligibility": "Applicants apply after registering. The annual notice supplies award-specific criteria and selection is competitive.",
+        "deadline": "September to October after registration",
+        "application": "Submit documents called for in the university’s annual notice.",
+        "renewal": null,
+        "source": {
+          "title": "SDUTCM 2026 admissions guide",
+          "url": "https://gjjiaoyu.sdutcm.edu.cn/info/1158/2262.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "shanghai-university",
+    "name": "Shanghai University",
+    "aliases": [
+      "SHU",
+      "SILC Business School",
+      "上海大学"
+    ],
+    "city": "Shanghai",
+    "province": "Shanghai",
+    "website": "https://shusilc.shu.edu.cn",
+    "applicationUrl": "https://apply.shu.edu.cn",
+    "note": "The programme and scholarship records here refer to SILC Business School.",
+    "programs": [
+      {
+        "id": "silc-ug",
+        "name": "SILC undergraduate business programmes",
+        "subjects": [
+          "International Economics and Trade",
+          "Finance",
+          "Business Administration",
+          "Digital Marketing",
+          "Innovation and Entrepreneurship"
+        ],
+        "level": "bachelor",
+        "language": "English",
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": "4 years",
+        "tuitionCny": 40000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "30 June 2026",
+        "requirements": "The 2026 brochure lists IELTS 6.5, TOEFL iBT 90, Duolingo 120 or a listed equivalent. CSCA applies. Check the current guide for exemptions and deadlines.",
+        "fees": null,
+        "source": {
+          "title": "SILC 2026 undergraduate admissions",
+          "url": "https://shusilc.shu.edu.cn/Future_Students/Undergraduate.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "sgs-ug",
+        "name": "Shanghai Government Scholarship (SILC undergraduate)",
+        "type": "Provincial or municipal",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2026,
+        "coverage": "Full tuition and comprehensive medical insurance.",
+        "eligibility": "Eligible international applicants to SILC undergraduate programmes.",
+        "deadline": "30 April 2026",
+        "application": "Apply via Shanghai University.",
+        "renewal": null,
+        "source": {
+          "title": "SILC 2026 undergraduate and postgraduate scholarships",
+          "url": "https://shusilc.shu.edu.cn/Future_Students/Scholarships.htm"
+        }
+      },
+      {
+        "id": "silc-ug",
+        "name": "SILC New International Student Scholarship (undergraduate)",
+        "type": "University",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2026,
+        "coverage": "20%, 50% or 100% of tuition for four academic years.",
+        "eligibility": "Eligible SILC degree applicants.",
+        "deadline": "31 March or 31 May 2026, depending on round.",
+        "application": "The admissions application is considered automatically.",
+        "renewal": null,
+        "source": {
+          "title": "SILC 2026 undergraduate and postgraduate scholarships",
+          "url": "https://shusilc.shu.edu.cn/Future_Students/Scholarships.htm"
+        }
+      },
+      {
+        "id": "csc-pg",
+        "name": "Chinese Government Scholarship (SILC postgraduate)",
+        "type": "National · Chinese Government Scholarship",
+        "levels": [
+          "master"
+        ],
+        "cycleYear": 2026,
+        "coverage": "Tuition, accommodation or an accommodation subsidy, living allowance and comprehensive medical insurance.",
+        "eligibility": "Check the postgraduate programme and CSC criteria.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "SILC 2026 undergraduate and postgraduate scholarships",
+          "url": "https://shusilc.shu.edu.cn/Future_Students/Scholarships.htm"
+        }
+      },
+      {
+        "id": "sgs-pg",
+        "name": "Shanghai Government Scholarship (SILC postgraduate)",
+        "type": "Provincial or municipal",
+        "levels": [
+          "master"
+        ],
+        "cycleYear": 2026,
+        "coverage": "Tuition, accommodation or an accommodation subsidy, living allowance and comprehensive medical insurance.",
+        "eligibility": "Check the postgraduate admissions and scholarship criteria.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "SILC 2026 undergraduate and postgraduate scholarships",
+          "url": "https://shusilc.shu.edu.cn/Future_Students/Scholarships.htm"
+        }
+      },
+      {
+        "id": "shu-new",
+        "name": "Shanghai University New Students Scholarship",
+        "type": "University",
+        "levels": [
+          "master"
+        ],
+        "cycleYear": 2026,
+        "coverage": "Full tuition and preferential accommodation pricing.",
+        "eligibility": "Eligible postgraduate applicants.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "SILC 2026 undergraduate and postgraduate scholarships",
+          "url": "https://shusilc.shu.edu.cn/Future_Students/Scholarships.htm"
+        }
+      },
+      {
+        "id": "silc-pg",
+        "name": "SILC New International Students Scholarship (postgraduate)",
+        "type": "University",
+        "levels": [
+          "master"
+        ],
+        "cycleYear": 2026,
+        "coverage": "20%, 50% or 100% tuition reduction for two academic years.",
+        "eligibility": "Eligible SILC master’s applicants.",
+        "deadline": "31 May 2026",
+        "application": "Considered from the admission application.",
+        "renewal": null,
+        "source": {
+          "title": "SILC 2026 undergraduate and postgraduate scholarships",
+          "url": "https://shusilc.shu.edu.cn/Future_Students/Scholarships.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "shenyang-city-university",
+    "name": "Shenyang City University",
+    "aliases": [
+      "SCU",
+      "沈阳城市学院"
+    ],
+    "city": "Shenyang",
+    "province": "Liaoning",
+    "website": "https://www.shenyangcu.edu.cn",
+    "applicationUrl": null,
+    "note": "Confirm international intake and scholarship terms with the university.",
+    "programs": [],
+    "scholarships": []
+  },
+  {
+    "slug": "taizhou-university",
+    "name": "Taizhou University",
+    "aliases": [
+      "TZU",
+      "台州学院"
+    ],
+    "city": "Taizhou",
+    "province": "Zhejiang",
+    "website": "https://www.zjtz.edu.cn",
+    "applicationUrl": null,
+    "note": "The photographed 2026 brochure lists Linhai and other campuses. Confirm campus by programme.",
+    "programs": [
+      {
+        "id": "master",
+        "name": "International master’s programmes",
+        "subjects": [
+          "Elementary Education",
+          "Chemical Engineering",
+          "Materials Engineering",
+          "Electronic Information",
+          "Biology",
+          "Mechanical Engineering",
+          "Electrical Engineering",
+          "Power Engineering",
+          "Hydraulic Engineering"
+        ],
+        "level": "master",
+        "language": "Depends on major",
+        "intakeMonth": 9,
+        "intakeYear": 2026,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "Bachelor’s degree, applicable language evidence, recommendations and interview. Confirm exact criteria and intake dates.",
+        "fees": null,
+        "source": {
+          "title": "Taizhou University · 2026 international admissions fair brochure",
+          "url": "https://www.zjtz.edu.cn"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "freshman",
+        "name": "Freshman Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2026,
+        "coverage": null,
+        "eligibility": "The 2026 fair brochure lists awards for eligible undergraduate freshmen.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Taizhou University · 2026 international admissions fair brochure",
+          "url": "https://www.zjtz.edu.cn"
+        }
+      },
+      {
+        "id": "graduate",
+        "name": "Taizhou University Scholarship for International Graduate Students",
+        "type": "University",
+        "levels": [
+          "master"
+        ],
+        "cycleYear": 2026,
+        "coverage": "Brochure describes a tuition and accommodation award and stipends of CNY 600/month for science/engineering or CNY 200/month for other majors, for 10 months. Confirm the award category and terms.",
+        "eligibility": "International graduate students in their standard three-year period. Reapplication and selection criteria apply.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Taizhou University · 2026 international admissions fair brochure",
+          "url": "https://www.zjtz.edu.cn"
+        }
+      },
+      {
+        "id": "zhejiang",
+        "name": "Zhejiang Provincial Government Scholarship (Class A)",
+        "type": "Provincial or municipal",
+        "levels": [
+          "master"
+        ],
+        "cycleYear": 2026,
+        "coverage": null,
+        "eligibility": "The photographed prospectus describes selection for outstanding new or continuing graduate students within the allotted quota. Award combination restrictions apply.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Taizhou University · 2026 international admissions fair brochure",
+          "url": "https://www.zjtz.edu.cn"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "tianfu-college-of-swufe",
+    "name": "Tianfu College of Southwestern University of Finance and Economics",
+    "aliases": [
+      "TFSWUFE",
+      "西南财经大学天府学院"
+    ],
+    "city": "Chengdu",
+    "province": "Sichuan",
+    "website": "https://int.tfswufe.edu.cn",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [
+      {
+        "id": "trade",
+        "name": "International Economics and Trade",
+        "subjects": [
+          "International Economics and Trade"
+        ],
+        "level": "bachelor",
+        "language": "English",
+        "intakeMonth": null,
+        "intakeYear": 2026,
+        "duration": "4 years",
+        "tuitionCny": 29500,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "30 September 2026",
+        "requirements": "Check the 2026 guide for required qualifications, language documents and application steps.",
+        "fees": "Published tuition after scholarship is CNY 13,000/year. Accommodation CNY 2,000/year, books CNY 1,500/year. Other charges apply.",
+        "source": {
+          "title": "Tianfu College 2026 international admissions brochure",
+          "url": "https://int.tfswufe.edu.cn/info/1003/2985.htm"
+        }
+      },
+      {
+        "id": "cs",
+        "name": "Computer Science and Technology",
+        "subjects": [
+          "Computer Science and Technology"
+        ],
+        "level": "bachelor",
+        "language": "English",
+        "intakeMonth": null,
+        "intakeYear": 2026,
+        "duration": "4 years",
+        "tuitionCny": 29500,
+        "tuitionPeriod": "year",
+        "applicationDeadline": "30 September 2026",
+        "requirements": "Check the 2026 guide for required qualifications, language documents and application steps.",
+        "fees": "Published tuition after scholarship is CNY 13,000/year. Accommodation CNY 2,000/year, books CNY 1,500/year. Other charges apply.",
+        "source": {
+          "title": "Tianfu College 2026 international admissions brochure",
+          "url": "https://int.tfswufe.edu.cn/info/1003/2985.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "entry",
+        "name": "International undergraduate tuition scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": 2026,
+        "coverage": "Published net tuition CNY 13,000/year from a standard CNY 29,500/year for the two listed English-taught programmes.",
+        "eligibility": "See the admissions brochure for selection, eligibility and payment conditions.",
+        "deadline": "30 September 2026 admissions deadline.",
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "Tianfu College 2026 international admissions brochure",
+          "url": "https://int.tfswufe.edu.cn/info/1003/2985.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "yangtze-normal-university",
+    "name": "Yangtze Normal University",
+    "aliases": [
+      "YZNU",
+      "长江师范学院"
+    ],
+    "city": "Chongqing",
+    "province": "Chongqing",
+    "website": "https://guojjl.yznu.edu.cn",
+    "applicationUrl": "https://yznu.at0086.cn/student",
+    "note": null,
+    "programs": [
+      {
+        "id": "language",
+        "name": "Chinese Language Programme",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": "Chinese",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "Check the current brochure for start dates and fees.",
+        "fees": null,
+        "source": {
+          "title": "YZNU international admissions and fair-brochure listings",
+          "url": "https://guojjl.yznu.edu.cn/lxzs/list.htm"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "mayor",
+        "name": "Chongqing Municipal Government Mayor Scholarship",
+        "type": "Provincial or municipal",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": "Fair brochure quotes CNY 25,000 per academic year for the referenced category. Confirm the category and year.",
+        "eligibility": "For eligible students pursuing at least one academic year.",
+        "deadline": "Brochure shows 30 May for the September route. Confirm the year with YZNU.",
+        "application": "Apply with the mayor scholarship documentation in the university portal.",
+        "renewal": null,
+        "source": {
+          "title": "YZNU international admissions and fair-brochure listings",
+          "url": "https://guojjl.yznu.edu.cn/lxzs/list.htm"
+        }
+      },
+      {
+        "id": "president",
+        "name": "YZNU President Scholarship",
+        "type": "University",
+        "levels": [
+          "bachelor"
+        ],
+        "cycleYear": null,
+        "coverage": "Fair brochure lists CNY 14,000, CNY 10,000 and CNY 6,000 tiers per academic year.",
+        "eligibility": "Eligible degree-programme students. The first-year rule and number of places are set by the university.",
+        "deadline": null,
+        "application": null,
+        "renewal": "Subsequent awards are assessed using prior-year academic performance.",
+        "source": {
+          "title": "YZNU international admissions and fair-brochure listings",
+          "url": "https://guojjl.yznu.edu.cn/lxzs/list.htm"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "youjiang-medical-university-for-nationalities",
+    "name": "Youjiang Medical University for Nationalities",
+    "aliases": [
+      "YMUN",
+      "右江民族医学院"
+    ],
+    "city": "Baise",
+    "province": "Guangxi",
+    "website": "https://www.ymun.edu.cn",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [
+      {
+        "id": "language-3",
+        "name": "Chinese language training",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": "Chinese",
+        "intakeMonth": 3,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "The brochure lists March and September; class opening depends on enrollment.",
+        "fees": null,
+        "source": {
+          "title": "Youjiang Medical University for Nationalities · admissions brochure",
+          "url": "https://www.ymun.edu.cn"
+        }
+      },
+      {
+        "id": "language-9",
+        "name": "Chinese language training",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": "Chinese",
+        "intakeMonth": 9,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": "The brochure lists March and September; class opening depends on enrollment.",
+        "fees": null,
+        "source": {
+          "title": "Youjiang Medical University for Nationalities · admissions brochure",
+          "url": "https://www.ymun.edu.cn"
+        }
+      },
+      {
+        "id": "master",
+        "name": "Clinical medicine master’s programmes",
+        "subjects": [
+          "Internal Medicine",
+          "Pediatrics",
+          "Neurology",
+          "Psychiatry and Mental Health",
+          "Emergency Medicine",
+          "Critical Care Medicine",
+          "Ophthalmology"
+        ],
+        "level": "master",
+        "language": "Chinese",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": "3 years",
+        "tuitionCny": 25000,
+        "tuitionPeriod": "year",
+        "applicationDeadline": null,
+        "requirements": "The programme table specifies HSK 5 for the listed Chinese-medium majors. Verify the exact subject and campus.",
+        "fees": null,
+        "source": {
+          "title": "Youjiang Medical University for Nationalities · admissions brochure",
+          "url": "https://www.ymun.edu.cn"
+        }
+      }
+    ],
+    "scholarships": []
+  },
+  {
+    "slug": "zhejiang-international-studies-university",
+    "name": "Zhejiang International Studies University",
+    "aliases": [
+      "ZISU",
+      "浙江外国语学院"
+    ],
+    "city": "Hangzhou",
+    "province": "Zhejiang",
+    "website": "https://www.zisu.edu.cn/english",
+    "applicationUrl": null,
+    "note": null,
+    "programs": [
+      {
+        "id": "language",
+        "name": "Chinese language non-degree programme",
+        "subjects": [
+          "Chinese Language"
+        ],
+        "level": "language",
+        "language": "Chinese and English",
+        "intakeMonth": null,
+        "intakeYear": null,
+        "duration": null,
+        "tuitionCny": null,
+        "tuitionPeriod": null,
+        "applicationDeadline": null,
+        "requirements": null,
+        "fees": null,
+        "source": {
+          "title": "ZISU international website · admissions brochure",
+          "url": "https://www.zisu.edu.cn/english"
+        }
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "clec",
+        "name": "International Chinese Language Teachers Scholarship",
+        "type": "Chinese language teaching",
+        "levels": [
+          "language",
+          "bachelor",
+          "master"
+        ],
+        "cycleYear": null,
+        "coverage": "Tuition, accommodation, living allowance and comprehensive medical insurance as described in the fair brochure.",
+        "eligibility": "The brochure lists degree and non-degree tracks. Confirm HSK and HSKK requirements for the selected track.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "ZISU international website · admissions brochure",
+          "url": "https://www.zisu.edu.cn/english"
+        }
+      },
+      {
+        "id": "zhejiang-b",
+        "name": "Zhejiang Provincial Government Scholarship Class B",
+        "type": "Provincial or municipal",
+        "levels": [
+          "bachelor",
+          "master"
+        ],
+        "cycleYear": null,
+        "coverage": "CNY 20,000 listed in the fair brochure.",
+        "eligibility": "The brochure identifies continuing degree students. Confirm exact degree levels.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "ZISU international website · admissions brochure",
+          "url": "https://www.zisu.edu.cn/english"
+        }
+      },
+      {
+        "id": "new",
+        "name": "New Student Tuition Waiver Scholarship",
+        "type": "University",
+        "levels": [],
+        "cycleYear": null,
+        "coverage": "The fair brochure lists 100%, 50% and 25% tuition waivers by award class.",
+        "eligibility": "Confirm the entry year and eligible programmes.",
+        "deadline": null,
+        "application": null,
+        "renewal": null,
+        "source": {
+          "title": "ZISU international website · admissions brochure",
+          "url": "https://www.zisu.edu.cn/english"
+        }
+      }
+    ]
+  }
+]

@@ -10,7 +10,10 @@ import { UniversityDetails } from "./UniversityDetails";
 
 const control = "w-full rounded-xl border border-border bg-background px-3 py-2.5 text-sm";
 
-export function UniversityExplorer({ records }: { records: CatalogRecord[] }) {
+export function UniversityExplorer({ records, allowEditing }: {
+  records: CatalogRecord[];
+  allowEditing?: boolean;
+}) {
   const [filters, setFilters] = useState<CatalogFilters>({});
   const [editing, setEditing] = useState<string | null>(null);
   const [selected, setSelected] = useState<string[]>([]);
@@ -105,10 +108,14 @@ export function UniversityExplorer({ records }: { records: CatalogRecord[] }) {
                   <UniversityDetails programs={programs} awards={awards} showSources />
                 </div>
               </details>
-              <button type="button" aria-expanded={editing === record.slug} onClick={() => setEditing(editing === record.slug ? null : record.slug)} className="mt-3 text-sm font-semibold text-primary-text">
-                {editing === record.slug ? "Close editor" : "Edit university"}
-              </button>
-              {editing === record.slug && <div className="mt-4 border-t border-border pt-4"><Editor entry={record} /></div>}
+              {allowEditing && (
+                <>
+                  <button type="button" aria-expanded={editing === record.slug} onClick={() => setEditing(editing === record.slug ? null : record.slug)} className="mt-3 text-sm font-semibold text-primary-text">
+                    {editing === record.slug ? "Close editor" : "Edit university"}
+                  </button>
+                  {editing === record.slug && <div className="mt-4 border-t border-border pt-4"><Editor entry={record} /></div>}
+                </>
+              )}
             </article>
           ))}
         </div>
