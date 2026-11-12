@@ -8,19 +8,13 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 export const metadata: Metadata = {
   title: "Pricing — Free and Premium",
   description:
-    "Compare the free and Premium plans for studying in China with ATOZ GSM. Free covers costs, locations and document checklists; Premium adds university names, scholarship detail and one-to-one counselling.",
+    "Compare the free and Premium plans for studying in China with ATOZ GSM. Free includes study guides and document checklists. Premium adds one-to-one counselling and personalised scholarship guidance.",
 };
 
 const FEATURES: { label: string; free: string | boolean; premium: string | boolean }[] = [
-  { label: "Tuition and hostel costs", free: true, premium: true },
-  { label: "University location and city", free: true, premium: true },
-  { label: "Programmes and study levels offered", free: true, premium: true },
   { label: "Document checklist for your programme", free: true, premium: true },
   { label: "Study-in-China guides and resources", free: true, premium: true },
   { label: "AI course advisor", free: "Basic", premium: "Full" },
-  { label: "University names", free: false, premium: true },
-  { label: "Which scholarship each university offers", free: false, premium: true },
-  { label: "Our written guidance per university", free: false, premium: true },
   { label: "Apply to your chosen subject and university", free: false, premium: true },
   { label: "One-to-one counsellor", free: false, premium: true },
   { label: "Document review before submission", free: false, premium: true },
@@ -45,9 +39,8 @@ const PricingPage = () => (
             Most of ATOZ GSM is free
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Research what studying in China actually costs without paying us anything. Premium is
-            for when you want to know exactly which university to apply to, what scholarship it
-            offers, and to have someone walk the application with you.
+            Explore study guides and application resources for free. With Premium, a counsellor helps
+            you assess university and scholarship options and guides you through your application.
           </p>
         </header>
 
@@ -57,10 +50,10 @@ const PricingPage = () => (
             <p className="mt-2 text-sm text-muted-foreground">No account charge, no time limit.</p>
             <p className="mt-6 font-display text-4xl font-bold text-secondary">৳0</p>
             <Link
-              href="/universities"
+              href="/blog"
               className="mt-8 block rounded-full border border-border px-6 py-3.5 text-center text-xs font-bold uppercase tracking-wider text-secondary transition-colors hover:bg-accent"
             >
-              Browse the directory
+              Browse the guides
             </Link>
           </div>
 
@@ -70,7 +63,7 @@ const PricingPage = () => (
             </span>
             <h2 className="font-display text-2xl font-bold text-secondary">Premium</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Names, scholarships, guidance and a counsellor.
+              One-to-one counselling and scholarship guidance.
             </p>
             <p className="mt-6 font-display text-4xl font-bold text-secondary">
               ৳{pricing.launchOfferBdt.toLocaleString("en-US")}

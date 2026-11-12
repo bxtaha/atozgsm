@@ -1,7 +1,8 @@
 import { LanguageToggle } from "@/components/layout/LanguageToggle";
 import Link from "next/link";
-import { FileText, LayoutDashboard, LogOut } from "lucide-react";
+import { FileText, GraduationCap, LayoutDashboard, LogOut } from "lucide-react";
 import { logout } from "@/app/(auth)/actions";
+import { canManageCatalog } from "@/lib/universities/catalog";
 import type { SessionUser } from "@/lib/auth/session";
 
 const NAV = [
@@ -17,7 +18,7 @@ export const DashboardShell = ({
   children: React.ReactNode;
 }) => (
   <div className="flex min-h-dvh flex-col">
-    <nav className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-xl">
+    <nav className="sticky top-0 z-50 print:hidden border-b border-border bg-background/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-3">
         <Link href="/" className="font-display text-lg font-bold tracking-tight text-secondary">
           🎓 ATOZ GSM
@@ -30,9 +31,12 @@ export const DashboardShell = ({
               {item.label}
             </Link>
           ))}
-          <Link href="/universities" className="transition-colors hover:text-primary-text">
-            Universities
-          </Link>
+          {canManageCatalog(user.id) && (
+            <Link href="/admin/universities" className="flex items-center gap-1.5 transition-colors hover:text-primary-text">
+              <GraduationCap className="h-3.5 w-3.5" />
+              Universities
+            </Link>
+          )}
         </div>
 
         <div className="flex items-center gap-3">
@@ -54,7 +58,7 @@ export const DashboardShell = ({
       </div>
     </nav>
 
-    <main className="flex-1 px-4 py-10 lg:py-14">
+    <main className="flex-1 px-4 py-10 lg:py-14 print:p-0">
       <div className="mx-auto max-w-5xl">{children}</div>
     </main>
   </div>

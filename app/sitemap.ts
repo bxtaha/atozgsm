@@ -7,7 +7,6 @@ const sitemap = (): MetadataRoute.Sitemap => {
     { path: "", priority: 1 },
     { path: "/csca", priority: 0.9 },
     { path: "/chinese", priority: 0.9 },
-    { path: "/universities", priority: 0.9 },
     { path: "/ai-advisor", priority: 0.8 },
     { path: "/blog", priority: 0.8 },
     { path: "/pricing", priority: 0.7 },

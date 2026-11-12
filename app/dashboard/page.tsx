@@ -133,8 +133,7 @@ const DashboardPage = () => {
                 Want your documents checked?
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-secondary-foreground/80">
-                Premium adds a counsellor who reviews each document before you submit, plus university
-                names and scholarship detail.
+                Premium includes one-to-one counselling and a document review before you submit.
               </p>
               <Link
                 href="/pricing"

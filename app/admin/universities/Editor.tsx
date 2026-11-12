@@ -15,14 +15,14 @@ function SaveButton({ importing }: { importing: boolean }) {
   );
 }
 
-export function Editor({ entry }: { entry?: { record: CatalogRecord; published: boolean } }) {
+export function Editor({ entry }: { entry?: CatalogRecord }) {
   const [state, action] = useFormState(importUniversities, {});
   return (
     <form action={action} className="grid gap-4">
       {entry ? (
         <label className="grid gap-1 text-sm font-semibold">
           University JSON
-          <textarea name="catalog" defaultValue={JSON.stringify(entry.record, null, 2)} required rows={15} spellCheck={false} className={`${control} w-full font-mono font-normal`} />
+          <textarea name="catalog" defaultValue={JSON.stringify(entry, null, 2)} required rows={15} spellCheck={false} className={`${control} w-full font-mono font-normal`} />
         </label>
       ) : (
         <label className="grid gap-1 text-sm font-semibold">
@@ -30,16 +30,7 @@ export function Editor({ entry }: { entry?: { record: CatalogRecord; published: 
           <input type="file" name="catalogFile" accept=".json,application/json" required className={control} />
         </label>
       )}
-      <div className="flex flex-wrap items-end gap-4">
-        <label className="grid gap-1 text-sm font-semibold">
-          Visibility
-          <select name="visibility" defaultValue={entry?.published ? "published" : "draft"} className={control}>
-            <option value="draft">Draft</option>
-            <option value="published">Published</option>
-          </select>
-        </label>
-        <SaveButton importing={!entry} />
-      </div>
+      <div><SaveButton importing={!entry} /></div>
       {state.error && <p role="alert" className="text-sm text-destructive">{state.error}</p>}
       {state.message && <p role="status" className="text-sm">{state.message}</p>}
     </form>

@@ -15,9 +15,8 @@ export async function importUniversities(
   const uploaded = file instanceof File && file.size > 0;
   if (uploaded && file.size > 750_000) return { error: "Choose a JSON file under 750 KB." };
   const payload = uploaded ? await file.text() : form.get("catalog");
-  const visibility = form.get("visibility");
-  if (typeof payload !== "string" || !payload.trim() || (visibility !== "published" && visibility !== "draft")) {
-    return { error: "Enter catalog JSON and choose a visibility." };
+  if (typeof payload !== "string" || !payload.trim()) {
+    return { error: "Enter catalog JSON." };
   }
   let parsed: unknown;
   try {
@@ -30,9 +29,7 @@ export async function importUniversities(
     const issue = result.error.issues[0];
     return { error: `${issue.path.join(".") || "Catalog"} — ${issue.message}` };
   }
-  saveCatalog(result.data, visibility === "published", user.id);
+  saveCatalog(result.data, user.id);
   revalidatePath("/admin/universities");
-  revalidatePath("/university");
-  revalidatePath("/university/[slug]", "page");
   return { message: `Saved ${result.data.length} ${result.data.length === 1 ? "university" : "universities"}.` };
 }
